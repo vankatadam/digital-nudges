@@ -1,12 +1,5 @@
-import Link from "next/link";
+import NavBar from "../components/Navigation-bar";
 
 export default function GettingStarted() {
-  return (
-    <div>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      Getting Started!
-    </div>
-  );
+  return <NavBar color="blue"></NavBar>;
 }
