@@ -188,6 +188,9 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
+          .card p {
+            color: blue;
+          }
         }
       `}</style>
 
