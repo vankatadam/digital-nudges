@@ -1,7 +1,7 @@
 import NavBar from "../components/Navigation-bar";
 import Typography from "@material-ui/core/Typography";
 
-export default function designCycle() {
+export default function designCycleTest() {
   return (
     <NavBar>
       <Typography variant="h5">4. Test</Typography>
