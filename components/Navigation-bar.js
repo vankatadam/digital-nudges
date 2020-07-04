@@ -33,9 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    [theme.breakpoints.up("sm")]: {
-      zIndex: theme.zIndex.drawer + 1,
-    },
+    zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -79,10 +77,10 @@ export default function NavigationBar(props) {
 
   const drawer = (
     <div className={classes.drawer}>
-      <Hidden smDown>
+      <Hidden xsDown>
         <div className={classes.toolbar} />
       </Hidden>
-      <List disableListWrap="true" disabledItemsFocusable="true">
+      <List>
         <ListItem component={ButtonLink} className={classes.a} href="/index">
           Home
         </ListItem>
@@ -98,9 +96,54 @@ export default function NavigationBar(props) {
           <ListItem
             component={ButtonLink}
             href="/getting-started"
+            className={classes.a}
+          >
+            Design Cycle
+          </ListItem>
+          <ListItem
+            component={ButtonLink}
+            href="/getting-started"
             className={classes.nested}
           >
-            design-cycle-design
+            1. Goals
+          </ListItem>
+          <ListItem
+            component={ButtonLink}
+            href="/getting-started"
+            className={classes.nested}
+          >
+            2. Users
+          </ListItem>
+          <ListItem
+            component={ButtonLink}
+            href="/getting-started"
+            className={classes.nested}
+          >
+            3. Design
+          </ListItem>
+          <ListItem
+            component={ButtonLink}
+            href="/getting-started"
+            className={classes.nested}
+          >
+            4. Test
+          </ListItem>
+        </List>
+        {/* Home, Getting Started are not in separate list, tahts why Cycle and Nudges have bigger space between */}
+        <List>
+          <ListItem
+            component={ButtonLink}
+            href="/getting-started"
+            className={classes.a}
+          >
+            Nudges
+          </ListItem>
+          <ListItem
+            component={ButtonLink}
+            href="/nudges/defaults"
+            className={classes.nested}
+          >
+            Defaults
           </ListItem>
         </List>
       </List>
@@ -135,7 +178,6 @@ export default function NavigationBar(props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{

@@ -1,6 +1,7 @@
 import NavBar from "../components/Navigation-bar";
 import Typography from "@material-ui/core/Typography";
 import Head from "next/head";
+import TextField from "@material-ui/core/TextField";
 
 export async function getStaticProps(context) {
   return {
