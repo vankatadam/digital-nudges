@@ -92,43 +92,15 @@ export default function NavigationBar(props) {
         >
           Getting started
         </ListItem>
-        <List>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.a}
-          >
-            Design Cycle
-          </ListItem>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.nested}
-          >
-            1. Goals
-          </ListItem>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.nested}
-          >
-            2. Users
-          </ListItem>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.nested}
-          >
-            3. Design
-          </ListItem>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.nested}
-          >
-            4. Test
-          </ListItem>
-        </List>
+
+        <ListItem
+          component={ButtonLink}
+          href="/design-cycle"
+          className={classes.a}
+        >
+          Design Cycle
+        </ListItem>
+
         {/* Home, Getting Started are not in separate list, tahts why Cycle and Nudges have bigger space between */}
         <List>
           <ListItem
