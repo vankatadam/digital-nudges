@@ -19,12 +19,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { TextareaAutosize } from "@material-ui/core";
 
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    flexGrow: 1,
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -35,14 +36,9 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
+
   // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
+  //toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
   },
@@ -56,6 +52,33 @@ const useStyles = makeStyles((theme) => ({
   },
   a: {
     color: "black",
+  },
+  menuButton: {
+    //marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(0.5),
+    flex: 1,
+    padding: 0,
+    /* //was for hiding the nav bar three lines button
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },*/
+    justifyContent: "left",
+  },
+  titleDiv: {
+    flex: 1,
+    textAlign: "center",
+  },
+  titleDigital: {
+    color: "white",
+    display: "inline-block",
+    textAlign: "right",
+  },
+  titleNudges: { color: "#8A2BE2", display: "inline-block" },
+  flexHack: { flex: 1, alignSelf: "right" },
+  toolbar2: {
+    background: "black",
+    flexGrow: 1,
+    justifyContent: "center",
   },
 }));
 
@@ -87,7 +110,6 @@ export default function NavigationBar(props) {
         <ListItem
           component={ButtonLink}
           href="/getting-started"
-          selected="true"
           className={classes.a}
         >
           Getting started
@@ -129,7 +151,7 @@ export default function NavigationBar(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolbar2}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -139,29 +161,38 @@ export default function NavigationBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Digital Nudges
-          </Typography>
+          <div className={classes.titleDiv}>
+            <Typography className={classes.titleDigital} variant="h6" noWrap>
+              Digital
+            </Typography>
+            <Typography className={classes.titleNudges} variant="h6" noWrap>
+              Nudges
+            </Typography>
+          </div>
+          <div className={classes.flexHack}></div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation="css">
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
+        {/*
+        <Hidden xlUp implementation="css">*/}
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+        >
+          {drawer}
+        </Drawer>
+        {/*</Hidden> */}
+
+        {/* was for the left nav bar whole time showed
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
@@ -173,6 +204,7 @@ export default function NavigationBar(props) {
             {drawer}
           </Drawer>
         </Hidden>
+        */}
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
