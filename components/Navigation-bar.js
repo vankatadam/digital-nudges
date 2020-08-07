@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    background: "black",
   },
 
   // necessary for content to be below app bar
