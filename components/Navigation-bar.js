@@ -20,12 +20,16 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { TextareaAutosize } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -38,20 +42,21 @@ const useStyles = makeStyles((theme) => ({
   },
 
   // necessary for content to be below app bar
-  //toolbar: theme.mixins.toolbar,
+  toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
   },
   content: {
-    flexGrow: 1,
     padding: theme.spacing(3),
   },
   nested: {
-    paddingLeft: theme.spacing.unit * 4,
+    paddingLeft: theme.spacing(4),
     color: "black",
+    fontSize: "1rem",
   },
   a: {
     color: "black",
+    fontSize: "1rem",
   },
   menuButton: {
     //marginRight: theme.spacing(2),
@@ -105,9 +110,6 @@ export default function NavigationBar(props) {
 
   const drawer = (
     <div className={classes.drawer}>
-      <Hidden xsDown>
-        <div className={classes.toolbar} />
-      </Hidden>
       <List>
         <ListItem component={ButtonLink} className={classes.a} href="/index">
           Home
@@ -155,51 +157,53 @@ export default function NavigationBar(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar className={classes.toolbar2}>
-          <div className={classes.menuButtonDiv}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={classes.menuButton}
-            >
-              <MenuIcon className={classes.menuIcon} />
-            </IconButton>
-          </div>
-          <div className={classes.titleDiv}>
-            <Typography className={classes.titleDigital} variant="h6" noWrap>
-              Digital
-            </Typography>
-            <Typography className={classes.titleNudges} variant="h6" noWrap>
-              Nudges
-            </Typography>
-          </div>
-          <div className={classes.flexHack}></div>
-        </Toolbar>
-      </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        {/*
+      {/* md oder lg?*/}
+      <Container maxWidth="md">
+        <AppBar position="fixed" className={classes.appBar}>
+          <Toolbar className={classes.toolbar2}>
+            <div className={classes.menuButtonDiv}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                className={classes.menuButton}
+              >
+                <MenuIcon className={classes.menuIcon} />
+              </IconButton>
+            </div>
+            <div className={classes.titleDiv}>
+              <Typography className={classes.titleDigital} variant="h5" noWrap>
+                Digital
+              </Typography>
+              <Typography className={classes.titleNudges} variant="h5" noWrap>
+                Nudges
+              </Typography>
+            </div>
+            <div className={classes.flexHack}></div>
+          </Toolbar>
+        </AppBar>
+        <nav className={classes.drawer} aria-label="mailbox folders">
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          {/*
         <Hidden xlUp implementation="css">*/}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-        >
-          {drawer}
-        </Drawer>
-        {/*</Hidden> */}
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+          >
+            {drawer}
+          </Drawer>
+          {/*</Hidden> */}
 
-        {/* was for the left nav bar whole time showed
+          {/* was for the left nav bar whole time showed
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
@@ -212,11 +216,12 @@ export default function NavigationBar(props) {
           </Drawer>
         </Hidden>
         */}
-      </nav>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {props.children}
-      </main>
+        </nav>
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          {props.children}
+        </main>
+      </Container>
     </div>
   );
 }
