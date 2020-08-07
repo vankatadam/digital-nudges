@@ -30,11 +30,9 @@ import { purple } from "@material-ui/core/colors";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
       main: "#000000",
     },
     secondary: {
-      // This is green.A700 as hex.
       main: purple[500],
     },
   },
@@ -131,7 +129,7 @@ function HideOnScroll(props) {
 export default function NavigationBar(props) {
   const { window } = props;
   const classes = useStyles();
-  const theme = useTheme();
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
