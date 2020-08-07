@@ -21,6 +21,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { TextareaAutosize } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
+import Slide from "@material-ui/core/Slide";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 
 const drawerWidth = 250;
 
@@ -96,6 +98,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
 export default function NavigationBar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -230,30 +245,36 @@ export default function NavigationBar(props) {
       <CssBaseline />
       {/* md oder lg?*/}
       <Container maxWidth="md">
-        <AppBar position="fixed" className={classes.appBar}>
-          <Toolbar className={classes.toolbar2}>
-            <div className={classes.menuButtonDiv}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                className={classes.menuButton}
-              >
-                <MenuIcon className={classes.menuIcon} />
-              </IconButton>
-            </div>
-            <div className={classes.titleDiv}>
-              <Typography className={classes.titleDigital} variant="h5" noWrap>
-                Digital
-              </Typography>
-              <Typography className={classes.titleNudges} variant="h5" noWrap>
-                Nudges
-              </Typography>
-            </div>
-            <div className={classes.flexHack}></div>
-          </Toolbar>
-        </AppBar>
+        <HideOnScroll {...props}>
+          <AppBar position="fixed" className={classes.appBar}>
+            <Toolbar className={classes.toolbar2}>
+              <div className={classes.menuButtonDiv}>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  className={classes.menuButton}
+                >
+                  <MenuIcon className={classes.menuIcon} />
+                </IconButton>
+              </div>
+              <div className={classes.titleDiv}>
+                <Typography
+                  className={classes.titleDigital}
+                  variant="h5"
+                  noWrap
+                >
+                  Digital
+                </Typography>
+                <Typography className={classes.titleNudges} variant="h5" noWrap>
+                  Nudges
+                </Typography>
+              </div>
+              <div className={classes.flexHack}></div>
+            </Toolbar>
+          </AppBar>
+        </HideOnScroll>
         <nav className={classes.drawer} aria-label="mailbox folders">
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           {/*
