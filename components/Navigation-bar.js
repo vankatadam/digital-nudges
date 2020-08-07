@@ -92,12 +92,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
-  <Link href={href} as={hrefAs} prefetch>
-    <a className={className}>{children}</a>
-  </Link>
-);
-
 export default function NavigationBar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -107,6 +101,14 @@ export default function NavigationBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
+    <Link href={href} as={hrefAs} prefetch>
+      <a className={className} onClick={handleDrawerToggle}>
+        {children}
+      </a>
+    </Link>
+  );
 
   const drawer = (
     <div className={classes.drawer}>
@@ -131,22 +133,77 @@ export default function NavigationBar(props) {
         </ListItem>
 
         {/* Home, Getting Started are not in separate list, tahts why Cycle and Nudges have bigger space between */}
-        <List>
-          <ListItem
-            component={ButtonLink}
-            href="/getting-started"
-            className={classes.a}
-          >
-            Nudges
-          </ListItem>
-          <ListItem
-            component={ButtonLink}
-            href="/nudges/defaults"
-            className={classes.nested}
-          >
-            Defaults
-          </ListItem>
-        </List>
+
+        <ListItem
+          component={ButtonLink}
+          href="/getting-started"
+          className={classes.a}
+        >
+          Nudges
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.nested}
+        >
+          Defaults
+        </ListItem>
       </List>
     </div>
   );
