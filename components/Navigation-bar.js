@@ -89,9 +89,13 @@ const useStyles = makeStyles((theme) => ({
     background: "black",
     flexGrow: 1,
     justifyContent: "center",
+
+    minHeight: 48,
+    [theme.breakpoints.up("sm")]: {
+      minHeight: 56,
+    },
   },
 }));
-
 export default function NavigationBar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -116,6 +120,8 @@ export default function NavigationBar(props) {
         <ListItem component={ButtonLink} className={classes.a} href="/index">
           Home
         </ListItem>
+        <Divider variant="middle" />
+
         <ListItem
           component={ButtonLink}
           href="/getting-started"
@@ -203,6 +209,14 @@ export default function NavigationBar(props) {
           className={classes.nested}
         >
           Defaults
+        </ListItem>
+
+        <ListItem
+          component={ButtonLink}
+          href="/nudges/defaults"
+          className={classes.a}
+        >
+          Author Info
         </ListItem>
       </List>
     </div>
