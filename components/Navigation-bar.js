@@ -56,7 +56,8 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     //marginRight: theme.spacing(2),
     marginBottom: theme.spacing(0.5),
-    flex: 1,
+    marginLeft: theme.spacing(0.01),
+    flex: 0,
     padding: 0,
     /* //was for hiding the nav bar three lines button
     [theme.breakpoints.up("sm")]: {
@@ -64,8 +65,12 @@ const useStyles = makeStyles((theme) => ({
     },*/
     justifyContent: "left",
   },
-  titleDiv: {
+  menuIcon: { fontSize: 25 },
+  menuButtonDiv: {
     flex: 1,
+  },
+  titleDiv: {
+    flex: 2,
     textAlign: "center",
   },
   titleDigital: {
@@ -152,15 +157,17 @@ export default function NavigationBar(props) {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar2}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
+          <div className={classes.menuButtonDiv}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon className={classes.menuIcon} />
+            </IconButton>
+          </div>
           <div className={classes.titleDiv}>
             <Typography className={classes.titleDigital} variant="h6" noWrap>
               Digital
