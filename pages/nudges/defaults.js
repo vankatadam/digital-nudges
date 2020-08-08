@@ -14,6 +14,7 @@ import Example from "../../components/Examples";
 import NavBar from "../../components/Navigation-bar";
 import theme from "../../src/theme";
 import { ThemeProvider } from "@material-ui/styles";
+import TitleBox from "../../components/TitleBox";
 
 //Quellen:
 //Passwort:
@@ -57,7 +58,12 @@ export default function GettingStarted() {
               content="minimum-scale=1, initial-scale=1, width=device-width"
             />
           </Head>
-          <Typography variant="h5">Defaults</Typography>
+          <TitleBox
+            title={"Defaults"}
+            effort={50}
+            effectiveness={50}
+            efficiency={1}
+          ></TitleBox>
           <Typography variant="body1" color="primary">
             Die häufigste Form der Umsetzung von „Defaults“ im Web ist in Form
             einer Voreinstellung von „Radio Buttons, „Checkboxen“,
