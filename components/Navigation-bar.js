@@ -28,12 +28,14 @@ import { ThemeProvider } from "@material-ui/styles";
 import { purple } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-    secondary: {
-      main: purple[500],
+  overrides: {
+    palette: {
+      primary: {
+        main: "#000000",
+      },
+      secondary: {
+        main: purple[500],
+      },
     },
   },
 });
@@ -260,7 +262,7 @@ export default function NavigationBar(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* md oder lg?*/}
-        <Container maxWidth="md">
+        <Container maxWidth={props.home ? "false" : "md"}>
           <HideOnScroll {...props}>
             <AppBar position="fixed" className={classes.appBar}>
               <Toolbar className={classes.toolbar2}>

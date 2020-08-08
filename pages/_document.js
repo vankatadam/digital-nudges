@@ -9,7 +9,17 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          {/* Chrome, Firefox OS and Opera */}
+          <meta name="theme-color" content="#000000" />
+          {/* Windows Phone */}
+          <meta name="msapplication-navbutton-color" content="#000000" />
+          {/* iOS Safari */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="#000000"
+          />
+          <link rel="icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

@@ -11,6 +11,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Example from "../../components/Examples";
+import NavBar from "../../components/Navigation-bar";
 
 //Quellen:
 //Passwort:
@@ -44,58 +45,60 @@ export default function GettingStarted() {
     event.preventDefault();
   };
   return (
-    <div>
-      <Head>
-        <title>Defaults</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-
-      <Typography variant="h5">Defaults</Typography>
-
-      <Typography variant="body1" color="initial">
-        Automatisch Passwörter vorschlagen als Default
-      </Typography>
-      {/** Example Passwörter */}
-      <Example>
-        <FormControl className={clsx(classes.margin, classes.textField)}>
-          <InputLabel htmlFor="standard-adornment-password">
-            Password
-          </InputLabel>
-          <Input
-            id="standard-adornment-password"
-            type={values.showPassword ? "text" : "password"}
-            value={values.password}
-            onChange={handleChange("password")}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
+    <NavBar>
+      <div>
+        <Head>
+          <title>Defaults</title>
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-        </FormControl>
-      </Example>
-      <Typography variant="body1" color="initial">
-        Dies ist nur ein Umsetzungsbeispiel, der keinen Sicherheitsmasnahmen
-        Entspricht. Für eigene Implementierung in öffentlichen oder internen
-        Applikationen folgen sie bitte Sicherheitsmaßnahmen.
-      </Typography>
-      {[...new Array(36)]
-        .map(
-          () => `Cras mattis consectetur purus sit amet fermentum.
+        </Head>
+
+        <Typography variant="h5">Defaults</Typography>
+
+        <Typography variant="body1" color="initial">
+          Automatisch Passwörter vorschlagen als Default
+        </Typography>
+        {/** Example Passwörter */}
+        <Example>
+          <FormControl className={clsx(classes.margin, classes.textField)}>
+            <InputLabel htmlFor="standard-adornment-password">
+              Password
+            </InputLabel>
+            <Input
+              id="standard-adornment-password"
+              type={values.showPassword ? "text" : "password"}
+              value={values.password}
+              onChange={handleChange("password")}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+        </Example>
+        <Typography variant="body1" color="initial">
+          Dies ist nur ein Umsetzungsbeispiel, der keinen Sicherheitsmasnahmen
+          Entspricht. Für eigene Implementierung in öffentlichen oder internen
+          Applikationen folgen sie bitte Sicherheitsmaßnahmen.
+        </Typography>
+        {[...new Array(36)]
+          .map(
+            () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-        )
-        .join("\n")}
-    </div>
+          )
+          .join("\n")}
+      </div>
+    </NavBar>
   );
 }
