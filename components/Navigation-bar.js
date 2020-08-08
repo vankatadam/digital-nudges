@@ -26,28 +26,16 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { purple } from "@material-ui/core/colors";
-
-const theme = createMuiTheme({
-  overrides: {
-    palette: {
-      primary: {
-        main: "#000000",
-      },
-      secondary: {
-        main: purple[500],
-      },
-    },
-  },
-});
+import theme from "../src/theme";
 
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    paddingLeft: 0,
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -102,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
     textAlign: "right",
   },
-  titleNudges: { color: "#8A2BE2", display: "inline-block" },
+  titleNudges: { display: "inline-block" },
   flexHack: { flex: 1, alignSelf: "right" },
   toolbar2: {
     background: "black",
@@ -262,7 +250,7 @@ export default function NavigationBar(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* md oder lg?*/}
-        <Container maxWidth={props.home ? "false" : "md"}>
+        <Container maxWidth={props.home ? "xl" : "md"}>
           <HideOnScroll {...props}>
             <AppBar position="fixed" className={classes.appBar}>
               <Toolbar className={classes.toolbar2}>
@@ -289,6 +277,7 @@ export default function NavigationBar(props) {
                     className={classes.titleNudges}
                     variant="h5"
                     noWrap
+                    color="secondary"
                   >
                     Nudges
                   </Typography>

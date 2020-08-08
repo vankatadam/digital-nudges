@@ -6,20 +6,7 @@ import { purple } from "@material-ui/core/colors";
 import { ThemeProvider } from "@material-ui/styles";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import NavBar from "../components/Navigation-bar";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-    secondary: {
-      main: purple[500],
-    },
-    third: {
-      main: "#FFFFFF",
-    },
-  },
-});
+import theme from "../src/theme";
 
 const useStyles = makeStyles((theme) => ({
   root: {
