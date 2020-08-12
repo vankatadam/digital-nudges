@@ -42,6 +42,9 @@ export default function Home() {
           <Typography variant="h3" color="secondary">
             Nudges
           </Typography>
+          <a href="https://codesandbox.io/s/competent-monad-0siso?file=/index.js">
+            Link to Sandbox
+          </a>
         </ThemeProvider>
       </div>{" "}
     </NavBar>
