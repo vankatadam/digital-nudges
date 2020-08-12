@@ -127,7 +127,7 @@ export default function TitleBox(props) {
                 <Typography style={{ display: "inline-block", marginRight: 4 }}>
                   Effektivität:
                 </Typography>
-                {props.effectiveness <= 5 && (
+                {props.effectiveness <= 25 && (
                   <>
                     <Typography
                       style={{
@@ -139,7 +139,7 @@ export default function TitleBox(props) {
                     </Typography>
                   </>
                 )}
-                {props.effectiveness <= 10 && props.effectiveness > 5 && (
+                {props.effectiveness <= 50 && props.effectiveness > 25 && (
                   <>
                     <Typography
                       style={{ color: "orange", display: "inline-block" }}
@@ -148,7 +148,7 @@ export default function TitleBox(props) {
                     </Typography>
                   </>
                 )}
-                {props.effectiveness > 10 && (
+                {props.effectiveness > 50 && (
                   <>
                     <Typography
                       style={{ color: "green", display: "inline-block" }}
