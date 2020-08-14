@@ -15,6 +15,7 @@ import NavBar from "../../components/Navigation-bar";
 import theme from "../../src/theme";
 import { ThemeProvider } from "@material-ui/styles";
 import TitleBox from "../../components/TitleBox";
+import Paper from "@material-ui/core/Paper";
 
 //Quellen:
 //Passwort:
@@ -60,23 +61,104 @@ export default function GettingStarted() {
           </Head>
           <TitleBox
             title={"Defaults"}
-            effort={50}
+            effort={1}
             effectiveness={50}
             efficiency={1}
           ></TitleBox>
           {/** 1 Theoretische Erklärung */}
           {/** auf K 3.4.1 nehmen + von */}
-
-          <Typography variant="body1" color="primary">
-            Die häufigste Form der Umsetzung von „Defaults“ im Web ist in Form
-            einer Voreinstellung von „Radio Buttons, „Checkboxen“,
-            Schiebere-geln statt oder vordefinierbaren Textfeldern statt. Mit
-            solch einer Voreinstellung er-höht man die Chance, dass der Nutzer
-            auch tatsächlich die vorgewählte Antwort auswählt, da Nutzer zum
-            Status-Quo tendieren (siehe Kapitel 2.1.5.1). Da Defaults auf
-            mehreren verschiedenen Wegen und mit verschiedenen UI Elementen
-            umgesetzt werden können, werden anschließend mehrere Beispiele
-            aufgeführt:
+          <Typography gutterBottom>
+            {" "}
+            Die gängigste Form von Nudges, die in vielen verschiedenen
+            Bereichen, wie in der Verhaltensökonomik [vgl. 1], Psychologie [vgl.
+            2], Jura [vgl. 3] oder Medizin [vgl. 4], bereits erforscht und
+            verwendet wird, nennt sich „Defaults“. In der Psychologie wird sie
+            auch unter den Begriff Status Quo [vgl. 2] gefasst. Dieser Nudge
+            funktioniert dank der Tatsache, dass Menschen den Weg des
+            niedrigsten Widerstandes wählen [vgl. 5]. Der Weg des niedrigsten
+            Widerstandes ist in einer Entscheidungsumgebung die Option, die
+            gewählt wird, wenn sich der Nutzer entscheidet nichts zu wählen und
+            die Wahl dem Entscheidungsarchitekten überlässt [vgl. 6]. Dies
+            können verschiedene Opt-In oder Opt-Out Entscheidungen bei der Wahl
+            zwischen wenigen Alternativen [vgl. 4], aber auch Empfehlungen bei
+            einer Wahl von vielen Alternativen sein [vgl. 2]. Durch empirische
+            Untersuchungen wurde bewiesen, dass sich bei einer Wahl zwischen
+            mehreren Alternativen bei einer steigenden Anzahl an Alternativen
+            der „Nudging“-Effekt verstärkt und somit auch die Tendenz zu einer
+            „Default“-Entscheidung [vgl. 2]. Die Stärke von „Defaults“ liegt in
+            der Unvermeidbarkeit [vgl. 6]. Jeder Entscheidungsarchitekt muss
+            sich somit die Frage stellen, wie das Ergebnis aussehen wird, wenn
+            sich der Nutzer entscheidet nichts zu tun [vgl. 6].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Da „Defaults“ mit gängigen Web-Elementen wie „Radio Buttons,
+            „Checkboxen“, Schieberegeln, oder vordefinierten Eingabe-Feldern
+            umgesetzt werden können, kann dieser Nudge auf fast jede Website,
+            die eine Nutzer-Eingabe benötigt, angewendet werden. Es gibt bereits
+            viele empirisch bewiesene Forschungen und Beispiele, die diesen
+            Nudge Mechanismus bestätigen [vgl. 3, 4, vgl. 7–11]. Die Beispiele,
+            die auch im Web umgesetzt werden können, beziehen sich auf
+            Voreinstellungen von UI Komponenten, bzw. eine Vorauswahl von
+            Alternativen, die ausgewählt werden können [vgl. 12]. Für eine
+            Umsetzung von Opt-In oder Opt-Out Politiken eignen sich „Checkboxen“
+            und für eine Vorauswahl von mehreren Elementen eignen sich „Radio
+            Buttons“ sowie Schieberegeln [vgl. 12]. Um komplexere Entscheidung
+            zu unterstützen, wie Passwortauswahl, eignen sich vordefinierbare
+            Text-Felder [vgl. 9].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Da Defaults auf mehreren verschiedenen Wegen und mit verschiedenen
+            UI Elementen umgesetzt werden können, werden anschließend mehrere
+            Beispiele aufgeführt:{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das erste Beispiel wird sich mit dem UI Element „Checkbox“
+            beschäftigen. Dieses Beispiel orientiert sich an Mobile Square App,
+            die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
+            Bezahlmethode, das gegebene Trinkgeld innerhalb eines Jahres
+            verdoppelt hat [vgl. 13]. Solche Opt-Out Methode ist Beispielweise
+            auch bei Newslettern bei den meisten Webseiten mit Newslettern
+            angewendet. Somit wird dieses Beispiel als eine vorangekreuzte
+            „Checkbox“ dargestellt.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das zweite Beispiel bezieht sich auf Schieberegeln und
+            vordefinierbare Textfelder. Wie [6] in deren Beispiel mit Spenden
+            erklären (siehe Anchoring => Link auf Biases??), beziehen sich
+            Menschen bei einer Entscheidung auf einen initialen Wert und passen
+            diesen nach deren Urteil an [vgl. 6]. Somit wird mit einer
+            Voreinstellung von Schieberegeln oder vordefiniertem Text in
+            Texteingabe-Feldern die Chance erhöht, dass der Nutzer auch bei
+            einem ähnlichen Wert landet. Somit können z.B. Spenden erhöht
+            werden, in dem ein höherer Wert eingestellt wird [vgl. 6].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das dritte Beispiel bezieht sich auch auf vordefinierte
+            Text-Eingaben, diesmal jedoch im Kontext von Passwort Management.
+            Dieses Beispiel wurde von Studien von [9] inspiriert, indem als
+            „Default“ Einstellung ein automatisch generiertes Passwort bei der
+            Erstellung eines Kontos vorlag [vgl. 9].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
+            Antwortmöglichkeiten. Es funktioniert ähnlich wie das erste
+            Beispiel. Eine oder mehrere Antworten, in Form von „Checkboxen“ oder
+            „Radio Buttons“, werden vorausgewählt und somit wird die Chance
+            erhöht, dass der Nutzer diese auch tatsächlich wählt [vgl. 14].{" "}
+          </Typography>{" "}
+          <Typography gutterBottom>
+            Alle erwähnten Beispiele von Defaults werden mit dem
+            Standart-UI-Framework dieser Guideline, Material UI, umgesetzt
+            werden, da es alle benötigte Elemente und deren Voreinstellung
+            unterstützt [vgl. 15–18].{" "}
+          </Typography>{" "}
+          <Typography gutterBottom>
+            Anschließend werden mehrere Design-Berücksichtigungen und
+            Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [19]:
+            Was ist eine angemessene Standardauswahl oder ein angemessener Wert
+            und warum? Wie einfach können die Nutzer aus der Entscheidung
+            austreten (opt-out)? Auf unethische und gesetzwidrige Richtlinien
+            achten.{" "}
           </Typography>
           {/** 2 Beispiele */}
           <Typography variant="body1" color="secondary">
@@ -113,14 +195,6 @@ export default function GettingStarted() {
             Entspricht. Für eigene Implementierung in öffentlichen oder internen
             Applikationen folgen sie bitte Sicherheitsmaßnahmen.
           </Typography>
-          {[...new Array(36)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-            )
-            .join("\n")}
         </div>
       </ThemeProvider>
     </NavBar>
