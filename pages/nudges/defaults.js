@@ -16,6 +16,17 @@ import theme from "../../src/theme";
 import { ThemeProvider } from "@material-ui/styles";
 import TitleBox from "../../components/TitleBox";
 import Paper from "@material-ui/core/Paper";
+import { withStyles } from "@material-ui/core/styles";
+import { green } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@material-ui/icons/CheckBox";
+import Favorite from "@material-ui/icons/Favorite";
+import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import Button from "@material-ui/core/Button";
 
 //Quellen:
 //Passwort:
@@ -30,9 +41,44 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     width: "30ch",
   },
+  typoGreen: {
+    fontWeight: 500,
+    color: green[600],
+  },
 }));
 
+const BoldTypo = withStyles({
+  root: {
+    fontWeight: 500,
+    display: "inline",
+  },
+})((props) => <Typography {...props} />);
+
+// Checkbox Example
+const GreenCheckbox = withStyles({
+  root: {
+    color: green[400],
+    "&$checked": {
+      color: green[600],
+    },
+  },
+  checked: {},
+})((props) => <Checkbox color="default" {...props} />);
+
+// Checkbox Example End
+
 export default function GettingStarted() {
+  // Checkbox Example
+  const [checked, setChecked] = React.useState({
+    checkedA: true,
+    checkedB: true,
+  });
+
+  const handleChangeCheckbox = (event) => {
+    setChecked({ ...checked, [event.target.name]: event.target.checked });
+  };
+  // Checkbox Example End
+
   const classes = useStyles();
   const [values, setValues] = React.useState({
     password: "Vordefinniertespasswort",
@@ -106,25 +152,85 @@ export default function GettingStarted() {
             zu unterstützen, wie Passwortauswahl, eignen sich vordefinierbare
             Text-Felder [vgl. 9].{" "}
           </Typography>
+          <hr />
+          <Typography variant={"h4"}>Konkrete Beispiele</Typography>
+          <hr />
           <Typography gutterBottom>
             Da Defaults auf mehreren verschiedenen Wegen und mit verschiedenen
             UI Elementen umgesetzt werden können, werden anschließend mehrere
             Beispiele aufgeführt:{" "}
           </Typography>
           <Typography gutterBottom>
-            Das erste Beispiel wird sich mit dem UI Element „Checkbox“
-            beschäftigen. Dieses Beispiel orientiert sich an Mobile Square App,
-            die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
+            Das <BoldTypo>erste</BoldTypo> Beispiel wird sich mit dem UI Element
+            „Checkbox“ beschäftigen. Dieses Beispiel orientiert sich an Mobile
+            Square App, die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
             Bezahlmethode, das gegebene Trinkgeld innerhalb eines Jahres
-            verdoppelt hat [vgl. 13]. Solche Opt-Out Methode ist Beispielweise
-            auch bei Newslettern bei den meisten Webseiten mit Newslettern
-            angewendet. Somit wird dieses Beispiel als eine vorangekreuzte
-            „Checkbox“ dargestellt.{" "}
+            verdoppelt hat [vgl. 13]. Solch eine Opt-Out Methode wird
+            Beispielweise auch bei Newslettern bei den meisten Webseiten mit
+            Newslettern angewendet. Somit wird dieses Beispiel als eine
+            vorangekreuzte „Checkbox“ dargestellt.{" "}
           </Typography>
+          <Example link="https://codesandbox.io/s/defaults1checkboxen-0x8se?file=/index.js">
+            {" "}
+            <Typography variant={"h6"}>Ihr Essen kostet insgesamt: </Typography>
+            <Typography display="inline">Netto: </Typography>
+            <Typography display="inline">10€</Typography>
+            <br />
+            <Typography display="inline">MwST. (19%): </Typography>
+            <Typography display="inline">11,9€</Typography>
+            <br />
+            <Typography>
+              Insgesamt:{" "}
+              {checked.checkedA ? (
+                <BoldTypo display="inline" className={classes.typoGreen}>
+                  13,09€
+                </BoldTypo>
+              ) : (
+                <BoldTypo display="inline">11,9€</BoldTypo>
+              )}
+            </Typography>
+            <Typography display="inline">Tipp? (10%): </Typography>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={checked.checkedA}
+                  onChange={handleChangeCheckbox}
+                  name="checkedA"
+                  color="primary"
+                />
+              }
+            />
+            <FormControlLabel
+              control={
+                <GreenCheckbox
+                  checked={checked.checkedA}
+                  onChange={handleChangeCheckbox}
+                  name="checkedA"
+                />
+              }
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={checked.checkedA}
+                  icon={<FavoriteBorder />}
+                  checkedIcon={<Favorite />}
+                  name="checkedA"
+                  onChange={handleChangeCheckbox}
+                  style={{ color: red[600] }}
+                />
+              }
+            />
+            <Button style={{ display: "block" }} variant="contained">
+              Bezahlen
+            </Button>
+          </Example>
+          https://material-ui.com/components/checkboxes/ ; Verschiedene Farben,
+          da es Emotionen Wecken könnte (Visualisation, Welt von Social Norms)
           <Typography gutterBottom>
             Das zweite Beispiel bezieht sich auf Schieberegeln und
             vordefinierbare Textfelder. Wie [6] in deren Beispiel mit Spenden
-            erklären (siehe Anchoring => Link auf Biases??), beziehen sich
+            erklären (siehe Anchoring ={">"} Link auf Biases??), beziehen sich
             Menschen bei einer Entscheidung auf einen initialen Wert und passen
             diesen nach deren Urteil an [vgl. 6]. Somit wird mit einer
             Voreinstellung von Schieberegeln oder vordefiniertem Text in
@@ -132,6 +238,7 @@ export default function GettingStarted() {
             einem ähnlichen Wert landet. Somit können z.B. Spenden erhöht
             werden, in dem ein höherer Wert eingestellt wird [vgl. 6].{" "}
           </Typography>
+          <Example></Example>
           <Typography gutterBottom>
             Das dritte Beispiel bezieht sich auch auf vordefinierte
             Text-Eingaben, diesmal jedoch im Kontext von Passwort Management.
@@ -152,6 +259,9 @@ export default function GettingStarted() {
             werden, da es alle benötigte Elemente und deren Voreinstellung
             unterstützt [vgl. 15–18].{" "}
           </Typography>{" "}
+          <hr />
+          <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
+          <hr />
           <Typography gutterBottom>
             Anschließend werden mehrere Design-Berücksichtigungen und
             Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [19]:

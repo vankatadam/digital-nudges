@@ -266,21 +266,25 @@ export default function NavigationBar(props) {
                   </IconButton>
                 </div>
                 <div className={classes.titleDiv}>
-                  <Typography
-                    className={classes.titleDigital}
-                    variant="h5"
-                    noWrap
-                  >
-                    Digital
-                  </Typography>
-                  <Typography
-                    className={classes.titleNudges}
-                    variant="h5"
-                    noWrap
-                    color="secondary"
-                  >
-                    Nudges
-                  </Typography>
+                  <Link href="/index">
+                    <a className={classes.a}>
+                      <Typography
+                        className={classes.titleDigital}
+                        variant="h5"
+                        noWrap
+                      >
+                        Digital
+                      </Typography>
+                      <Typography
+                        className={classes.titleNudges}
+                        variant="h5"
+                        noWrap
+                        color="secondary"
+                      >
+                        Nudges
+                      </Typography>
+                    </a>
+                  </Link>
                 </div>
                 <div className={classes.flexHack}></div>
               </Toolbar>

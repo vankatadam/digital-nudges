@@ -23,7 +23,9 @@ export default function Examples(props) {
       <Card className={classes.root}>
         <CardContent>{props.children}</CardContent>
         <CardActions>
-          <Button size="small">Codesandbox</Button>
+          <Button size="small" href={props.link}>
+            Codesandbox
+          </Button>
         </CardActions>
       </Card>
     </div>
