@@ -56,7 +56,7 @@ export default function TitleBox(props) {
   const open = Boolean(anchorEl);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <Grid container alignItems="center">
           <Grid item xs>

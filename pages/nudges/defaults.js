@@ -27,6 +27,8 @@ import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Button from "@material-ui/core/Button";
+import MoodIcon from "@material-ui/icons/Mood";
+import Slider from "@material-ui/core/Slider";
 
 //Quellen:
 //Passwort:
@@ -44,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
   typoGreen: {
     fontWeight: 500,
     color: green[600],
+  },
+  inputsMargin: {
+    marginTop: 18,
+    marginBottom: 32,
+    display: "block",
   },
 }));
 
@@ -67,6 +74,32 @@ const GreenCheckbox = withStyles({
 
 // Checkbox Example End
 
+//Slider Example
+const marks = [
+  {
+    value: 10,
+    label: "10€",
+  },
+  {
+    value: 50,
+    label: "50€",
+  },
+  {
+    value: 75,
+    label: "75€",
+  },
+  {
+    value: 100,
+    label: "100€",
+  },
+];
+
+function valuetext(value) {
+  return `${value}°C`;
+}
+
+//Slider example End
+
 export default function GettingStarted() {
   // Checkbox Example
   const [checked, setChecked] = React.useState({
@@ -82,6 +115,7 @@ export default function GettingStarted() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     password: "Vordefinniertespasswort",
+    password2: "Vordefinniertespasswort",
     showPassword: false,
   });
   const handleChange = (prop) => (event) => {
@@ -238,7 +272,61 @@ export default function GettingStarted() {
             einem ähnlichen Wert landet. Somit können z.B. Spenden erhöht
             werden, in dem ein höherer Wert eingestellt wird [vgl. 6].{" "}
           </Typography>
-          <Example></Example>
+          <Example>
+            {" "}
+            <Typography variant={"h6"}>
+              Wie viel möchten Sie spenden?
+              <MoodIcon
+                style={{ marginLeft: "6px", color: "green" }}
+              ></MoodIcon>
+            </Typography>
+            <Slider
+              defaultValue={75}
+              getAriaValueText={valuetext}
+              aria-labelledby="discrete-slider-custom"
+              step={1}
+              valueLabelDisplay="auto"
+              marks={marks}
+              className={classes.inputsMargin}
+            />
+            <Button style={{ display: "block" }} variant="contained">
+              Spenden
+            </Button>
+          </Example>
+          <Typography gutterBottom style={{ marginTop: 12, marginBottom: 12 }}>
+            Alternative mit einem Textfeld:
+          </Typography>
+          <Example>
+            {" "}
+            <Typography variant={"h6"}>
+              Wie viel möchten Sie spenden?
+              <MoodIcon
+                style={{ marginLeft: "6px", color: "green" }}
+              ></MoodIcon>
+              <FormControl className={classes.inputsMargin}>
+                <InputLabel htmlFor="standard-adornment-amount">
+                  Betrag
+                </InputLabel>
+                <Input
+                  id="standard-adornment-amount"
+                  value={"75"}
+                  startAdornment={
+                    <InputAdornment position="start">€</InputAdornment>
+                  }
+                />
+              </FormControl>
+            </Typography>
+            <Button style={{ display: "block" }} variant="contained">
+              Spenden
+            </Button>
+          </Example>
+          https://material-ui.com/components/slider/;
+          https://material-ui.com/components/text-fields/;
+          https://medium.com/google-design/the-evolution-of-material-designs-text-fields-603688b3fe03;
+          der letzte Link sagt, dass man den Filled variant, oder OUtlined
+          benutzen soll (research); die Spannweite ist nur von 0-100 als
+          default, sonst muss man selber die Werte berechnen. Je mehr man fragt,
+          desto mehr bekommt man in der Regel (THaler?)
           <Typography gutterBottom>
             Das dritte Beispiel bezieht sich auch auf vordefinierte
             Text-Eingaben, diesmal jedoch im Kontext von Passwort Management.
@@ -246,6 +334,55 @@ export default function GettingStarted() {
             „Default“ Einstellung ein automatisch generiertes Passwort bei der
             Erstellung eines Kontos vorlag [vgl. 9].{" "}
           </Typography>
+          <Example>
+            <Typography variant={"h6"}>
+              Erstellen Sie bitte ein Passwort
+            </Typography>
+            <FormControl className={clsx(classes.margin, classes.textField)}>
+              <InputLabel htmlFor="standard-adornment-password">
+                Passwort
+              </InputLabel>
+              <Input
+                id="standard-adornment-password"
+                type={values.showPassword ? "text" : "password"}
+                value={values.password}
+                onChange={handleChange("password")}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+            <FormControl className={clsx(classes.margin, classes.textField)}>
+              <InputLabel htmlFor="standard-adornment-password">
+                Passwort bitte wiederholen
+              </InputLabel>
+              <Input
+                id="standard-adornment-password"
+                type={values.showPassword ? "text" : "password"}
+                value={values.password}
+                onChange={handleChange("password")}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+          </Example>
           <Typography gutterBottom>
             Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
             Antwortmöglichkeiten. Es funktioniert ähnlich wie das erste
@@ -275,30 +412,6 @@ export default function GettingStarted() {
             Automatisch Passwörter vorschlagen als Default
           </Typography>
           {/** Example Passwörter */}
-          <Example>
-            <FormControl className={clsx(classes.margin, classes.textField)}>
-              <InputLabel htmlFor="standard-adornment-password">
-                Password
-              </InputLabel>
-              <Input
-                id="standard-adornment-password"
-                type={values.showPassword ? "text" : "password"}
-                value={values.password}
-                onChange={handleChange("password")}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                    >
-                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
-          </Example>
           {/** 3 Design Empfehlungen, Literatur..  */}
           <Typography variant="body1" color="initial">
             Dies ist nur ein Umsetzungsbeispiel, der keinen Sicherheitsmasnahmen
