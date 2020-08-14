@@ -31,6 +31,14 @@ export default function GettingStarted() {
           src="https://codesandbox.io/static/img/play-codesandbox.svg"
         />
       </a>
+      <Typography>Zuerst: wie ist die Guideline Aufgebaut</Typography>
+      <Typography>
+        Was sind die wichtigste Elemente in Dig. Nudges, worauf man ersmal
+        achten soll
+      </Typography>
+      <Typography>
+        Wo kann man anfangen?: Design Cycle oder direkt zu Nudges
+      </Typography>
     </div>
   );
 }

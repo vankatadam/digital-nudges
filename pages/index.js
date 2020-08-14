@@ -45,6 +45,8 @@ export default function Home() {
           <a href="https://codesandbox.io/s/competent-monad-0siso?file=/index.js">
             Link to Sandbox
           </a>
+          <Typography>Lerne euere Superfähigkeit blabla</Typography>
+          <Typography></Typography>
         </ThemeProvider>
       </div>{" "}
     </NavBar>

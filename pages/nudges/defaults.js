@@ -64,6 +64,9 @@ export default function GettingStarted() {
             effectiveness={50}
             efficiency={1}
           ></TitleBox>
+          {/** 1 Theoretische Erklärung */}
+          {/** auf K 3.4.1 nehmen + von */}
+
           <Typography variant="body1" color="primary">
             Die häufigste Form der Umsetzung von „Defaults“ im Web ist in Form
             einer Voreinstellung von „Radio Buttons, „Checkboxen“,
@@ -75,7 +78,7 @@ export default function GettingStarted() {
             umgesetzt werden können, werden anschließend mehrere Beispiele
             aufgeführt:
           </Typography>
-
+          {/** 2 Beispiele */}
           <Typography variant="body1" color="secondary">
             Automatisch Passwörter vorschlagen als Default
           </Typography>
@@ -104,6 +107,7 @@ export default function GettingStarted() {
               />
             </FormControl>
           </Example>
+          {/** 3 Design Empfehlungen, Literatur..  */}
           <Typography variant="body1" color="initial">
             Dies ist nur ein Umsetzungsbeispiel, der keinen Sicherheitsmasnahmen
             Entspricht. Für eigene Implementierung in öffentlichen oder internen
