@@ -272,7 +272,7 @@ export default function GettingStarted() {
             einem ähnlichen Wert landet. Somit können z.B. Spenden erhöht
             werden, in dem ein höherer Wert eingestellt wird [vgl. 6].{" "}
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/defaults2slider-5wg65?file=/index.js">
             {" "}
             <Typography variant={"h6"}>
               Wie viel möchten Sie spenden?
@@ -296,7 +296,7 @@ export default function GettingStarted() {
           <Typography gutterBottom style={{ marginTop: 12, marginBottom: 12 }}>
             Alternative mit einem Textfeld:
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/defaults3customfield-27zu0?file=/index.js">
             {" "}
             <Typography variant={"h6"}>
               Wie viel möchten Sie spenden?
@@ -334,7 +334,7 @@ export default function GettingStarted() {
             „Default“ Einstellung ein automatisch generiertes Passwort bei der
             Erstellung eines Kontos vorlag [vgl. 9].{" "}
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/great-currying-rjio2?file=/index.js">
             <Typography variant={"h6"}>
               Erstellen Sie bitte ein Passwort
             </Typography>
@@ -382,6 +382,12 @@ export default function GettingStarted() {
                 }
               />
             </FormControl>
+            <Button
+              style={{ display: "block", marginTop: "12px" }}
+              variant="contained"
+            >
+              Passwort erstellen
+            </Button>
           </Example>
           <Typography gutterBottom>
             Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
@@ -408,15 +414,61 @@ export default function GettingStarted() {
             achten.{" "}
           </Typography>
           {/** 2 Beispiele */}
-          <Typography variant="body1" color="secondary">
-            Automatisch Passwörter vorschlagen als Default
-          </Typography>
-          {/** Example Passwörter */}
-          {/** 3 Design Empfehlungen, Literatur..  */}
-          <Typography variant="body1" color="initial">
-            Dies ist nur ein Umsetzungsbeispiel, der keinen Sicherheitsmasnahmen
-            Entspricht. Für eigene Implementierung in öffentlichen oder internen
-            Applikationen folgen sie bitte Sicherheitsmaßnahmen.
+          <Typography>
+            {/** Example Passwörter */}
+            {/** 3 Design Empfehlungen, Literatur..  */}
+            References 1. Cartwright E (2011) Behavioral economics. Routledge
+            advanced texts in economics and finance, vol 16. Routledge, London,
+            New York NY 2. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies:
+            The Endowment Effect, Loss Aversion, and Status Quo Bias. Journal of
+            Economic Perspectives 5: 193–206.
+            https://doi.org/10.1257/jep.5.1.193 3. Barnet ER (1992) The Sound of
+            Silence: Default Rules and Contractual Consent. Virginia Law Review
+            78: 821–911 4. Johnson EJ, Goldstein D (2003) Medicine. Do defaults
+            save lives? Science 302: 1338–1339.
+            https://doi.org/10.1126/science.1091721 5. Thaler RH, Sunstein CR,
+            Balz JP (2013) Choice Architecture. In: Shafir E (ed) The Behavioral
+            Foundations of Public Policy. Princeton University Press, Princeton,
+            pp 428–439 6. Thaler RH, Sunstein CR (2009) Nudge: Improving
+            decisions about health, wealth, and happiness, Rev. and expanded
+            ed., with a new afterword and a new chapter. Penguin, New York, NY
+            7. Al-Ameen MN, Wright M, Scielzo S (2015) Towards Making Random
+            Passwords Memorable. In: Kim J (ed) CHI 2015 crossings: CHI 2015 ;
+            proceedings of the 33rd Annual CHI Conference on Human Factors in
+            Computing Systems ; April 18 - 23, 2015, Seoul, Republic of Korea.
+            ACM, New York, NY, pp 2315–2324 8. Egebark J, Ekström M (2016) Can
+            indifference make the world greener? Journal of Environmental
+            Economics and Management 76: 1–13.
+            https://doi.org/10.1016/j.jeem.2015.11.004 9. Kankane S, DiRusso C,
+            Buckley C (2018) Can We Nudge Users Toward Better Password
+            Management? In: Mandryk R, Hancock M (eds) Extended abstracts of the
+            2018 CHI Conference on Human Factors in Computing Systems. ACM
+            Press, Montreal, pp 1–6 10. Lehmann BA, Chapman GB, Franssen FME et
+            al. (2016) Changing the default to promote influenza vaccination
+            among health care workers. Vaccine 34: 1389–1392.
+            https://doi.org/10.1016/j.vaccine.2016.01.046 11. Wu L, Cirimele J,
+            Bassen J et al. (2013) Head-mounted and multi-surface displays
+            support emergency medical teams. In: Bruckman A (ed) Proceedings of
+            the 2013 conference on Computer supported cooperative work
+            companion. ACM, New York, NY, p 279 12. Weinmann M, Schneider C, vom
+            Brocke J (2016) Digital Nudging. Bus Inf Syst Eng 58: 433–436.
+            https://doi.org/10.1007/s12599-016-0453-1 13. Carr A (2013) How
+            Square Register’s UI Guilts You Into Leaving Tips. Fast Company 14.
+            Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging:
+            guiding online user choices through interface design. Commun ACM 61:
+            67–73. https://doi.org/10.1145/3213765 15. Material-UI (2020) Slider
+            React component. https://material-ui.com/components/slider/.
+            Accessed 07 Jan 2020 16. Material-UI (2020) Checkbox React
+            component. https://material-ui.com/components/checkboxes/. Accessed
+            07 Feb 2020 17. Material-UI (2020) Radio buttons React component.
+            https://material-ui.com/components/radio-buttons/. Accessed 07 Feb
+            2020 18. Material-UI (2020) Text Field React component.
+            https://material-ui.com/components/text-fields/. Accessed 04 Jul
+            2020 19. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways
+            to Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI
+            2019: Proceedings of the 2019 CHI Conference on Human Factors in
+            Computing Systems : May 4-9, 2019, Glasgow, Scotland, UK. The
+            Association for Computing Machinery, New York, New York, pp 1–15
           </Typography>
         </div>
       </ThemeProvider>
