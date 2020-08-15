@@ -34,6 +34,12 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import { deepPurple } from "@material-ui/core/colors";
 
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -55,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 18,
     marginBottom: 32,
     display: "block",
+  },
+  table: {
+    minWidth: 650,
   },
 }));
 
@@ -103,6 +112,28 @@ function valuetext(value) {
 }
 
 //Slider example End
+
+//Efficiency
+
+function createData(name, source, effectivity) {
+  return { name, source, effectivity };
+}
+
+const rows = [
+  createData(
+    "Organ-Spenderraten",
+    "Johnson und Goldstein 2003, S. 1338–1339",
+    "55,5%"
+  ),
+  createData("Datenschutzeinstellungen", "Bellman et al. 2001, S. 26", "48%"),
+  createData("Ersparnisse", "Madrian und Shea 2001, S. 1160", "132%"),
+  createData(
+    "Installierung von Smart Grids",
+    "Ölander und Thøgersen 2014, S. 351",
+    "33%"
+  ),
+  createData("Gesunde Ernährung", "Lee et al. 2011, S. 328–332", "157%"),
+];
 
 export default function GettingStarted() {
   // Checkbox Example
@@ -164,8 +195,8 @@ export default function GettingStarted() {
           <TitleBox
             title={"Defaults"}
             effort={1}
-            effectiveness={50}
-            efficiency={1}
+            effectiveness={85.1}
+            efficiency={3}
           ></TitleBox>
           {/** 1 Theoretische Erklärung */}
           {/** auf K 3.4.1 nehmen + von */}
@@ -467,64 +498,154 @@ export default function GettingStarted() {
             achten.{" "}
           </Typography>
           {/** 2 Beispiele */}
-          <Typography>
-            <hr />
-            <Typography variant={"h4"}>Referencen</Typography>
-            <hr />
-            {/** Example Passwörter */}
-            {/** 3 Design Empfehlungen, Literatur..  */}
+          <hr />
+          <Typography variant={"h4"}>Referencen</Typography>
+          <hr />
+          <TableContainer component={Paper}>
+            <Table className={classes.table} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Studien Art</TableCell>
+                  <TableCell align="right">Quelle</TableCell>
+                  <TableCell align="right">Effektivität</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.source}</TableCell>
+                    <TableCell align="right">{row.effectivity}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <hr />
+          <Typography variant={"h4"}>Referencen</Typography>
+          <hr />
+          {/** Example Passwörter */}
+          {/** 3 Design Empfehlungen, Literatur..  */}
+          <Typography gutterBottom>
             1. Cartwright E (2011) Behavioral economics. Routledge advanced
             texts in economics and finance, vol 16. Routledge, London, New York
-            NY 2. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies: The
-            Endowment Effect, Loss Aversion, and Status Quo Bias. Journal of
-            Economic Perspectives 5: 193–206.
-            https://doi.org/10.1257/jep.5.1.193 3. Barnet ER (1992) The Sound of
-            Silence: Default Rules and Contractual Consent. Virginia Law Review
-            78: 821–911 4. Johnson EJ, Goldstein D (2003) Medicine. Do defaults
-            save lives? Science 302: 1338–1339.
-            https://doi.org/10.1126/science.1091721 5. Thaler RH, Sunstein CR,
-            Balz JP (2013) Choice Architecture. In: Shafir E (ed) The Behavioral
-            Foundations of Public Policy. Princeton University Press, Princeton,
-            pp 428–439 6. Thaler RH, Sunstein CR (2009) Nudge: Improving
-            decisions about health, wealth, and happiness, Rev. and expanded
-            ed., with a new afterword and a new chapter. Penguin, New York, NY
+            NY
+          </Typography>
+          <Typography gutterBottom>
+            2. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies: The Endowment
+            Effect, Loss Aversion, and Status Quo Bias. Journal of Economic
+            Perspectives 5: 193–206. https://doi.org/10.1257/jep.5.1.193
+          </Typography>
+          <Typography gutterBottom>
+            3. Barnet ER (1992) The Sound of Silence: Default Rules and
+            Contractual Consent. Virginia Law Review 78: 821–911
+          </Typography>
+          <Typography gutterBottom>
+            4. Johnson EJ, Goldstein D (2003) Medicine. Do defaults save lives?
+            Science 302: 1338–1339. https://doi.org/10.1126/science.1091721
+          </Typography>
+          <Typography gutterBottom>
+            5. Thaler RH, Sunstein CR, Balz JP (2013) Choice Architecture. In:
+            Shafir E (ed) The Behavioral Foundations of Public Policy. Princeton
+            University Press, Princeton, pp 428–439
+          </Typography>
+          <Typography gutterBottom>
+            6. Thaler RH, Sunstein CR (2009) Nudge: Improving decisions about
+            health, wealth, and happiness, Rev. and expanded ed., with a new
+            afterword and a new chapter. Penguin, New York, NY
+          </Typography>
+          <Typography gutterBottom>
             7. Al-Ameen MN, Wright M, Scielzo S (2015) Towards Making Random
             Passwords Memorable. In: Kim J (ed) CHI 2015 crossings: CHI 2015 ;
             proceedings of the 33rd Annual CHI Conference on Human Factors in
             Computing Systems ; April 18 - 23, 2015, Seoul, Republic of Korea.
-            ACM, New York, NY, pp 2315–2324 8. Egebark J, Ekström M (2016) Can
-            indifference make the world greener? Journal of Environmental
-            Economics and Management 76: 1–13.
-            https://doi.org/10.1016/j.jeem.2015.11.004 9. Kankane S, DiRusso C,
-            Buckley C (2018) Can We Nudge Users Toward Better Password
-            Management? In: Mandryk R, Hancock M (eds) Extended abstracts of the
-            2018 CHI Conference on Human Factors in Computing Systems. ACM
-            Press, Montreal, pp 1–6 10. Lehmann BA, Chapman GB, Franssen FME et
-            al. (2016) Changing the default to promote influenza vaccination
-            among health care workers. Vaccine 34: 1389–1392.
-            https://doi.org/10.1016/j.vaccine.2016.01.046 11. Wu L, Cirimele J,
-            Bassen J et al. (2013) Head-mounted and multi-surface displays
-            support emergency medical teams. In: Bruckman A (ed) Proceedings of
-            the 2013 conference on Computer supported cooperative work
-            companion. ACM, New York, NY, p 279 12. Weinmann M, Schneider C, vom
-            Brocke J (2016) Digital Nudging. Bus Inf Syst Eng 58: 433–436.
-            https://doi.org/10.1007/s12599-016-0453-1 13. Carr A (2013) How
-            Square Register’s UI Guilts You Into Leaving Tips. Fast Company 14.
-            Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging:
+            ACM, New York, NY, pp 2315–2324
+          </Typography>
+          <Typography gutterBottom>
+            8. Egebark J, Ekström M (2016) Can indifference make the world
+            greener? Journal of Environmental Economics and Management 76: 1–13.
+            https://doi.org/10.1016/j.jeem.2015.11.004
+          </Typography>
+          <Typography gutterBottom>
+            9. Kankane S, DiRusso C, Buckley C (2018) Can We Nudge Users Toward
+            Better Password Management? In: Mandryk R, Hancock M (eds) Extended
+            abstracts of the 2018 CHI Conference on Human Factors in Computing
+            Systems. ACM Press, Montreal, pp 1–6
+          </Typography>
+          <Typography gutterBottom>
+            10. Lehmann BA, Chapman GB, Franssen FME et al. (2016) Changing the
+            default to promote influenza vaccination among health care workers.
+            Vaccine 34: 1389–1392. https://doi.org/10.1016/j.vaccine.2016.01.046
+          </Typography>
+          <Typography gutterBottom>
+            11. Wu L, Cirimele J, Bassen J et al. (2013) Head-mounted and
+            multi-surface displays support emergency medical teams. In: Bruckman
+            A (ed) Proceedings of the 2013 conference on Computer supported
+            cooperative work companion. ACM, New York, NY, p 279
+          </Typography>
+          <Typography gutterBottom>
+            12. Weinmann M, Schneider C, vom Brocke J (2016) Digital Nudging.
+            Bus Inf Syst Eng 58: 433–436.
+            https://doi.org/10.1007/s12599-016-0453-1
+          </Typography>
+          <Typography gutterBottom>
+            13. Carr A (2013) How Square Register’s UI Guilts You Into Leaving
+            Tips. Fast Company
+          </Typography>
+          <Typography gutterBottom>
+            14. Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging:
             guiding online user choices through interface design. Commun ACM 61:
-            67–73. https://doi.org/10.1145/3213765 15. Material-UI (2020) Slider
-            React component. https://material-ui.com/components/slider/.
-            Accessed 07 Jan 2020 16. Material-UI (2020) Checkbox React
-            component. https://material-ui.com/components/checkboxes/. Accessed
-            07 Feb 2020 17. Material-UI (2020) Radio buttons React component.
+            67–73. https://doi.org/10.1145/3213765
+          </Typography>
+          <Typography gutterBottom>
+            15. Material-UI (2020) Checkbox React component.
+            https://material-ui.com/components/checkboxes/. Accessed 07 Feb 2020
+          </Typography>
+          <Typography gutterBottom>
+            16. Material-UI (2020) Radio buttons React component.
             https://material-ui.com/components/radio-buttons/. Accessed 07 Feb
-            2020 18. Material-UI (2020) Text Field React component.
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            17. Material-UI (2020) Slider React component.
+            https://material-ui.com/components/slider/. Accessed 07 Jan 2020
+          </Typography>
+          <Typography gutterBottom>
+            18. Material-UI (2020) Text Field React component.
             https://material-ui.com/components/text-fields/. Accessed 04 Jul
-            2020 19. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways
-            to Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI
-            2019: Proceedings of the 2019 CHI Conference on Human Factors in
-            Computing Systems : May 4-9, 2019, Glasgow, Scotland, UK. The
-            Association for Computing Machinery, New York, New York, pp 1–15
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            19. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
+          </Typography>
+          <Typography gutterBottom>
+            20. Bellman S, Johnson EJ, Lohse GL (2001) On site: to opt-in or
+            opt-out?: it depends on the question. Commun ACM 44: 25–27.
+            https://doi.org/10.1145/359205.359241
+          </Typography>
+          <Typography gutterBottom>
+            21. Madrian BC, Shea DF (2001) The Power of Suggestion: Inertia in
+            401(k) Participation and Savings Behavior. The Quarterly Journal of
+            Economics 116: 1149–1187. https://doi.org/10.1162/003355301753265543
+          </Typography>
+          <Typography gutterBottom>
+            22. Ölander F, Thøgersen J (2014) Informing Versus Nudging in
+            Environmental Policy. J Consum Policy 37: 341–356.
+            https://doi.org/10.1007/s10603-014-9256-2
+          </Typography>
+          <Typography gutterBottom>
+            23. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
+            to design persuasive technology for healthy choices. In: Tan D,
+            Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
+            extended abstracts / the 29th Annual CHI Conference on Human Factors
+            in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
+            ACM, New York, NY, pp 325–334
           </Typography>
         </div>
       </ThemeProvider>

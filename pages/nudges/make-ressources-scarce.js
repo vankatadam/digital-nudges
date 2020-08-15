@@ -69,14 +69,14 @@ export default function GettingStarted() {
       <ThemeProvider theme={theme}>
         <div>
           <Head>
-            <title>Positioning</title>
+            <title>Make Ressources Scarce</title>
             <meta
               name="viewport"
               content="minimum-scale=1, initial-scale=1, width=device-width"
             />
           </Head>
           <TitleBox
-            title={"Positioning"}
+            title={"Make Ressources Scarce"}
             effort={1}
             effectiveness={53}
             efficiency={1}

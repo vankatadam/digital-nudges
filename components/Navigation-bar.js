@@ -176,59 +176,45 @@ export default function NavigationBar(props) {
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/positioning"
           className={classes.nested}
         >
-          Defaults
+          Positioning
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/adding-inferior-alternatives"
           className={classes.nested}
         >
-          Defaults
+          Adding Inferior Alternatives
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/visualisation"
           className={classes.nested}
         >
-          Defaults
+          Visualisation
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/make-ressources-scarce"
           className={classes.nested}
         >
-          Defaults
+          Make Ressources Scarce
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/404"
           className={classes.nested}
         >
-          Defaults
+          Comming soon
         </ListItem>
         <ListItem
           component={ButtonLink}
-          href="/nudges/defaults"
+          href="/nudges/404"
           className={classes.nested}
         >
-          Defaults
-        </ListItem>
-        <ListItem
-          component={ButtonLink}
-          href="/nudges/defaults"
-          className={classes.nested}
-        >
-          Defaults
-        </ListItem>
-        <ListItem
-          component={ButtonLink}
-          href="/nudges/defaults"
-          className={classes.nested}
-        >
-          Defaults
+          Comming soon
         </ListItem>
 
         <ListItem
