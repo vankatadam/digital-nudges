@@ -32,6 +32,7 @@ import Slider from "@material-ui/core/Slider";
 import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
+import { deepPurple } from "@material-ui/core/colors";
 
 //Quellen:
 //Passwort:
@@ -132,7 +133,9 @@ export default function GettingStarted() {
     event.preventDefault();
   };
 
-  const [valueRadio, setValueRadio] = React.useState("female");
+  //Radio Buttons
+
+  const [valueRadio, setValueRadio] = React.useState("premium");
 
   const handleChangeRadio = (event) => {
     setValueRadio(event.target.value);
@@ -296,7 +299,7 @@ export default function GettingStarted() {
             <Typography variant={"h6"}>
               Wie viel möchten Sie spenden?
               <MoodIcon
-                style={{ marginLeft: "6px", color: "green" }}
+                style={{ marginLeft: "6px", color: deepPurple[400] }}
               ></MoodIcon>
             </Typography>
             <Slider
@@ -320,7 +323,7 @@ export default function GettingStarted() {
             <Typography variant={"h6"}>
               Wie viel möchten Sie spenden?
               <MoodIcon
-                style={{ marginLeft: "6px", color: "green" }}
+                style={{ marginLeft: "6px", color: deepPurple[400] }}
               ></MoodIcon>
               <FormControl className={classes.inputsMargin}>
                 <InputLabel htmlFor="standard-adornment-amount">
@@ -417,35 +420,40 @@ export default function GettingStarted() {
             „Radio Buttons“, werden vorausgewählt und somit wird die Chance
             erhöht, dass der Nutzer diese auch tatsächlich wählt [vgl. 14].{" "}
           </Typography>{" "}
-          <Example link="https://codesandbox.io/s/great-currying-rjio2?file=/index.js">
+          <Example link="https://codesandbox.io/s/defaults4checkbox-rtwrk?file=/index.js">
             <Typography variant={"h6"}>
-              Wählen sie eine der folgenden Optionen aus:
+              Wählen Sie das Abo, das Ihren Bedürfnissen am besten entspricht:
             </Typography>
             <FormControl component="fieldset">
-              <FormLabel component="legend">Gender</FormLabel>
               <RadioGroup
-                aria-label="gender"
-                name="gender1"
+                aria-label="Abonnement"
+                name="Abonnements"
                 value={valueRadio}
                 onChange={handleChangeRadio}
               >
                 <FormControlLabel
-                  value="female"
+                  value="basis"
                   control={<Radio />}
-                  label="Female"
+                  label="Basis"
                 />
                 <FormControlLabel
-                  value="male"
+                  value="premium"
                   control={<Radio />}
-                  label="Male"
+                  label={<BoldTypo color="secondary">Premium</BoldTypo>}
                 />
                 <FormControlLabel
-                  value="other"
+                  value="standard"
                   control={<Radio />}
-                  label="Other"
+                  label="Standard"
                 />
               </RadioGroup>
             </FormControl>
+            <Button
+              style={{ display: "block", marginTop: "12px" }}
+              variant="contained"
+            >
+              Abo Wählen
+            </Button>
           </Example>
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
