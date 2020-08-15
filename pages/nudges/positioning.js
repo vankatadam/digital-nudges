@@ -29,9 +29,6 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Button from "@material-ui/core/Button";
 import MoodIcon from "@material-ui/icons/Mood";
 import Slider from "@material-ui/core/Slider";
-import FormLabel from "@material-ui/core/FormLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
 
 //Quellen:
 //Passwort:
@@ -131,22 +128,6 @@ export default function GettingStarted() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-
-  const [valueRadio, setValueRadio] = React.useState("female");
-
-  const handleChangeRadio = (event) => {
-    setValueRadio(event.target.value);
-  };
-
-  //For Text Input
-  const [valuesInput, setValuesInput] = React.useState({
-    amount: "75",
-  });
-
-  const handleChangeInput = (prop) => (event) => {
-    setValuesInput({ ...valuesInput, [prop]: event.target.value });
-  };
-
   return (
     <NavBar>
       <ThemeProvider theme={theme}>
@@ -328,8 +309,7 @@ export default function GettingStarted() {
                 </InputLabel>
                 <Input
                   id="standard-adornment-amount"
-                  value={valuesInput.amount}
-                  onChange={handleChangeInput("amount")}
+                  value={"75"}
                   startAdornment={
                     <InputAdornment position="start">€</InputAdornment>
                   }
@@ -409,7 +389,6 @@ export default function GettingStarted() {
               Passwort erstellen
             </Button>
           </Example>
-          https://material-ui.com/components/text-fields/;
           <Typography gutterBottom>
             Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
             Antwortmöglichkeiten. Es funktioniert ähnlich wie das erste
@@ -426,8 +405,8 @@ export default function GettingStarted() {
               <RadioGroup
                 aria-label="gender"
                 name="gender1"
-                value={valueRadio}
-                onChange={handleChangeRadio}
+                value={value}
+                onChange={handleChange}
               >
                 <FormControlLabel
                   value="female"
@@ -447,6 +426,12 @@ export default function GettingStarted() {
               </RadioGroup>
             </FormControl>
           </Example>
+          <Typography gutterBottom>
+            Alle erwähnten Beispiele von Defaults werden mit dem
+            Standart-UI-Framework dieser Guideline, Material UI, umgesetzt
+            werden, da es alle benötigte Elemente und deren Voreinstellung
+            unterstützt [vgl. 15–18].{" "}
+          </Typography>{" "}
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
@@ -460,15 +445,12 @@ export default function GettingStarted() {
           </Typography>
           {/** 2 Beispiele */}
           <Typography>
-            <hr />
-            <Typography variant={"h4"}>Referencen</Typography>
-            <hr />
             {/** Example Passwörter */}
             {/** 3 Design Empfehlungen, Literatur..  */}
-            1. Cartwright E (2011) Behavioral economics. Routledge advanced
-            texts in economics and finance, vol 16. Routledge, London, New York
-            NY 2. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies: The
-            Endowment Effect, Loss Aversion, and Status Quo Bias. Journal of
+            References 1. Cartwright E (2011) Behavioral economics. Routledge
+            advanced texts in economics and finance, vol 16. Routledge, London,
+            New York NY 2. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies:
+            The Endowment Effect, Loss Aversion, and Status Quo Bias. Journal of
             Economic Perspectives 5: 193–206.
             https://doi.org/10.1257/jep.5.1.193 3. Barnet ER (1992) The Sound of
             Silence: Default Rules and Contractual Consent. Virginia Law Review
