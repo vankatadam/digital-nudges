@@ -30,6 +30,13 @@ import Button from "@material-ui/core/Button";
 import MoodIcon from "@material-ui/icons/Mood";
 import Slider from "@material-ui/core/Slider";
 
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -61,6 +68,29 @@ const BoldTypo = withStyles({
   },
 })((props) => <Typography {...props} />);
 
+//Efficiency
+
+function createData(name, source, effectivity) {
+  return { name, source, effectivity };
+}
+
+const rows = [
+  createData("Delboeuf’s Illusion", "Hollinworth et al. 2013, S. 1333", "10%"),
+  createData(
+    "Auswahl eines sicheren WiFis",
+    "Turland et al. 2015, S. 199",
+    "53,3%"
+  ),
+  createData(
+    "Hoher und geringer Kontrast",
+    "Adams et al. 2015, 724-723",
+    "46%"
+  ),
+  createData("Leistung der Spieler", "Colusso et al. 2016, S. 3022", "80%"),
+
+  createData("", "Durchschnittliche Effizienz: ", "47,33%"),
+];
+
 export default function GettingStarted() {
   const classes = useStyles();
 
@@ -81,15 +111,160 @@ export default function GettingStarted() {
             effectiveness={53}
             efficiency={1}
           ></TitleBox>
+          <Typography gutterBottom>
+            Der ursprüngliche Nudge von 1 wurde als „Deceptive Visualisation“
+            bezeichnet, da der Fokus hauptsächlich auf visuelle Täuschungen
+            gelegt wurde [vgl. 1]. In dieser Guideline wird dieser Nudge um
+            visuelle Darstellungen erweitert, die nicht nur als eine visuelle
+            Täuschung dargestellt sind und daher wurde der Name zu
+            „Visualisation“ abgekürzt. Der „Visualisation“ Nudge basiert auf
+            Salienz [vgl. 1]. Salienz bedeutet, dass sich Menschen mit einer
+            höheren Wahrscheinlichkeit auf die Elemente konzentrieren, die
+            hervorgehoben sind, und die ignorieren, die es nicht sind [vgl. 2].
+            Dieser Nudge nutzt diese Tatsache aus, um die Wahrnehmung der Nutzer
+            zu verändern und um den Fokus auf gewünschte Elemente zu setzen
+            [vgl. 1]. „Visualisation“ Nudge besitz viele Ähnlichkeiten mit einem
+            ursprünglichen grundlegenden Nudge von Thaler et al. mit dem Namen
+            Incentives (siehe Kapitel 2.1.5.6.).{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Dieser Nudge kann, wie bereits erwähnt, als eine visuelle Täuschung
+            umgesetzt werden [vgl. 1]. Dies wäre beispielweise eine gezielte
+            Beleuchtung der Mitte von einem Teller, um damit die Portion größer
+            aussehend zu lassen und somit das Gefühl geben, dass mehr gegessen
+            wurde, als es in der Realität ist [vgl. 3].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            In den Digitalen Umgebungen, können dies visuelle Verdeutlichungen
+            von bestimmten Elementen sein, die eine bestimmte Tatsache
+            hervorheben [vgl. 1, vgl. 3, 4]. Dies können beispielweise visuelle
+            Verdeutlichungen von „Buttons“ für ältere Nutzer sein, damit das
+            Ziel schneller auffällt und größer aussieht und somit die „point and
+            click“ Aufgaben schneller und effizienter erledigt werden können
+            [vgl. 4]. Im Bereich Healtcare können dies „Healthy Labels“ sein,
+            die visuell zeigen, wie bestimmte Ware gesund sind und somit wird
+            erzielt, dass gesündere Ware gekauft werden [vgl. 5]. Im
+            Energiesektor sind dies Energieetiketten, die mit
+            Farbenverdeutlichen, wie energieeffizient bestimmte Geräte sind
+            [vgl. 6]. Im Bereich der IT-Sicherheit, wie bereits im Kapitel 3.4.2
+            erwähnt, kann dies eine farbige Darstellung von sicheren und
+            unsicheren Netzwerken sein.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Die meiste Nudges versuchen in einen oder anderen Weise die
+            Wahrnehmung der Nutzer zu verändern, wie Beispielsweise
+            „Positioning“ Nudge (siehe Kapitel 3.4.2) mit einer Veränderung der
+            Anordnung von Elementen, oder „Adding Inferior Alternatives“ Nudge
+            mit einem Hinzufügen von „decoy“ Alternativen (siehe Kapitel 3.4.3).
+            „Visualisation“ Nudge unterscheidet sich im Gegensatz zu anderen
+            Nudges, indem der Fokus auf die reine visuelle Darstellung gesetzt
+            wird. Dies wäre Beispielsweise, wie in oberen Absätzen erklärt, eine
+            alternative Darstellung von bereits bestehenden Informationen, wie
+            Energieetiketten, die neben einander in verschiedenen Farbtönen
+            angezeigt werden, oder eine Darstellung von „Buttons“ rund um die
+            ein Kreis gezeichnet wird, damit sie besser zu sehen sind, oder eine
+            Darstellung von sicheren Netzwerken in grünen Farben und von
+            unsicheren Netzwerken in roten.{" "}
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
+          <Typography gutterBottom>
+            Wie erwähnt, erfolgt die Umsetzung von „Visualisation“ Nudge dank
+            der Tatsache, dass Menschen einen Fokus auf hervorgehobene Elemente
+            setzen [vgl. 2]. In webbasierten Umgebungen können verschiedene
+            Elemente hervorgehoben werden, oder visuell statt nur textuell
+            leicht dargestellt werden. Daher werden folgende passende Beispiele
+            umgesetzt:{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das erste Beispiel bezieht sich auf „Healthy Labels“ [vgl. 5, vgl.
+            9]. Das Ziel von „Healthy Labels“ ist eine erhöhte Konzentration der
+            Nutzer auf wichtige Informationen bei Lebensmitteletiketten und eine
+            Hervorhebung, welche enthaltene Nährwerte zu einer gesunden
+            Ernährung führen könnten [vgl. 5]. Ein anderes Ziel ist eine
+            Erleichterung bei dem Ignorieren von Marketing-Aspekten, das in
+            vielen Fällen die wichtige Informationen über einer ungesunden
+            Ernährung versteckt [vgl. 5]. Solche Umsetzung eignet sich nicht nur
+            für Etiketten in einem Lebensmittelgeschäft, aber auch für
+            Online-Shops, die Lebensmittel verkaufen, da eine Verdeutlichung
+            durch verschiedene Ikonen oder Hervorhebungen von verschiedenen
+            Elementen leicht umsetzbar sind. In diesem Beispiel wird die
+            Variante mit drei farbigen Ikonen umgesetzt, um zu verdeutlichen,
+            welche Ernährung gesund ist.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das zweite Beispiel bezieht sich auf das Gebiet der IT-Sicherheit
+            mit der Studie von 7. Ziel von dieser Studie war eine Erhöhung der
+            Auswahlrate von sicheren Netzwerken. Dies wurde anhand von
+            verschiedenen Nudges versucht, unter deren „Visualisation“ Nudge zu
+            finden war [vgl. 7]. „Visualisation“ Nudge hat eine hohe
+            Erfolgsrate, im Vergleich zu anderen Nudges, von 53,3%, daher wurde
+            dieses Beispiel zusätzlich zu dem Beispiel „Healthy Labels“ gewählt,
+            auch wenn die Umsetzung sehr ähnlich ist. Die sicherste Wi-Fis
+            werden als grüne Ikonen angezeigt, die mittle sichere als
+            Orangene/Gelbe und die unsichere als rote Ikonen. Da dieser Nudge am
+            besten im Zusammenspiel mit „Positioning“ Nudge funktioniert, werden
+            diese zusammen angewendet. Daher werden die sicherste Wi-Fis oben
+            positioniert und die unsicheren unten, da eine Anordnung gewählt
+            werden muss.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das dritte Beispiel bezieht sich auf Energieetiketten.
+            Energieetiketten verdeutlichen die Informationen über
+            Energieeffizienz und somit wird der Nutzer zu einem
+            umweltfreundlicheren Verhalten aufgefordert [vgl. 6, vgl. 10].
+            Dieses Beispiel wird mit Bildern umgesetzt, die von der Europäische
+            Union online zur Verfügung stehen [11].{" "}
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
           <Typography gutterBottom></Typography>
+          <hr />
+          <Typography variant={"h4"}>Effektivität</Typography>
+          <hr />
+          <TableContainer component={Paper}>
+            <Table className={classes.table} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Studien Art</TableCell>
+                  <TableCell align="right">Quelle</TableCell>
+                  <TableCell align="right">Effektivität</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.source}</TableCell>
+                    <TableCell align="right">{row.effectivity}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <Typography gutterBottom>
+            Die Effektivität der Studie von [3] wurde im Vergleich zu einem
+            Standartzustand berechnet. Da eine Auswahl zwischen der gleichen
+            Mahlzeit, aber mit unterschiedlichen Licht-Kontrasten stattgefunden
+            hat, wäre die Prozentuelle Auswahl von zwei gleichen Mahlzeiten,
+            ohne jeder Anwendung von Nudges, genau 50%. Daher wurde die
+            Abweichung von diesem Wert berechnet. Dies war eine Abweichung
+            zwischen den Werten 50% und 73%, falls eine Erhöhung erwünscht war
+            und den Werten 50% und 27% falls eine Verringerung erwünscht war. In
+            beiden Fällen ist die Abweichung 23% und daher war die Berechnete
+            Effizienz 50/23 = 0,46 {"=>"} 46%.
+          </Typography>
+          <Typography gutterBottom>
+            Dieser Nudge, auch wenn nah an der Grenze zu einer hohen
+            Effizienzklasse, wird mit der durchschnittlichen Effektivität von
+            47,33% in die Effizienzklasse mittel angeordnet.{" "}
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>

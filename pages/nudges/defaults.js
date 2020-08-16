@@ -133,6 +133,7 @@ const rows = [
     "33%"
   ),
   createData("Gesunde Ernährung", "Lee et al. 2011, S. 328–332", "157%"),
+  createData("", "Durchschnittliche Effizienz: ", "85,1%"),
 ];
 
 export default function GettingStarted() {
@@ -499,7 +500,7 @@ export default function GettingStarted() {
           </Typography>
           {/** 2 Beispiele */}
           <hr />
-          <Typography variant={"h4"}>Referencen</Typography>
+          <Typography variant={"h4"}>Effektivität</Typography>
           <hr />
           <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
@@ -523,6 +524,25 @@ export default function GettingStarted() {
               </TableBody>
             </Table>
           </TableContainer>
+          <Typography variant="body1" color="initial">
+            Die Effektivität stellt bei „Defaults“-Studien die prozentuelle
+            Erhöhung der Auswahlra-te von der gewünschten/gezielten Alternative
+            im Vergleich zu der Auswahlrate ohne der Anwendung von diesem Nudge,
+            dar. Beispielsweise war die Auswahlrate ohne Nudges bei der Studie
+            von Ölander und Thøgersen 2014 60%, und die Auswahlrate mit Nudges,
+            in diesem Fall ein Opt-out, war sie 80%. Somit war die Effektivität
+            33,3%, da die Auswahlrate um 33,3% erhöht wurde. Die Effektivität
+            der Studie von Johnson und Goldstein 2003 wurde als ein Durchschnitt
+            deren beiden Untersuchungen, einem Online-Experiment und einer
+            Analyse der realen Organ-Spenderraten zwischen 1991 und 2001 Daten,
+            berechnet. Die Studien zeigen, dass „Default“ Nudge in vielen
+            unterschiedlichen Kontexten mit vielen unterschiedlichen Ergebnissen
+            angewendet werden kann. Trotzt den unter-schiedlichen Ergebnissen
+            zeigt die durchschnittliche Effektivität, dass Default Nudges eine
+            hohe Erfolgsrate aufweisen können und daher werden sie mit der
+            durchschnittli-chen Effektivität von 85,1% in die Effizienzklasse
+            hoch angeordnet.
+          </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />

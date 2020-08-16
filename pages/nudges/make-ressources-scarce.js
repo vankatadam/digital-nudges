@@ -30,6 +30,13 @@ import Button from "@material-ui/core/Button";
 import MoodIcon from "@material-ui/icons/Mood";
 import Slider from "@material-ui/core/Slider";
 
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -61,6 +68,22 @@ const BoldTypo = withStyles({
   },
 })((props) => <Typography {...props} />);
 
+//Efficiency
+
+function createData(name, source, effectivity) {
+  return { name, source, effectivity };
+}
+
+const rows = [
+  createData(
+    "Auswahl von verschiedenen Gütern",
+    "Mittone und Savadori 2009, S. 460",
+    "50,2%"
+  ),
+  createData("Online Retail", "Park et al. 2019, S. 28–29", "14,8%"),
+  createData("", "Durchschnittliche Effizienz: ", "32,5%"),
+];
+
 export default function GettingStarted() {
   const classes = useStyles();
 
@@ -81,15 +104,161 @@ export default function GettingStarted() {
             effectiveness={53}
             efficiency={1}
           ></TitleBox>
+          <Typography gutterBottom>
+            „Make Resources Scarce” Nudge basiert auf dem “Scarcity Bias” [vgl.
+            1]. “Scarcity Bias” beschreibt die Neigung zu einer Überbewertung
+            von Elementen, über die gedacht wird, dass die in der Zukunft nur in
+            einer geringen Menge oder gar nicht verfügbar sein werden [vgl. 2].
+            Diese Überbewertung findet auch bei Sachen statt, die nicht
+            unbedingt von den Menschen gebraucht werden und vor der Realisierung
+            der geringen Verfügbarkeit, waren diese Elemente auch oft nicht
+            gewollt [vgl. 1].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Die Umsetzung dieses Nudges wird durch eine Reduzierung der
+            wahrgenommenen Verfügbarkeit eines Artikels umgesetzt [1].
+            Beispielweise wurde dies in einer Smartwatch App benutzt, in der die
+            physische Aktivität nur von der letzten Stunde angezeigt wurde und
+            somit waren das Feedback und die Zeit die knappe Ressource [vgl. 3].
+            Dies führte die Nutzer dazu, dass eine physische Aktivität mehrmals
+            am Tag durchgeführt wurde [vgl. 3]. In webbasierten Umgebungen
+            befindet sich dieser Nudge in jedem größeren E-Shop wie Amazon oder
+            Ebay [vgl. 4, 5]. Dieser Nudge wird in Form einer Anzeige einen
+            geringeren Verfügbarkeit von Produkten, die absichtlich zur
+            Verstärkung des Effektes aus dem Kontext hervorgehoben werden und
+            mit Worten, die das Gefühl einen geringen Verfügbarkeit noch
+            verstärken, wie „nur noch x Produkte verfügbar“ kennengezeichnet
+            [vgl. 4, 5].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Dieser Nudge, in Bezug auf eine geringe Mengen Verfügbarkeit,
+            funktioniert am besten bei Elementen oder Produkten, die
+            zeitkritisch sind oder die ablaufen können [vgl. 6, 7]. Dies können
+            beispielsweise Hotelzimmer, Flugzeugtickets, oder einmalige
+            Sammelobjekte sein [vgl. 6, 7]. Zusätzlich wurde bei der Studie von
+            6 im Bereich „Online Retail“ ein positiver Effekt dieses Nudges nur
+            bei den unteren 51% meistverkauften Artikeln gemessen. Dies weißt
+            darauf hin, dass dieser Nudge neben zeitkritischen Produkten, ein
+            Effekt auf nicht oft verkaufte Artikel hat [6].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Im Gegensatz dazu funktioniert dieser Nudge nicht, bis hin zu
+            negativen Effekten (bis zu 17,6% Verringerung der Verkaufsquote),
+            bei beständigen, haltbaren Sachen wie Küchengeräten da der Eindruck
+            entsteht, dass diese Ware geringerwertig sind und der Verkäufer
+            diese als ungewünschte Restware schnell verkaufen muss [vgl. 6, 7].
+            Zusätzlich, wie im Oberen Abschnitt erwähnt, weißt die Studie von 6
+            darauf hin, dass dieser Nudge bei oft verkauften Artikeln, zumindest
+            im Bereich „Online Retail“, nicht funktioniert.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Die Umsetzung dieses Nudges auf Webseiten erfolgt mit Hilfe von
+            Text, Datenbankabfragen in Bezug auf verfügbare Artikel, oder einer
+            graphischen Darstellung in Form von Bildern. Diese Funktionen können
+            mit Hilfe vom reinen JavaScript und dem Reactjs Frameworks erfolgen.{" "}
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
+          <Typography gutterBottom>
+            In webbasierten Umgebungen befindet sich dieser Nudge in den
+            gängigsten E-Shops, sowie in den meisten Flugtickets Vermittlern
+            Webseiten aus dessen das aufgeführte Beispiel in das Guideline
+            entnommen wird [vgl. 4, 5, vgl. 8].{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das erste Beispiel ist von einem limitierten Angebot bei Amazon. In
+            diesem Beispiel sind mehrere Nudges, wie es für Amazon üblich ist
+            [vgl. 9], vorhanden und zur Verdeutlichung bereits erwähnten Nudges
+            von vorherigen Kapitel, werden auch diese kurz erwähnt. Zuerst wird
+            eine Empfehlung von Amazon angezeigt, die zu einer Hervorhebung
+            dient (vgl. 9), ein großer Rabatt, sowie eine Darstellung, wie viel
+            man insgesamt gespart hat. Daneben wird visuell dargestellt, welche
+            Energieeffizienzklasse dieser Fernseher hat, sowie Positionierung
+            von den wichtigsten Informationen auf gut sichtbaren Stellen, die
+            zusätzlich mit einer Schriftgröße, Schriftstärke und Schriftfarbe
+            hervorgehoben werden. Das wichtige Element für „Make Resources
+            Scarce“ Nudge besteht in dem limitierten Angebot. Dies ist zuerst
+            auf der Homepage hervorgehoben, da Limitierte Angebote angezeigt
+            werden, sowie auf der tatsächlichen Produktpage, auf der die Zeit
+            angegeben wird, in der das Angebot abläuft und die Preise zu deren
+            normalen Preisen umgestellt werden. Die Zeitliche Beschränkung wird
+            das erste Beispiel in der Guideline sein. Es wird also ein Produkt
+            dargestellt, das eine Zeitliche Beschränkung hat.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das zweite Beispiel ist ein Produktangebot bei E-Bay. Hierbei
+            werden, wie bei Amazon, auch viele ähnliche Nudges angewendet. Der
+            Unterschied zu dem Angebot von Amazon ist in einer anderen Art von
+            „Make Resources Scarce“ Nudge. Es besteht keine Zeitbeschränkung,
+            aber ein Hinweis darauf, dass nur eine begrenzte Anzahl an Waren
+            verfügbar ist, sowie Angaben zu verkauften Artikeln, die auch darauf
+            hinweisen, dass dieses Produkt oft verkauft wird und somit schnell
+            ausverkauft werden kann.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Das dritte Beispiel ist eine Kombination aus den beiden vorherigen
+            Beispielen. Dieses Beispiel orientiert sich am Flugticketverkauf bei
+            Lufthansa. In diesem Fall ist das limitierte Angebot durch ein
+            Flugdatum begrenzt, sowie einem Limit bei Flugplätzen. Zusätzlich
+            wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
+            verkauft.{" "}
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
+          <Typography gutterBottom>
+            Abschließend werden mehrere Design-Berücksichtigungen und
+            Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [1]:
+            Wie kann das System die wünschenswerte Alternative als knappe
+            Ressource darstellen und das Gefühl hervorrufen, dass etwas verpasst
+            wird, wenn die Alternative nicht verfolgt wird? Ist die Verwendung
+            von Text, Bildern oder Visualisierungen angemessener? Der Verwendung
+            der Sprache, die impliziert, dass das Publikum das Ergebnis bereits
+            erreicht oder die Alternative ausgewählt hat, kann ein Gefühl der
+            Eigenverantwortung auslösen und wiederum die Motivation der Benutzer
+            erhöhen, einen Verlust zu vermeiden.{" "}
+          </Typography>
           <Typography gutterBottom></Typography>
+          <hr />
+          <Typography variant={"h4"}>Effektivität</Typography>
+          <hr />
+          <TableContainer component={Paper}>
+            <Table className={classes.table} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Studien Art</TableCell>
+                  <TableCell align="right">Quelle</TableCell>
+                  <TableCell align="right">Effektivität</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="right">{row.source}</TableCell>
+                    <TableCell align="right">{row.effectivity}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <Typography variant="body1" color="initial">
+            Gleich wie bei „Positioning“ Nudge muss berücksichtigt werden, dass
+            die Effektivität, durch die begrenzte Anzahl an Studien mit
+            unterschiedlichen Ergebnissen, stark abweichen kann. Zusätzlich
+            müssen bei diesem Nudge, wie in oberen Abschnitten erklärt,
+            Anwendungseinschränkungen berücksichtigt werden, da dieser Nudge bei
+            einem anwenden in falschen Situationen bis zu einen negativen
+            Effizienz führen kann [6]. Die Studien, trotz den
+            Anwendungseinschränkungen, zeigen dass „Make ressources scarce“ mit
+            der durchschnittlichen Effektivität von 32,5% in die Effizienzklasse
+            mittel angeordnet werden kann.
+          </Typography>
 
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
