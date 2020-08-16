@@ -18,9 +18,16 @@ const useStyles = makeStyles({
 export default function Examples(props) {
   const classes = useStyles();
 
+  const cardStyle = {
+    maxWidth: 900,
+  };
+
   return (
     <div className={classes.container}>
-      <Card className={classes.root}>
+      <Card
+        className={classes.root}
+        style={props.maxWidth == 900 ? cardStyle : {}}
+      >
         <CardContent>{props.children}</CardContent>
         <CardActions>
           <Button size="small" href={props.link}>

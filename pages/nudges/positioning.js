@@ -192,14 +192,6 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          <Checkbox
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{ "aria-label": "select all desserts" }}
-          />
-        </TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -318,7 +310,7 @@ export default function GettingStarted() {
   const [orderBy, setOrderBy] = React.useState("calories");
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
+
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleRequestSort = (event, property) => {
@@ -364,12 +356,6 @@ export default function GettingStarted() {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
-  const handleChangeDense = (event) => {
-    setDense(event.target.checked);
-  };
-
-  const isSelected = (name) => selected.indexOf(name) !== -1;
 
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
@@ -460,7 +446,7 @@ export default function GettingStarted() {
             können auch zuerst bevorzugte oder empfohlene Produkte, wie bei
             Amazon [vgl. 6], angezeigt werden.{" "}
           </Typography>
-          <Example>
+          <Example maxWidth="900">
             {" "}
             <div className={classes.root}>
               <Paper className={classes.paper}>
@@ -469,7 +455,7 @@ export default function GettingStarted() {
                   <Table
                     className={classes.table}
                     aria-labelledby="tableTitle"
-                    size={dense ? "small" : "medium"}
+                    size={"medium"}
                     aria-label="enhanced table"
                   >
                     <EnhancedTableHead
@@ -488,28 +474,15 @@ export default function GettingStarted() {
                           page * rowsPerPage + rowsPerPage
                         )
                         .map((row, index) => {
-                          const isItemSelected = isSelected(row.name);
-                          const labelId = `enhanced-table-checkbox-${index}`;
-
                           return (
                             <TableRow
                               hover
-                              onClick={(event) => handleClick(event, row.name)}
                               role="checkbox"
-                              aria-checked={isItemSelected}
                               tabIndex={-1}
                               key={row.name}
-                              selected={isItemSelected}
                             >
-                              <TableCell padding="checkbox">
-                                <Checkbox
-                                  checked={isItemSelected}
-                                  inputProps={{ "aria-labelledby": labelId }}
-                                />
-                              </TableCell>
                               <TableCell
                                 component="th"
-                                id={labelId}
                                 scope="row"
                                 padding="none"
                               >
@@ -525,9 +498,7 @@ export default function GettingStarted() {
                           );
                         })}
                       {emptyRows > 0 && (
-                        <TableRow
-                          style={{ height: (dense ? 33 : 53) * emptyRows }}
-                        >
+                        <TableRow style={{ height: 53 * emptyRows }}>
                           <TableCell colSpan={6} />
                         </TableRow>
                       )}
@@ -544,12 +515,6 @@ export default function GettingStarted() {
                   onChangeRowsPerPage={handleChangeRowsPerPage}
                 />
               </Paper>
-              <FormControlLabel
-                control={
-                  <Switch checked={dense} onChange={handleChangeDense} />
-                }
-                label="Dense padding"
-              />
             </div>
           </Example>
           https://material-ui.com/components/tables/ Sorting & Selecting Example
