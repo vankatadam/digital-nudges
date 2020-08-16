@@ -243,7 +243,44 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />
-          <Typography></Typography>
+          <Typography gutterBottom>
+            1. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
+          </Typography>
+          <Typography gutterBottom>
+            2. Bateman IJ, Munro A, Poe GL (2008) Decoy Effects in Choice
+            Experiments and Contingent Valuation: Asymmetric Dominance. Land
+            Economics 84: 115–127. https://doi.org/10.3368/le.84.1.115
+          </Typography>
+          <Typography gutterBottom>
+            3. Dimara E, Bezerianos A, Dragicevic P (2017) The Attraction Effect
+            in Information Visualization. IEEE Trans Vis Comput Graph 23:
+            471–480. https://doi.org/10.1109/TVCG.2016.2598594
+          </Typography>
+          <Typography gutterBottom>
+            4. Fasolo B, Misuraca R, McClelland GH et al. (2006) Animation
+            attracts: The attraction effect in an on-line shopping environment.
+            Psychol Mark 23: 799–811. https://doi.org/10.1002/mar.20134
+          </Typography>
+          <Typography gutterBottom>
+            5. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
+            to design persuasive technology for healthy choices. In: Tan D,
+            Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
+            extended abstracts / the 29th Annual CHI Conference on Human Factors
+            in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
+            ACM, New York, NY, pp 325–334
+          </Typography>
+          <Typography gutterBottom>
+            6. Material-UI (2020) Card React component.
+            https://material-ui.com/components/cards/. Accessed 10 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            7. Material-UI (2020) Grid React component.
+            https://material-ui.com/components/grid/#grid. Accessed 05 Jul 2020
+          </Typography>
         </div>
       </ThemeProvider>
     </NavBar>

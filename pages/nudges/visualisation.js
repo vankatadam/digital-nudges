@@ -269,7 +269,76 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />
-          <Typography></Typography>
+          <Typography gutterBottom>
+            1. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
+          </Typography>
+          <Typography gutterBottom>
+            2. Juskan M (2018) Sound change, priming, salience: Producing and
+            perceiving variation in Liverpool English. Language variation, vol
+            3. Language Science Press, Berlin
+          </Typography>
+          <Typography gutterBottom>
+            3. Adams AT, Costa J, Jung MF et al. (2015) Mindless Computing:
+            Designing Technologies to Subtly Influence Behavior. Proc ACM Int
+            Conf Ubiquitous Comput 2015: 719–730.
+            https://doi.org/10.1145/2750858.2805843
+          </Typography>
+          <Typography gutterBottom>
+            4. Hollinworth N, Hwang F, Field DT (2013) Using Delboeuf's illusion
+            to improve point and click performance for older adults. In: Mackay
+            W, Brewster S, Mackay WE (eds) CHI 2013: Extended abstracts of the
+            31st Annual CHI Conference on Human Factors in Computing Systems :
+            27 April - 2 May 2013, Paris, France. ACM, [Place of publication not
+            identified], pp 1329–1334
+          </Typography>
+          <Typography gutterBottom>
+            5. Cioffi CE, Levitsky DA, Pacanowski CR et al. (2015) A nudge in a
+            healthy direction. The effect of nutrition labels on food purchasing
+            behaviors in university dining facilities. Appetite 92: 207–216.
+            https://doi.org/10.1016/j.appet.2015.04.053
+          </Typography>
+          <Typography gutterBottom>
+            6. Ölander F, Thøgersen J (2014) Informing Versus Nudging in
+            Environmental Policy. J Consum Policy 37: 341–356.
+            https://doi.org/10.1007/s10603-014-9256-2
+          </Typography>
+          <Typography gutterBottom>
+            7. Turland J, Coventry L, Jeske D et al. (2015) Nudging towards
+            security. In: Lawson S, Dickinson P (eds) British HCI 2015:
+            Proceedings of the British HCI Conference 2015 : July 13-17, 2015,
+            Lincoln, Lincolnshire, UK. Association for Computing Machinery, New
+            York, New York, pp 193–201
+          </Typography>
+          <Typography gutterBottom>
+            8. Colusso L, Hsieh G, Munson SA (2016) Designing Closeness to
+            Increase Gamers' Performance. In: #chi4good: CHI 2016 : San Jose,
+            CA, USA, May 7-12 : proceedings : the 34th Annual CHI Conference on
+            Human Factors in Computing Systems : San Jose Convention Center. The
+            Association for Computing Machinery, New York, New York, pp
+            3020–3024
+          </Typography>
+          <Typography gutterBottom>
+            9. Thorndike AN, Sonnenberg L, Riis J et al. (2012) A 2-phase
+            labeling and choice architecture intervention to improve healthy
+            food and beverage choices. Am J Public Health 102: 527–533.
+            https://doi.org/10.2105/AJPH.2011.300391
+          </Typography>
+          <Typography gutterBottom>
+            10. Mirsch T, Lehrer C, Jung R (2017) Digital Nudging: Altering User
+            Behavior in Digital Environments. In: Proceedings der 13.
+            Internationalen Tagung Wirtschaftsinformatik (WI 2017), St. Gallen,
+            Switzerland, pp 634–648
+          </Typography>
+          <Typography gutterBottom>
+            11. Directorate-General for Communication (2020) Energy Label
+            Generator.
+            https://ec.europa.eu/energy/topics/energy-efficiency/energy-label-and-ecodesign/energy-label-generator_en.
+            Accessed 11 Jul 2020
+          </Typography>
         </div>
       </ThemeProvider>
     </NavBar>

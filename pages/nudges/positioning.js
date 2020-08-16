@@ -256,7 +256,45 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />
-          <Typography></Typography>
+          <Typography gutterBottom>
+            1. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
+          </Typography>
+          <Typography gutterBottom>
+            2. Cai S, Xu Y (2008) Designing Product Lists for E-commerce: The
+            Effects of Sorting on Consumer Decision Making. International
+            Journal of Human-Computer Interaction 24: 700–721.
+            https://doi.org/10.1080/10447310802335730
+          </Typography>
+          <Typography gutterBottom>
+            3. Turland J, Coventry L, Jeske D et al. (2015) Nudging towards
+            security. In: Lawson S, Dickinson P (eds) British HCI 2015:
+            Proceedings of the British HCI Conference 2015 : July 13-17, 2015,
+            Lincoln, Lincolnshire, UK. Association for Computing Machinery, New
+            York, New York, pp 193–201
+          </Typography>
+          <Typography gutterBottom>
+            4. Kammerer Y, Gerjets P (2014) The Role of Search Result Position
+            and Source Trustworthiness in the Selection of Web Search Results
+            When Using a List or a Grid Interface. International Journal of
+            Human-Computer Interaction 30: 177–191.
+            https://doi.org/10.1080/10447318.2013.846790
+          </Typography>
+          <Typography gutterBottom>
+            5. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
+            to design persuasive technology for healthy choices. In: Tan D,
+            Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
+            extended abstracts / the 29th Annual CHI Conference on Human Factors
+            in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
+            ACM, New York, NY, pp 325–334
+          </Typography>
+          <Typography gutterBottom>
+            6. Amazon.com Inc. (2020) Amazon.com. https://www.amazon.com/.
+            Accessed 05 Jul 2020
+          </Typography>
         </div>
       </ThemeProvider>
     </NavBar>

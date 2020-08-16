@@ -263,7 +263,50 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />
-          <Typography></Typography>
+          <Typography gutterBottom>
+            1. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
+          </Typography>
+          <Typography gutterBottom>
+            2. Mittone L, Savadori L (2009) The Scarcity Bias. Applied
+            Psychology 58: 453–468.
+            https://doi.org/10.1111/j.1464-0597.2009.00401.x
+          </Typography>
+          <Typography gutterBottom>
+            3. Gouveia R, Pereira F, Karapanos E et al. (2016) Exploring the
+            design space of glanceable feedback for physical activity trackers.
+            In: Lukowicz P, Krüger A, Bulling A et al. (eds) Proceedings of the
+            2016 ACM International Joint Conference on Pervasive and Ubiquitous
+            Computing. ACM, New York, NY, USA, pp 144–155
+          </Typography>
+          <Typography gutterBottom>
+            4. eBay Inc. (2020) eBay. https://www.ebay.de/. Accessed 13 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            5. Amazon.com Inc. (2020) Amazon.com. https://www.amazon.com/.
+            Accessed 05 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            6. Park S, Rabinovich E, Tang CS et al. (2019) The Impact of
+            Disclosing Inventory-Scarcity Messages on Purchase Frequencies and
+            Daily Sales in Online Retailing. SSRN Journal: 1–44.
+            https://doi.org/10.2139/ssrn.3447624
+          </Typography>
+          <Typography gutterBottom>
+            7. Tang CS (2020) ‘Only 2 Left in Stock! Order Now!’ But Does That
+            Really Work? The Wall Street Journal
+          </Typography>
+          <Typography gutterBottom>
+            8. Lufthansa (2020) Lufthansa Homepage.
+            https://www.lufthansa.com/de/en/homepage. Accessed 15 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            9. Mills S (2020) Amazon is Changing How it Nudges in Response to
+            Coronavirus. The Startup
+          </Typography>
         </div>
       </ThemeProvider>
     </NavBar>
