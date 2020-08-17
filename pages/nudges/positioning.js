@@ -6,7 +6,6 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import IconButton from "@material-ui/core/IconButton";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
@@ -18,6 +17,7 @@ import TitleBox from "../../components/TitleBox";
 import Paper from "@material-ui/core/Paper";
 import { withStyles, lighten } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
+import { orange } from "@material-ui/core/colors";
 import { red } from "@material-ui/core/colors";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -27,7 +27,6 @@ import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Button from "@material-ui/core/Button";
-import MoodIcon from "@material-ui/icons/Mood";
 import Slider from "@material-ui/core/Slider";
 
 import Table from "@material-ui/core/Table";
@@ -45,6 +44,18 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import PropTypes from "prop-types";
+
+import MoodIcon from "@material-ui/icons/Mood";
+import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+
+//Grid Example
+import GridList from "@material-ui/core/GridList";
+import GridListTile from "@material-ui/core/GridListTile";
+import GridListTileBar from "@material-ui/core/GridListTileBar";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import IconButton from "@material-ui/core/IconButton";
+import InfoIcon from "@material-ui/icons/Info";
 
 //Quellen:
 //Passwort:
@@ -88,6 +99,20 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: 20,
     width: 1,
+  },
+  rootGrid: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    width: 500,
+    height: 450,
+  },
+  icon: {
+    color: "rgba(255, 255, 255, 0.54)",
   },
 }));
 
@@ -176,15 +201,7 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-  const {
-    classes,
-    onSelectAllClick,
-    order,
-    orderBy,
-    numSelected,
-    rowCount,
-    onRequestSort,
-  } = props;
+  const { classes, order, orderBy, onRequestSort } = props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -220,83 +237,10 @@ function EnhancedTableHead(props) {
 
 EnhancedTableHead.propTypes = {
   classes: PropTypes.object.isRequired,
-  numSelected: PropTypes.number.isRequired,
   onRequestSort: PropTypes.func.isRequired,
-  onSelectAllClick: PropTypes.func.isRequired,
   order: PropTypes.oneOf(["asc", "desc"]).isRequired,
   orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
-};
-
-const useToolbarStyles = makeStyles((theme) => ({
-  root: {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(1),
-  },
-  highlight:
-    theme.palette.type === "light"
-      ? {
-          color: theme.palette.secondary.main,
-          backgroundColor: lighten(theme.palette.secondary.light, 0.85),
-        }
-      : {
-          color: theme.palette.text.primary,
-          backgroundColor: theme.palette.secondary.dark,
-        },
-  title: {
-    flex: "1 1 100%",
-  },
-}));
-
-const EnhancedTableToolbar = (props) => {
-  const classes = useToolbarStyles();
-  const { numSelected } = props;
-
-  return (
-    <Toolbar
-      className={clsx(classes.root, {
-        [classes.highlight]: numSelected > 0,
-      })}
-    >
-      {numSelected > 0 ? (
-        <Typography
-          className={classes.title}
-          color="inherit"
-          variant="subtitle1"
-          component="div"
-        >
-          {numSelected} selected
-        </Typography>
-      ) : (
-        <Typography
-          className={classes.title}
-          variant="h6"
-          id="tableTitle"
-          component="div"
-        >
-          Nutrition
-        </Typography>
-      )}
-
-      {numSelected > 0 ? (
-        <Tooltip title="Delete">
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
-      ) : (
-        <Tooltip title="Filter list">
-          <IconButton aria-label="filter list">
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
-      )}
-    </Toolbar>
-  );
-};
-
-EnhancedTableToolbar.propTypes = {
-  numSelected: PropTypes.number.isRequired,
 };
 
 //Sorting Example1 end
@@ -308,7 +252,7 @@ export default function GettingStarted() {
 
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
-  const [selected, setSelected] = React.useState([]);
+
   const [page, setPage] = React.useState(0);
 
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -317,35 +261,6 @@ export default function GettingStarted() {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
-  };
-
-  const handleSelectAllClick = (event) => {
-    if (event.target.checked) {
-      const newSelecteds = rows.map((n) => n.name);
-      setSelected(newSelecteds);
-      return;
-    }
-    setSelected([]);
-  };
-
-  const handleClick = (event, name) => {
-    const selectedIndex = selected.indexOf(name);
-    let newSelected = [];
-
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
-    } else if (selectedIndex === 0) {
-      newSelected = newSelected.concat(selected.slice(1));
-    } else if (selectedIndex === selected.length - 1) {
-      newSelected = newSelected.concat(selected.slice(0, -1));
-    } else if (selectedIndex > 0) {
-      newSelected = newSelected.concat(
-        selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1)
-      );
-    }
-
-    setSelected(newSelected);
   };
 
   const handleChangePage = (event, newPage) => {
@@ -361,6 +276,41 @@ export default function GettingStarted() {
     rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   //sorting example1 end
+
+  //Grid Example
+  const tileData = [
+    {
+      img: "/imageGrid1.jpg",
+      title: "Cookies",
+      preis: "1,99 €",
+    },
+    {
+      img: "/imageGrid2.jpg",
+      title: "Weiße Schokolade",
+      preis: "0,99 €",
+    },
+    {
+      img: "/imageGrid3.jpg",
+      title: "Chips",
+      preis: "1,49 €",
+    },
+    {
+      img: "/imageGrid4.jpg",
+      title: "Ice",
+      preis: "0,99 €",
+    },
+    {
+      img: "/imageGrid5.jpg",
+      title: "Dunkle Schokolade",
+      preis: "1,99 €",
+    },
+    {
+      img: "/imageGrid6.jpg",
+      title: "Chips mit Ketchup",
+      preis: "1,99 €",
+    },
+  ];
+  //Grid Example end
 
   return (
     <NavBar>
@@ -446,75 +396,81 @@ export default function GettingStarted() {
             können auch zuerst bevorzugte oder empfohlene Produkte, wie bei
             Amazon [vgl. 6], angezeigt werden.{" "}
           </Typography>
-          <Example maxWidth="900">
+          <Example
+            maxWidth="900"
+            link="https://codesandbox.io/s/positioning1sorting-cih3k"
+          >
             {" "}
             <div className={classes.root}>
-              <Paper className={classes.paper}>
-                <EnhancedTableToolbar numSelected={selected.length} />
-                <TableContainer>
-                  <Table
-                    className={classes.table}
-                    aria-labelledby="tableTitle"
-                    size={"medium"}
-                    aria-label="enhanced table"
-                  >
-                    <EnhancedTableHead
-                      classes={classes}
-                      numSelected={selected.length}
-                      order={order}
-                      orderBy={orderBy}
-                      onSelectAllClick={handleSelectAllClick}
-                      onRequestSort={handleRequestSort}
-                      rowCount={rows.length}
-                    />
-                    <TableBody>
-                      {stableSort(rows, getComparator(order, orderBy))
-                        .slice(
-                          page * rowsPerPage,
-                          page * rowsPerPage + rowsPerPage
-                        )
-                        .map((row, index) => {
-                          return (
-                            <TableRow
-                              hover
-                              role="checkbox"
-                              tabIndex={-1}
-                              key={row.name}
-                            >
-                              <TableCell
-                                component="th"
-                                scope="row"
-                                padding="none"
-                              >
-                                {row.name}
-                              </TableCell>
-                              <TableCell align="right">
-                                {row.calories}
-                              </TableCell>
-                              <TableCell align="right">{row.fat}</TableCell>
-                              <TableCell align="right">{row.carbs}</TableCell>
-                              <TableCell align="right">{row.protein}</TableCell>
-                            </TableRow>
-                          );
-                        })}
-                      {emptyRows > 0 && (
-                        <TableRow style={{ height: 53 * emptyRows }}>
-                          <TableCell colSpan={6} />
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-                <TablePagination
-                  rowsPerPageOptions={[5, 10, 25]}
+              <Toolbar className={clsx(classes.root)}>
+                <Typography
+                  className={classes.title}
+                  variant="h6"
+                  id="tableTitle"
                   component="div"
-                  count={rows.length}
-                  rowsPerPage={rowsPerPage}
-                  page={page}
-                  onChangePage={handleChangePage}
-                  onChangeRowsPerPage={handleChangeRowsPerPage}
-                />
-              </Paper>
+                >
+                  Nutrition
+                </Typography>
+              </Toolbar>
+              <TableContainer>
+                <Table
+                  className={classes.table}
+                  aria-labelledby="tableTitle"
+                  size={"medium"}
+                  aria-label="enhanced table"
+                >
+                  <EnhancedTableHead
+                    classes={classes}
+                    order={order}
+                    orderBy={orderBy}
+                    onRequestSort={handleRequestSort}
+                    rowCount={rows.length}
+                  />
+                  <TableBody>
+                    {stableSort(rows, getComparator(order, orderBy))
+                      .slice(
+                        page * rowsPerPage,
+                        page * rowsPerPage + rowsPerPage
+                      )
+                      .map((row, index) => {
+                        return (
+                          <TableRow
+                            hover
+                            role="checkbox"
+                            tabIndex={-1}
+                            key={row.name}
+                          >
+                            <TableCell
+                              component="th"
+                              scope="row"
+                              padding="none"
+                            >
+                              {row.name}
+                            </TableCell>
+                            <TableCell align="right">{row.calories}</TableCell>
+                            <TableCell align="right">{row.fat}</TableCell>
+                            <TableCell align="right">{row.carbs}</TableCell>
+                            <TableCell align="right">{row.protein}</TableCell>
+                          </TableRow>
+                        );
+                      })}
+                    {emptyRows > 0 && (
+                      <TableRow style={{ height: 53 * emptyRows }}>
+                        <TableCell colSpan={6} />
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+              <TablePagination
+                rowsPerPageOptions={[5, 10, 25]}
+                component="div"
+                count={rows.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onChangePage={handleChangePage}
+                onChangeRowsPerPage={handleChangeRowsPerPage}
+              />
             </div>
           </Example>
           https://material-ui.com/components/tables/ Sorting & Selecting Example
@@ -525,18 +481,138 @@ export default function GettingStarted() {
             Farben zwischen grün (das bevorzugte Element) und rot, erreicht
             [vgl. 3].{" "}
           </Typography>
+          <Example
+            maxWidth="900"
+            link="https://codesandbox.io/s/positioning2sortingvisualisation-xi7p8?file=/index.js"
+          >
+            {" "}
+            <div className={classes.root}>
+              <Toolbar className={clsx(classes.root)}>
+                <Typography
+                  className={classes.title}
+                  variant="h6"
+                  id="tableTitle"
+                  component="div"
+                >
+                  Nutrition
+                </Typography>
+              </Toolbar>
+              <TableContainer>
+                <Table
+                  className={classes.table}
+                  aria-labelledby="tableTitle"
+                  size={"medium"}
+                  aria-label="enhanced table"
+                >
+                  <EnhancedTableHead
+                    classes={classes}
+                    order={order}
+                    orderBy={orderBy}
+                    onRequestSort={handleRequestSort}
+                    rowCount={rows.length}
+                  />
+                  <TableBody>
+                    {stableSort(rows, getComparator(order, orderBy))
+                      .slice(
+                        page * rowsPerPage,
+                        page * rowsPerPage + rowsPerPage
+                      )
+                      .map((row, index) => {
+                        return (
+                          <TableRow
+                            hover
+                            role="checkbox"
+                            tabIndex={-1}
+                            key={row.name}
+                          >
+                            <TableCell
+                              component="th"
+                              scope="row"
+                              padding="none"
+                            >
+                              {row.name}
+                            </TableCell>
+                            <TableCell align="right">
+                              {row.calories < 300 ? (
+                                <MoodIcon style={{ color: green[500] }} />
+                              ) : row.calories < 400 && row.calories >= 300 ? (
+                                <SentimentSatisfiedIcon
+                                  style={{ color: orange[500] }}
+                                />
+                              ) : (
+                                <SentimentVeryDissatisfiedIcon
+                                  style={{ color: red[500] }}
+                                />
+                              )}{" "}
+                              {row.calories}
+                            </TableCell>
+                            <TableCell align="right">{row.fat}</TableCell>
+                            <TableCell align="right">{row.carbs}</TableCell>
+                            <TableCell align="right">{row.protein}</TableCell>
+                          </TableRow>
+                        );
+                      })}
+                    {emptyRows > 0 && (
+                      <TableRow style={{ height: 53 * emptyRows }}>
+                        <TableCell colSpan={6} />
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+              <TablePagination
+                rowsPerPageOptions={[5, 10, 25]}
+                component="div"
+                count={rows.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onChangePage={handleChangePage}
+                onChangeRowsPerPage={handleChangeRowsPerPage}
+              />
+            </div>
+          </Example>
           <Typography gutterBottom>
             Das dritte Beispiel bezieht sich auf eine Verringerung der Wahl
             eines bestimmten Elements. Dies wird ähnlich wie im Beispiel eins
             erreicht, nur umgekehrt angewendet [vgl. 5]. Somit werden die
             unerwünschten Elemente an das Ende den Listen eingefügt [vgl. 5].{" "}
           </Typography>
+          NUR ORDER HÄTTE MAN ZU DESC geändert
           <Typography gutterBottom>
             Das letzte Beispiel beschäftigt sich mit einer Erhöhung der freien
             Wahl für den Nutzer und somit einer Verringerung dieses
             „Positioning“ Effektes. Dies wird dank einer Auflistung in einer
             alternativen Form von Listen und zwar in einer Gitter Form [vgl. 4].{" "}
           </Typography>
+          <Example>
+            <div className={classes.root}>
+              <GridList cellHeight={180} className={classes.gridList}>
+                <GridListTile
+                  key="Subheader"
+                  cols={2}
+                  style={{ height: "auto" }}
+                >
+                  <ListSubheader component="div">
+                    Kaufe deinen Liebligssnack
+                  </ListSubheader>
+                </GridListTile>
+                {tileData.map((tile) => (
+                  <GridListTile key={tile.img}>
+                    <img src={tile.img} alt={tile.title} />
+                    <GridListTileBar
+                      title={tile.title}
+                      subtitle={<span>Preis: {tile.preis}</span>}
+                      actionIcon={
+                        <Button style={{ color: "white" }}>Kaufen</Button>
+                      }
+                    />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          </Example>
+          Bilder werden automatisch in die Grid größe reingepasst
+          https://material-ui.com/components/grid-list/
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />

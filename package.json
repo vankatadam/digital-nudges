@@ -13,9 +13,13 @@
     "@material-ui/icons": "^4.9.1",
     "clsx": "^1.1.1",
     "fontsource-roboto": "^2.1.4",
+    "imagemin-mozjpeg": "^9.0.0",
     "lodash": "^4.17.19",
     "next": "9.4.4",
+    "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "responsive-loader": "^2.0.2",
+    "sharp": "^0.25.4"
   }
 }
