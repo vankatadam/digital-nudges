@@ -37,12 +37,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 
-//Quellen:
-//Passwort:
-//https://material-ui.com/components/text-fields/
-//https://codesandbox.io/s/q3xj3?file=/demo.js:1319-1512
-// not used, maybe later :https://www.npmjs.com/package/react-password-with-generator
-
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),

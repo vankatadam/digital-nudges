@@ -584,7 +584,7 @@ export default function GettingStarted() {
             „Positioning“ Effektes. Dies wird dank einer Auflistung in einer
             alternativen Form von Listen und zwar in einer Gitter Form [vgl. 4].{" "}
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/positioning3sortinggrid-u4oiy">
             <div className={classes.root}>
               <GridList cellHeight={180} className={classes.gridList}>
                 <GridListTile
