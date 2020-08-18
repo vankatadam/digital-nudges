@@ -37,6 +37,13 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Grid from "@material-ui/core/Grid";
+
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
@@ -101,10 +108,9 @@ export default function GettingStarted() {
           <TitleBox
             title={"Adding Inferior Alternatives"}
             effort={1}
-            effectiveness={53}
+            effectiveness={(32, 6)}
             efficiency={1}
           ></TitleBox>
-
           <Typography gutterBottom>
             {" "}
             „Adding Inferior Alternatives“ Nudge basiert auf dem „Decoy Effect“,
@@ -148,7 +154,6 @@ export default function GettingStarted() {
             „Decoy“ Produkte und deren Eigenschaften wie Bilder, Beschriftungen
             und Preis, können leicht mit Material UI umgesetzt werden.{" "}
           </Typography>
-
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
@@ -171,13 +176,209 @@ export default function GettingStarted() {
             auf webbasierte Technologien setzt, passt. Dieses Beispiel ist ein
             Vergleich zwischen drei Laptops [vgl. 9]: Der erste Laptop A wird
             die Konkurrenz darstellen, Laptop B das erwünschte Produkt und
-            Laptop C wird den „Decoy“ darstellen. Laptop B wird für die Zwecke
-            einer Verstärkung des Effektes als eine Animation angezeigt. Der
-            „Decoy“ Laptop wird die Regeln verfolgen, also die aufgeführte
-            Laptopspezifikationen werden geringer als bei dem Laptop B sein und
-            das Laptop C wird günstiger als Laptop A sein.{" "}
+            Laptop C wird den „Decoy“ darstellen. Der „Decoy“ Laptop wird die
+            Regeln verfolgen, also die aufgeführte Laptopspezifikationen werden
+            geringer als bei dem Laptop B sein und das Laptop C wird günstiger
+            als Laptop A sein.{" "}
           </Typography>
-
+          <Example
+            maxWidth="900"
+            link="https://codesandbox.io/s/inferior1comparelist-mbdnn?file=/index.js"
+          >
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image="/imageProductA.jpg"
+                      title="imageProductA"
+                      height="240"
+                      component="img"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Laptop A
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        RAM: 8GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        CPU: 3900MHz
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        Kerne: 6
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        GPU: 6GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Festplatte: 1TB SSD
+                      </Typography>
+                      <Typography variant="body2" color="primary" component="p">
+                        1799 €
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Warenkorb hinzufügen
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image="/imageProductB.jpg"
+                      title="imageProductB"
+                      height="240"
+                      component="img"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Laptop B
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        RAM: 8GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        CPU: 3400MHz
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        Kerne: 6
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        GPU: 4GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Festplatte: 512GB SSD
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="secondary"
+                        component="p"
+                      >
+                        999 €
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Warenkorb hinzufügen
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image="/imageProductC.jpg"
+                      title="imageProductC"
+                      height="240"
+                      component="img"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Laptop C
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        RAM: 6GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        CPU: 2900MHz
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        Kerne: 3
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        GPU: 3 GB
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Festplatte: 512 HDD
+                      </Typography>
+                      <Typography variant="body2" color="primary" component="p">
+                        949 €
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Warenkorb hinzufügen
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
+          </Example>
+          https://material-ui.com/components/cards/
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
@@ -233,7 +434,6 @@ export default function GettingStarted() {
             Nudge mit der durchschnittlichen Effektivität von 32,6% in die
             Effizienzklasse mittel angeordnet.{" "}
           </Typography>
-
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />

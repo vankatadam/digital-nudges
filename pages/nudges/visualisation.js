@@ -37,6 +37,13 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -194,6 +201,44 @@ export default function GettingStarted() {
             Variante mit drei farbigen Ikonen umgesetzt, um zu verdeutlichen,
             welche Ernährung gesund ist.{" "}
           </Typography>
+          <Example>
+            <Card className={classes.root}>
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
+                  <Typography component="h5" variant="h5">
+                    Live From Space
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                    Mac Miller
+                  </Typography>
+                </CardContent>
+                <div className={classes.controls}>
+                  <IconButton aria-label="previous">
+                    {theme.direction === "rtl" ? (
+                      <SkipNextIcon />
+                    ) : (
+                      <SkipPreviousIcon />
+                    )}
+                  </IconButton>
+                  <IconButton aria-label="play/pause">
+                    <PlayArrowIcon className={classes.playIcon} />
+                  </IconButton>
+                  <IconButton aria-label="next">
+                    {theme.direction === "rtl" ? (
+                      <SkipPreviousIcon />
+                    ) : (
+                      <SkipNextIcon />
+                    )}
+                  </IconButton>
+                </div>
+              </div>
+              <CardMedia
+                className={classes.cover}
+                image="/static/images/cards/live-from-space.jpg"
+                title="Live from space album cover"
+              />
+            </Card>
+          </Example>
           <Typography gutterBottom>
             Das zweite Beispiel bezieht sich auf das Gebiet der IT-Sicherheit
             mit der Studie von 7. Ziel von dieser Studie war eine Erhöhung der

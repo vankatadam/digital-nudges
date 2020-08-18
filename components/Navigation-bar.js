@@ -202,20 +202,6 @@ export default function NavigationBar(props) {
         >
           Make Ressources Scarce
         </ListItem>
-        <ListItem
-          component={ButtonLink}
-          href="/nudges/404"
-          className={classes.nested}
-        >
-          Comming soon
-        </ListItem>
-        <ListItem
-          component={ButtonLink}
-          href="/nudges/404"
-          className={classes.nested}
-        >
-          Comming soon
-        </ListItem>
 
         <ListItem
           component={ButtonLink}
