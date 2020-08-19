@@ -44,11 +44,18 @@ import CardMedia from "@material-ui/core/CardMedia";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
 
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 import Grid from "@material-ui/core/Grid";
+import Tooltip from "@material-ui/core/Tooltip";
+
+import SignalWifi4BarLockIcon from "@material-ui/icons/SignalWifi4BarLock";
+import SignalWifi1BarLockIcon from "@material-ui/icons/SignalWifi1BarLock";
+import SignalWifi3BarIcon from "@material-ui/icons/SignalWifi3Bar";
 
 //Quellen:
 //Passwort:
@@ -71,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 18,
     marginBottom: 32,
     display: "block",
+  },
+  root: {
+    width: "100%",
   },
 }));
 
@@ -105,14 +115,60 @@ const rows = [
 ];
 
 function Healthiness(props) {
-  return props.value < 10 ? (
-    <FavoriteIcon style={{ color: green[500] }} />
-  ) : props.value < 20 ? (
-    <FavoriteBorderIcon style={{ color: orange[500] }} />
-  ) : (
-    <SentimentVeryDissatisfiedIcon style={{ color: red[500] }} />
+  return (
+    <Tooltip title={props.value + " g"}>
+      {props.value < 10 ? (
+        <FavoriteIcon style={{ color: green[500] }} />
+      ) : props.value < 20 ? (
+        <FavoriteBorderIcon style={{ color: orange[500] }} />
+      ) : (
+        <SentimentVeryDissatisfiedIcon style={{ color: red[500] }} />
+      )}
+    </Tooltip>
   );
 }
+function HealthinessKcal(props) {
+  return (
+    <Tooltip title={props.value + " kcal"}>
+      {props.value < 125 ? (
+        <FavoriteIcon style={{ color: green[500] }} />
+      ) : props.value < 250 ? (
+        <FavoriteBorderIcon style={{ color: orange[500] }} />
+      ) : (
+        <SentimentVeryDissatisfiedIcon style={{ color: red[500] }} />
+      )}
+    </Tooltip>
+  );
+}
+
+//Example 2
+
+const wlanData = [
+  {
+    name: "5ma1",
+    securityLevel: 1,
+  },
+  {
+    name: "90sf",
+    securityLevel: 1,
+  },
+  {
+    name: "m4z7",
+    securityLevel: 2,
+  },
+  {
+    name: "h41l",
+    securityLevel: 2,
+  },
+  {
+    name: "83hi",
+    securityLevel: 3,
+  },
+  {
+    name: "7n4c",
+    securityLevel: 3,
+  },
+];
 
 export default function GettingStarted() {
   const classes = useStyles();
@@ -217,57 +273,150 @@ export default function GettingStarted() {
             Variante mit drei farbigen Ikonen umgesetzt, um zu verdeutlichen,
             welche Ernährung gesund ist.{" "}
           </Typography>
-          <Example>
-            <Card className={classes.root}>
-              <div className={classes.details}>
-                <CardContent className={classes.content}>
-                  <Typography component="h5" variant="h5">
-                    Cheeseburger
-                  </Typography>
-                  <Grid container spacing={1}>
-                    <Grid item xs={3} sd={7}>
-                      <Typography variant="subtitle1" color="textSecondary">
-                        kcal/100g:
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={3} sd={7}>
-                      <Healthiness value="5" />
-                    </Grid>
-                  </Grid>
+          <Example
+            maxWidth="900"
+            link="https://codesandbox.io/s/visualisation1healthiness-6c8vq?file=/index.js"
+          >
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/peanut.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Geröstete Erdnüsse
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      kcal/100g: <HealthinessKcal value="630" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Fett/100g: <Healthiness value="53" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Zucker/100g: <Healthiness value="3.6" />
+                    </Typography>
+                  </CardContent>
 
-                  <Typography variant="subtitle1" color="textSecondary">
-                    Fett/100g:
-                  </Typography>
-                  <Typography variant="subtitle1" color="textSecondary">
-                    Zucker/100g:
-                  </Typography>
-                </CardContent>
-                <div className={classes.controls}>
-                  <IconButton aria-label="previous">
-                    {theme.direction === "rtl" ? (
-                      <SkipNextIcon />
-                    ) : (
-                      <SkipPreviousIcon />
-                    )}
-                  </IconButton>
-                  <IconButton aria-label="play/pause">
-                    <PlayArrowIcon className={classes.playIcon} />
-                  </IconButton>
-                  <IconButton aria-label="next">
-                    {theme.direction === "rtl" ? (
-                      <SkipPreviousIcon />
-                    ) : (
-                      <SkipNextIcon />
-                    )}
-                  </IconButton>
-                </div>
-              </div>
-              <CardMedia
-                className={classes.cover}
-                image="/static/images/cards/live-from-space.jpg"
-                title="Live from space album cover"
-              />
-            </Card>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Erfahre mehr
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/ceaser.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Caesar Salat
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      kcal/100g: <HealthinessKcal value="44" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Fett/100g: <Healthiness value="2.1" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Zucker/100g: <Healthiness value="2.1" />
+                    </Typography>
+                  </CardContent>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Erfahre mehr
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/burger.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Burger
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      kcal/100g: <HealthinessKcal value="303" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Fett/100g: <Healthiness value="14" />
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Zucker/100g: <Healthiness value="5" />
+                    </Typography>
+                  </CardContent>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Erfahre mehr
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
           </Example>
           <Typography gutterBottom>
             Das zweite Beispiel bezieht sich auf das Gebiet der IT-Sicherheit
@@ -285,6 +434,44 @@ export default function GettingStarted() {
             positioniert und die unsicheren unten, da eine Anordnung gewählt
             werden muss.{" "}
           </Typography>
+          <Example>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+            >
+              {wlanData.map((singleWlan) => (
+                <Grid item key={singleWlan.name}>
+                  {singleWlan.securityLevel <= 1 ? (
+                    <div>
+                      <Grid container direction="row">
+                        <Grid item>
+                          <Typography>{singleWlan.name}</Typography>
+                          <Typography>{singleWlan.name}</Typography>
+                        </Grid>
+                        <Grid item>
+                          <SignalWifi4BarLockIcon
+                            style={{ color: green[600], display: "inline" }}
+                          />
+                        </Grid>
+                      </Grid>
+                    </div>
+                  ) : singleWlan.securityLevel <= 2 ? (
+                    <div>
+                      <Typography>{singleWlan.name}</Typography>{" "}
+                      <SignalWifi1BarLockIcon style={{ color: orange[600] }} />
+                    </div>
+                  ) : (
+                    <div>
+                      <Typography>{singleWlan.name}</Typography>{" "}
+                      <SignalWifi3BarIcon style={{ color: red[600] }} />
+                    </div>
+                  )}
+                </Grid>
+              ))}
+            </Grid>
+          </Example>
           <Typography gutterBottom>
             Das dritte Beispiel bezieht sich auf Energieetiketten.
             Energieetiketten verdeutlichen die Informationen über
