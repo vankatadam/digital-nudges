@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import Head from "next/head";
@@ -19,6 +20,10 @@ import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import { red } from "@material-ui/core/colors";
+import { blueGrey } from "@material-ui/core/colors";
+import { blue } from "@material-ui/core/colors";
+import { orange } from "@material-ui/core/colors";
+
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -36,6 +41,11 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import { Grid, GridListTileBar } from "@material-ui/core";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardActionArea from "@material-ui/core/CardActionArea";
+
+import Countdown from "react-countdown";
 
 //Quellen:
 //Passwort:
@@ -157,7 +167,6 @@ export default function GettingStarted() {
             graphischen Darstellung in Form von Bildern. Diese Funktionen können
             mit Hilfe vom reinen JavaScript und dem Reactjs Frameworks erfolgen.{" "}
           </Typography>
-
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
@@ -187,6 +196,78 @@ export default function GettingStarted() {
             das erste Beispiel in der Guideline sein. Es wird also ein Produkt
             dargestellt, das eine Zeitliche Beschränkung hat.{" "}
           </Typography>
+          <Example maxWidth="700">
+            <Grid container justify="space-between" direction="row">
+              <Grid item>
+                <img src="/burger.jpg" height="275" />
+              </Grid>
+              <Grid item style={{ width: 275 }}>
+                <Typography variant="h5">Ultra TV (4K Ultra HD)</Typography>
+                <Typography color="textSecondary" variant="body2">
+                  von Ultra Inc.
+                </Typography>
+                <Typography>2600 Bewertungen</Typography>
+                <Typography
+                  style={{
+                    color: orange[500],
+                    backgroundColor: blueGrey[500],
+                    textAlign: "center",
+                  }}
+                >
+                  Amazon's Wahl
+                </Typography>
+                <hr />
+                <Typography
+                  color="textSecondary"
+                  variant="body2"
+                  display="inline"
+                >
+                  Vorher:{" "}
+                </Typography>
+                <Typography
+                  style={{ textDecoration: "line-through" }}
+                  display="inline"
+                  variant="body2"
+                >
+                  999.99€
+                </Typography>
+                <Typography style={{ textDecoration: "none" }}>
+                  Tagesdeal:{" "}
+                  <Typography color="error" display="inline">
+                    479.99€
+                  </Typography>
+                  <Typography
+                    display="inline"
+                    color="primary"
+                    style={{ fontWeight: 500 }}
+                  >
+                    {" "}
+                    + FREIE Lieferung
+                  </Typography>
+                </Typography>
+                <Typography
+                  color="error"
+                  display="inline"
+                  style={{ margin: 0 }}
+                >
+                  Endet in:{" "}
+                </Typography>
+                <Countdown date={Date.now() + 70000000} daysInHours={true} />
+                <br />
+                <Typography display="inline">Du sparst: </Typography>
+                <Typography display="inline">519.01€ (52%)</Typography>
+                <br />
+                <img src="/Aplusplusplus.jpg" height="16" />
+                <CardActionArea>
+                  <Typography style={{ color: blue[700] }}>
+                    FREIER Amazon Support
+                  </Typography>
+                </CardActionArea>
+                <Typography></Typography>
+              </Grid>
+            </Grid>
+          </Example>
+          https://github.com/ndresx/react-countdown für einfaches countdown
           <Typography gutterBottom>
             Das zweite Beispiel ist ein Produktangebot bei E-Bay. Hierbei
             werden, wie bei Amazon, auch viele ähnliche Nudges angewendet. Der
@@ -205,7 +286,6 @@ export default function GettingStarted() {
             wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
             verkauft.{" "}
           </Typography>
-
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
@@ -259,7 +339,6 @@ export default function GettingStarted() {
             der durchschnittlichen Effektivität von 32,5% in die Effizienzklasse
             mittel angeordnet werden kann.
           </Typography>
-
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />

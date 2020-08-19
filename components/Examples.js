@@ -21,12 +21,21 @@ export default function Examples(props) {
   const cardStyle = {
     maxWidth: 900,
   };
+  const cardStyle2 = {
+    maxWidth: 700,
+  };
 
   return (
     <div className={classes.container}>
       <Card
         className={classes.root}
-        style={props.maxWidth == 900 ? cardStyle : {}}
+        style={
+          props.maxWidth == 900
+            ? cardStyle
+            : props.maxWidth == 700
+            ? cardStyle2
+            : {}
+        }
       >
         <CardContent>{props.children}</CardContent>
         <CardActions>
