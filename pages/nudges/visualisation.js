@@ -19,6 +19,7 @@ import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import { red } from "@material-ui/core/colors";
+import { orange } from "@material-ui/core/colors";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -43,6 +44,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
+
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import Grid from "@material-ui/core/Grid";
 
 //Quellen:
 //Passwort:
@@ -97,6 +103,16 @@ const rows = [
 
   createData("", "Durchschnittliche Effizienz: ", "47,33%"),
 ];
+
+function Healthiness(props) {
+  return props.value < 10 ? (
+    <FavoriteIcon style={{ color: green[500] }} />
+  ) : props.value < 20 ? (
+    <FavoriteBorderIcon style={{ color: orange[500] }} />
+  ) : (
+    <SentimentVeryDissatisfiedIcon style={{ color: red[500] }} />
+  );
+}
 
 export default function GettingStarted() {
   const classes = useStyles();
@@ -206,10 +222,24 @@ export default function GettingStarted() {
               <div className={classes.details}>
                 <CardContent className={classes.content}>
                   <Typography component="h5" variant="h5">
-                    Live From Space
+                    Cheeseburger
+                  </Typography>
+                  <Grid container spacing={1}>
+                    <Grid item xs={3} sd={7}>
+                      <Typography variant="subtitle1" color="textSecondary">
+                        kcal/100g:
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={3} sd={7}>
+                      <Healthiness value="5" />
+                    </Grid>
+                  </Grid>
+
+                  <Typography variant="subtitle1" color="textSecondary">
+                    Fett/100g:
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
-                    Mac Miller
+                    Zucker/100g:
                   </Typography>
                 </CardContent>
                 <div className={classes.controls}>
