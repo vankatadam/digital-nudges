@@ -434,39 +434,103 @@ export default function GettingStarted() {
             positioniert und die unsicheren unten, da eine Anordnung gewählt
             werden muss.{" "}
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/visualisation2wifis-ekwth?file=/index.js">
+            <Typography variant="h6" gutterBottom align="center">
+              Wählen sie ein Wi-Fi zum Verbinden
+            </Typography>
             <Grid
               container
               direction="column"
               justify="center"
               alignItems="center"
+              spacing={1}
             >
               {wlanData.map((singleWlan) => (
                 <Grid item key={singleWlan.name}>
                   {singleWlan.securityLevel <= 1 ? (
-                    <div>
-                      <Grid container direction="row">
-                        <Grid item>
-                          <Typography>{singleWlan.name}</Typography>
-                          <Typography>{singleWlan.name}</Typography>
+                    <Paper>
+                      <CardActionArea style={{ padding: 2, width: 200 }}>
+                        <Grid
+                          container
+                          direction="row"
+                          alignItems="center"
+                          justify="space-between"
+                          spacing={2}
+                        >
+                          <Grid item>
+                            <Typography>{singleWlan.name}</Typography>
+                            <Typography
+                              variant="body2"
+                              style={{ color: green[600] }}
+                              component="p"
+                            >
+                              Secured and Trusted
+                            </Typography>
+                          </Grid>
+                          <Grid item>
+                            <SignalWifi4BarLockIcon
+                              style={{ color: green[600], display: "inline" }}
+                            />
+                          </Grid>
                         </Grid>
-                        <Grid item>
-                          <SignalWifi4BarLockIcon
-                            style={{ color: green[600], display: "inline" }}
-                          />
-                        </Grid>
-                      </Grid>
-                    </div>
+                      </CardActionArea>
+                    </Paper>
                   ) : singleWlan.securityLevel <= 2 ? (
-                    <div>
-                      <Typography>{singleWlan.name}</Typography>{" "}
-                      <SignalWifi1BarLockIcon style={{ color: orange[600] }} />
-                    </div>
+                    <Paper>
+                      <CardActionArea style={{ padding: 2, width: 200 }}>
+                        <Grid
+                          container
+                          direction="row"
+                          alignItems="center"
+                          spacing={2}
+                          justify="space-between"
+                        >
+                          <Grid item>
+                            <Typography>{singleWlan.name}</Typography>
+                            <Typography
+                              variant="body2"
+                              style={{ color: orange[600] }}
+                              component="p"
+                            >
+                              Secured
+                            </Typography>
+                          </Grid>
+                          <Grid item>
+                            <SignalWifi1BarLockIcon
+                              style={{ color: orange[600], display: "inline" }}
+                            />
+                          </Grid>
+                        </Grid>
+                      </CardActionArea>
+                    </Paper>
                   ) : (
-                    <div>
-                      <Typography>{singleWlan.name}</Typography>{" "}
-                      <SignalWifi3BarIcon style={{ color: red[600] }} />
-                    </div>
+                    <Paper>
+                      <CardActionArea style={{ padding: 2, width: 200 }}>
+                        <Grid
+                          container
+                          direction="row"
+                          alignItems="center"
+                          spacing={2}
+                          justify="space-between"
+                        >
+                          <Grid item style={{}}>
+                            <Typography>{singleWlan.name}</Typography>
+                            <Typography
+                              variant="body2"
+                              style={{ color: red[600] }}
+                              component="p"
+                            >
+                              Open
+                            </Typography>
+                          </Grid>
+                          <Grid item>
+                            <SignalWifi3BarIcon
+                              style={{ color: red[600], display: "inline" }}
+                            />
+                          </Grid>
+                        </Grid>
+                      </CardActionArea>
+                    </Paper>
                   )}
                 </Grid>
               ))}
@@ -480,7 +544,136 @@ export default function GettingStarted() {
             Dieses Beispiel wird mit Bildern umgesetzt, die von der Europäische
             Union online zur Verfügung stehen [11].{" "}
           </Typography>
+          <Example maxWidth="900">
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/oven.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Ofen
+                    </Typography>
 
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Farbe: Silber
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Bauform: integrierbar
+                    </Typography>
+                    <Typography color="primary" component="p" gutterBottom>
+                      Preis: 399 € <img src="/Aplusplusplus.jpg" height="16" />
+                    </Typography>
+                  </CardContent>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Angebot
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/stove.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Herd
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Farbe: Silber
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Bauform: integrierbar
+                    </Typography>
+                    <Typography color="primary" component="p" gutterBottom>
+                      Preis: 599 € <img src="/B.jpg" height="16" />
+                    </Typography>
+                  </CardContent>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Angebot
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="/fridge.jpg"
+                    title="imageProductC"
+                    height="240"
+                    component="img"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Kühlschrank
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Farbe: Silber
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      gutterBottom
+                    >
+                      Bauform: freistehend
+                    </Typography>
+                    <Typography color="primary" component="p" gutterBottom>
+                      Preis: 999 € <img src="/A+.jpg" height="16" />
+                    </Typography>
+                  </CardContent>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Zum Angebot
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            </Grid>
+          </Example>
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
