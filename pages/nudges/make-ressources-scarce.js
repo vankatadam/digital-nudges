@@ -49,6 +49,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import Countdown from "react-countdown";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import FlightIcon from "@material-ui/icons/Flight";
+import Divider from "@material-ui/core/Divider";
+
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -79,6 +81,54 @@ const BoldTypo = withStyles({
     display: "inline",
   },
 })((props) => <Typography {...props} />);
+//3 Example
+const flights = [
+  {
+    time: "15:50 - 17:10",
+    firstFlight: "FRA - VIE, 0 Stopp(s)",
+    secondFlight: "",
+    eco: "274,44 €",
+    ecoAvail: "nur noch 7 Tickets zu diesem Preis",
+    bus: "508,44 €",
+    busAvail: "",
+  },
+  {
+    time: "20:00 - 21:25",
+    firstFlight: "FRA - VIE, 0 Stopp(s)",
+    secondFlight: "",
+    eco: "294,44 €",
+    ecoAvail: "",
+    bus: "488,47 €",
+    busAvail: "nur noch 2 Tickets zu diesem Preis",
+  },
+  {
+    time: "14:00 - 19:30",
+    firstFlight: "FRA - HAM, 1 Stopp(s)",
+    secondFlight: "HAM - VIE",
+    eco: "596,07 €",
+    ecoAvail: "",
+    bus: "719,07 €",
+    busAvail: "nur noch 2 Tickets zu diesem Preis",
+  },
+  {
+    time: "14:00 - 20:20",
+    firstFlight: "FRA - STR, 1 Stopp(s)",
+    secondFlight: "STR - VIE",
+    eco: "521,15 €",
+    ecoAvail: "nur noch 9 Tickets zu diesem Preis",
+    bus: "722,15 €",
+    busAvail: "",
+  },
+  {
+    time: "15:15 - 20:20",
+    firstFlight: "FRA - MUC, 1 Stopp(s)",
+    secondFlight: "MUC - VIE",
+    eco: "334,95 €",
+    ecoAvail: "",
+    bus: "571,95 €",
+    busAvail: "nur noch 3 Tickets zu diesem Preis",
+  },
+];
 
 //Efficiency
 
@@ -201,7 +251,7 @@ export default function GettingStarted() {
           <Example maxWidth="700">
             <Grid container justify="space-between" direction="row">
               <Grid item>
-                <img src="/burger.jpg" height="275" />
+                <img src="/tv.jpg" height="275" />
               </Grid>
               <Grid item style={{ width: 275 }}>
                 <Typography variant="h5">Ultra TV (4K Ultra HD)</Typography>
@@ -304,7 +354,7 @@ export default function GettingStarted() {
                     display="inline"
                   >
                     {" "}
-                    Alle Rabatfähige Artikel aufrufen
+                    Alle rabatfähige Artikel aufrufen
                   </Typography>
                 </CardActionArea>
               </Grid>
@@ -337,7 +387,7 @@ export default function GettingStarted() {
                       style={{}}
                       diplay="inline"
                     >
-                      In letzter Studne 7 verkauft!
+                      In letzter Stunde 7 verkauft!
                     </Typography>
                   </Grid>
                 </Grid>
@@ -411,16 +461,66 @@ export default function GettingStarted() {
             wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
             verkauft.{" "}
           </Typography>
-          <Example maxWidth="700">
-            <CardActionArea>
-              <Paper>
-                <Grid container justify="space-between" direction="row">
+          <Example maxWidth="900">
+            {flights.map((flight) => (
+              <Paper style={{ margin: 8 }} key={flight.time}>
+                <Grid
+                  container
+                  direction="row"
+                  justify="space-evenly"
+                  alignItems="center"
+                >
                   <Grid item>
                     <FlightIcon />
                   </Grid>
+                  <Grid item direction="column">
+                    <Grid item>
+                      <BoldTypo>{flight.time}</BoldTypo>
+                    </Grid>
+                    <Grid item>
+                      <Typography>{flight.firstFlight}</Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography>{flight.secondFlight}</Typography>
+                    </Grid>
+                  </Grid>
+
+                  <Divider orientation="vertical" flexItem="true" />
+
+                  <Grid item direction="column">
+                    <CardActionArea>
+                      <Grid item>
+                        <Typography style={{ color: green[500] }}>
+                          Economy Class:
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography>{flight.eco}</Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography color="error">{flight.ecoAvail}</Typography>
+                      </Grid>
+                    </CardActionArea>
+                  </Grid>
+                  <Divider orientation="vertical" flexItem="true" />
+                  <Grid item direction="column">
+                    <CardActionArea>
+                      <Grid item>
+                        <Typography style={{ color: blue[500] }}>
+                          Business Class:
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography>{flight.bus}</Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography color="error">{flight.busAvail}</Typography>
+                      </Grid>
+                    </CardActionArea>
+                  </Grid>
                 </Grid>
               </Paper>
-            </CardActionArea>
+            ))}
           </Example>
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
