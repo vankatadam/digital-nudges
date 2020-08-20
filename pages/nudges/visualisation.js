@@ -291,30 +291,65 @@ export default function GettingStarted() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Geröstete Erdnüsse
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      kcal/100g: <HealthinessKcal value="630" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Grid item style={{ padding: 0 }}>
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                          gutterBottom
+                        >
+                          kcal/100g:
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <HealthinessKcal value="630" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Fett/100g: <Healthiness value="53" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Fett/100g:
+                      </Typography>
+                      <Grid item>
+                        <Healthiness value="53" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Zucker/100g: <Healthiness value="3.6" />
-                    </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Zucker/100g:
+                      </Typography>
+                      <Grid item>
+                        <Healthiness value="3.6" />
+                      </Grid>
+                    </Grid>
                   </CardContent>
 
                   <CardActions>
@@ -337,30 +372,63 @@ export default function GettingStarted() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Caesar Salat
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      kcal/100g: <HealthinessKcal value="44" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        kcal/100g:
+                      </Typography>
+                      <Grid item>
+                        <HealthinessKcal value="44" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Fett/100g: <Healthiness value="2.1" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Fett/100g:
+                      </Typography>
+                      <Grid item>
+                        <Healthiness value="2.1" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Zucker/100g: <Healthiness value="2.1" />
-                    </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Zucker/100g:
+                      </Typography>
+                      <Grid item>
+                        <Healthiness value="2.1" />
+                      </Grid>
+                    </Grid>
                   </CardContent>
 
                   <CardActions>
@@ -383,30 +451,65 @@ export default function GettingStarted() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Burger
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      kcal/100g: <HealthinessKcal value="303" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        kcal/100g:
+                      </Typography>
+                      <Grid item>
+                        <HealthinessKcal value="303" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Fett/100g: <Healthiness value="14" />
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                      gutterBottom
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        gutterBottom
+                      >
+                        Fett/100g:
+                      </Typography>
+                      <Grid item>
+                        <Healthiness value="14" />
+                      </Grid>
+                    </Grid>
+                    <Grid
+                      container
+                      direction="row"
+                      alignItems="center"
+                      wrap="nowrap"
+                      spacing={1}
                     >
-                      Zucker/100g: <Healthiness value="5" />
-                    </Typography>
+                      <Grid item style={{ padding: 0 }}>
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                          gutterBottom
+                        >
+                          Zucker/100g:
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Healthiness value="5" />
+                      </Grid>
+                    </Grid>
                   </CardContent>
 
                   <CardActions>

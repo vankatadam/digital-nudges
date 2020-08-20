@@ -23,6 +23,7 @@ import { red } from "@material-ui/core/colors";
 import { blueGrey } from "@material-ui/core/colors";
 import { blue } from "@material-ui/core/colors";
 import { orange } from "@material-ui/core/colors";
+import { grey } from "@material-ui/core/colors";
 
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -46,7 +47,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
 import Countdown from "react-countdown";
-
+import WhatshotIcon from "@material-ui/icons/Whatshot";
+import FlightIcon from "@material-ui/icons/Flight";
 //Quellen:
 //Passwort:
 //https://material-ui.com/components/text-fields/
@@ -254,8 +256,13 @@ export default function GettingStarted() {
                 </Typography>
                 <Countdown date={Date.now() + 70000000} daysInHours={true} />
                 <br />
-                <Typography display="inline">Du sparst: </Typography>
-                <Typography display="inline">519.01€ (52%)</Typography>
+                <Typography display="inline">
+                  Du sparst:{" "}
+                  <Typography display="inline" color="error">
+                    519.01€ (52%)
+                  </Typography>
+                </Typography>
+
                 <br />
                 <img src="/Aplusplusplus.jpg" height="16" />
                 <CardActionArea>
@@ -278,6 +285,124 @@ export default function GettingStarted() {
             hinweisen, dass dieses Produkt oft verkauft wird und somit schnell
             ausverkauft werden kann.{" "}
           </Typography>
+          <Example>
+            <Grid container justify="center" direction="row">
+              <Grid item style={{ textAlign: "center" }}>
+                <Typography
+                  color="textSecondary"
+                  variant="body2"
+                  display="inline"
+                >
+                  {" "}
+                  Sparen sie bis zu
+                </Typography>
+                <BoldTypo style={{ color: red[500] }}> 70%</BoldTypo>{" "}
+                <CardActionArea style={{ display: "inline", marginBottom: 4 }}>
+                  <Typography
+                    style={{ color: blue[500] }}
+                    variant="body2"
+                    display="inline"
+                  >
+                    {" "}
+                    Alle Rabatfähige Artikel aufrufen
+                  </Typography>
+                </CardActionArea>
+              </Grid>
+              <Grid item>
+                <img
+                  src="/shoe.jpg"
+                  height="275"
+                  style={{ boxShadow: "3px 3px 8px 3px rgba(0, 0, 0, 0.1)" }}
+                />
+              </Grid>
+              <Grid item style={{ width: 275 }}>
+                <Typography variant="h5">Sammler Sneakers</Typography>
+                <Typography color="error">(Limited Edition)</Typography>
+                <Typography color="textSecondary" variant="body2">
+                  von Rainbow
+                </Typography>
+                <Typography>2600 Bewertungen</Typography>
+                <Grid container direction="row" alignItems="center">
+                  <Grid item>
+                    <WhatshotIcon
+                      fontSize="small"
+                      color="error"
+                      display="inline"
+                    />
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      color="error"
+                      variant="body2"
+                      style={{}}
+                      diplay="inline"
+                    >
+                      In letzter Studne 7 verkauft!
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <hr />
+                <Typography variant="body2" color="textSecondary">
+                  Begrenzte Stückzahl verfügbar
+                </Typography>
+
+                <Typography variant="body1" color="error">
+                  1.139 verkauft!
+                </Typography>
+                <CardActionArea style={{ marginBottom: 4 }}>
+                  <Typography variant="body2" style={{ color: blue[500] }}>
+                    Bewertungen ansehen
+                  </Typography>
+                </CardActionArea>
+
+                <Grid
+                  container
+                  justify="center"
+                  alignItems="center"
+                  style={{
+                    backgroundColor: grey[200],
+                    padding: 4,
+                    paddingBottom: 8,
+                  }}
+                >
+                  <BoldTypo variant="h6">EUR 59,59</BoldTypo>
+                  <Typography
+                    color="textSecondary"
+                    variant="body2"
+                    display="inline"
+                    style={{ marginLeft: 6, marginRight: 6 }}
+                  >
+                    UVP:{" "}
+                  </Typography>
+                  <Typography
+                    style={{ textDecoration: "line-through" }}
+                    display="inline"
+                    variant="body2"
+                  >
+                    259,99€
+                  </Typography>
+
+                  <br />
+                  <Button
+                    variant="contained"
+                    style={{
+                      color: "white",
+                      backgroundColor: blue[500],
+                      marginBottom: 6,
+                    }}
+                  >
+                    Sofort kaufen
+                  </Button>
+                  <Button
+                    variant="contained"
+                    style={{ color: "white", backgroundColor: blue[300] }}
+                  >
+                    In den Warenkorb
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Example>
           <Typography gutterBottom>
             Das dritte Beispiel ist eine Kombination aus den beiden vorherigen
             Beispielen. Dieses Beispiel orientiert sich am Flugticketverkauf bei
@@ -286,6 +411,17 @@ export default function GettingStarted() {
             wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
             verkauft.{" "}
           </Typography>
+          <Example maxWidth="700">
+            <CardActionArea>
+              <Paper>
+                <Grid container justify="space-between" direction="row">
+                  <Grid item>
+                    <FlightIcon />
+                  </Grid>
+                </Grid>
+              </Paper>
+            </CardActionArea>
+          </Example>
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
