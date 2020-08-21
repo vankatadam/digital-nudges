@@ -82,33 +82,33 @@ export default function TitleBox(props) {
                 <Typography style={{ display: "inline-block", marginRight: 4 }}>
                   Aufwand:
                 </Typography>
-                {props.effort <= 5 && (
+                {props.effort <= 1 && (
                   <>
                     <Typography
                       style={{
-                        color: "red",
+                        color: "green",
                         display: "inline-block",
                       }}
                     >
-                      {"< 5 Std"}
+                      {"< 1 Std"}
                     </Typography>
                   </>
                 )}
-                {props.effort <= 10 && props.effort > 5 && (
+                {props.effort <= 2 && props.effort > 1 && (
                   <>
                     <Typography
                       style={{ color: "orange", display: "inline-block" }}
                     >
-                      {"5 - 10 Std"}
+                      {"1 - 2 Std"}
                     </Typography>
                   </>
                 )}
-                {props.effort > 10 && (
+                {props.effort > 2 && (
                   <>
                     <Typography
                       style={{ color: "red", display: "inline-block" }}
                     >
-                      {"> 10 Std"}
+                      {"> 3 Std"}
                     </Typography>
                   </>
                 )}

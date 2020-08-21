@@ -10,7 +10,7 @@ import theme from "../src/theme";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: "linear-gradient(135deg, black, white)",
+    //backgroundImage: "linear-gradient(135deg, black, white)",
   },
   blackSquare: {
     backgroundColor: "black",
@@ -21,9 +21,7 @@ const useStyles = makeStyles((theme) => ({
     height: 300,
     zIndex: -1,
   },
-  digital: {
-    color: "#ffffff",
-  },
+  digital: {},
 }));
 
 export default function Home() {
@@ -42,11 +40,8 @@ export default function Home() {
           <Typography variant="h3" color="secondary">
             Nudges
           </Typography>
-          <a href="https://codesandbox.io/s/competent-monad-0siso?file=/index.js">
-            Link to Sandbox
-          </a>
-          <Typography>Lerne euere Superfähigkeit blabla</Typography>
-          <Typography></Typography>
+
+          <Typography>Enrdecke neue Gestaltungsmöglichkeiten</Typography>
         </ThemeProvider>
       </div>{" "}
     </NavBar>

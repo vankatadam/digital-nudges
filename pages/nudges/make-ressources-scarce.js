@@ -42,7 +42,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import { Grid, GridListTileBar } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
@@ -248,10 +248,13 @@ export default function GettingStarted() {
             das erste Beispiel in der Guideline sein. Es wird also ein Produkt
             dargestellt, das eine Zeitliche Beschränkung hat.{" "}
           </Typography>
-          <Example maxWidth="700">
+          <Example
+            maxWidth="700"
+            link="https://codesandbox.io/s/scarce1amazon-sg9gt"
+          >
             <Grid container justify="space-between" direction="row">
               <Grid item>
-                <img src="/tv.jpg" height="275" />
+                <img src="/tv.jpg" height="275" alt="tv" />
               </Grid>
               <Grid item style={{ width: 275 }}>
                 <Typography variant="h5">Ultra TV (4K Ultra HD)</Typography>
@@ -314,7 +317,7 @@ export default function GettingStarted() {
                 </Typography>
 
                 <br />
-                <img src="/Aplusplusplus.jpg" height="16" />
+                <img src="/Aplusplusplus.jpg" height="16" alt="a+++" />
                 <CardActionArea>
                   <Typography style={{ color: blue[700] }}>
                     FREIER Amazon Support
@@ -335,7 +338,7 @@ export default function GettingStarted() {
             hinweisen, dass dieses Produkt oft verkauft wird und somit schnell
             ausverkauft werden kann.{" "}
           </Typography>
-          <Example>
+          <Example link="https://codesandbox.io/s/naughty-allen-sngwi?file=/index.js">
             <Grid container justify="center" direction="row">
               <Grid item style={{ textAlign: "center" }}>
                 <Typography
@@ -363,6 +366,7 @@ export default function GettingStarted() {
                   src="/shoe.jpg"
                   height="275"
                   style={{ boxShadow: "3px 3px 8px 3px rgba(0, 0, 0, 0.1)" }}
+                  alt="shoe"
                 />
               </Grid>
               <Grid item style={{ width: 275 }}>
@@ -461,7 +465,10 @@ export default function GettingStarted() {
             wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
             verkauft.{" "}
           </Typography>
-          <Example maxWidth="900">
+          <Example
+            maxWidth="900"
+            link="https://codesandbox.io/s/lucid-fast-7cgsy?file=/index.js"
+          >
             {flights.map((flight) => (
               <Paper style={{ margin: 8 }} key={flight.time}>
                 <Grid
