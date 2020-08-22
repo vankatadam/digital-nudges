@@ -163,8 +163,8 @@ export default function GettingStarted() {
           <TitleBox
             title={"Make Ressources Scarce"}
             effort={1}
-            effectiveness={53}
-            efficiency={1}
+            effectiveness={32.5}
+            efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
             „Make Resources Scarce” Nudge basiert auf dem “Scarcity Bias” [vgl.

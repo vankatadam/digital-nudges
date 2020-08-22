@@ -27,6 +27,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { purple } from "@material-ui/core/colors";
 import theme from "../src/theme";
+import styles from "./backdropFilter.module.css";
 
 const drawerWidth = 250;
 
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    paddingLeft: 0,
+    minHeight: "100%",
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -219,49 +220,56 @@ export default function NavigationBar(props) {
 
   return (
     <div className={classes.root}>
+      <CssBaseline />
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         {/* md oder lg?*/}
-        <Container maxWidth={props.home ? "xl" : "md"}>
-          <HideOnScroll {...props}>
-            <AppBar position="fixed" className={classes.appBar}>
-              <Toolbar className={classes.toolbar2}>
-                <div className={classes.menuButtonDiv}>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    edge="start"
-                    onClick={handleDrawerToggle}
-                    className={classes.menuButton}
-                  >
-                    <MenuIcon className={classes.menuIcon} />
-                  </IconButton>
-                </div>
-                <div className={classes.titleDiv}>
-                  <Link href="/index">
-                    <a className={classes.a}>
-                      <Typography
-                        className={classes.titleDigital}
-                        variant="h5"
-                        noWrap
-                      >
-                        Digital
-                      </Typography>
-                      <Typography
-                        className={classes.titleNudges}
-                        variant="h5"
-                        noWrap
-                        color="secondary"
-                      >
-                        Nudges
-                      </Typography>
-                    </a>
-                  </Link>
-                </div>
-                <div className={classes.flexHack}></div>
-              </Toolbar>
-            </AppBar>
-          </HideOnScroll>
+        <Container
+          maxWidth={props.home ? "xl" : "md"}
+          styles={{ background: "white" }}
+        >
+          {props.middle == "true" ? (
+            ""
+          ) : (
+            <HideOnScroll {...props}>
+              <AppBar position="fixed" className={classes.appBar}>
+                <Toolbar className={classes.toolbar2}>
+                  <div className={classes.menuButtonDiv}>
+                    <IconButton
+                      color="inherit"
+                      aria-label="open drawer"
+                      edge="start"
+                      onClick={handleDrawerToggle}
+                      className={classes.menuButton}
+                    >
+                      <MenuIcon className={classes.menuIcon} />
+                    </IconButton>
+                  </div>
+                  <div className={classes.titleDiv}>
+                    <Link href="/index">
+                      <a className={classes.a}>
+                        <Typography
+                          className={classes.titleDigital}
+                          variant="h5"
+                          noWrap
+                        >
+                          Digital
+                        </Typography>
+                        <Typography
+                          className={classes.titleNudges}
+                          variant="h5"
+                          noWrap
+                          color="secondary"
+                        >
+                          Nudges
+                        </Typography>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className={classes.flexHack}></div>
+                </Toolbar>
+              </AppBar>
+            </HideOnScroll>
+          )}
           <nav className={classes.drawer} aria-label="mailbox folders">
             {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
             {/*
@@ -296,8 +304,22 @@ export default function NavigationBar(props) {
         </Hidden>
         */}
           </nav>
-          <main className={classes.content}>
-            <div className={classes.toolbar} />
+          <main
+            className={styles.container}
+            style={
+              props.middle == "true"
+                ? {
+                    padding: 16,
+                    position: "fixed",
+                    top: "50%",
+                    left: "50%",
+                    /* bring your own prefixes */
+                    transform: "translate(-50%, -50%)",
+                  }
+                : { padding: 16 }
+            }
+          >
+            {props.middle == "true" ? "" : <div className={classes.toolbar} />}
             {props.children}
           </main>
         </Container>

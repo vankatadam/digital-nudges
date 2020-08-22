@@ -335,9 +335,9 @@ export default function GettingStarted() {
           </Head>
           <TitleBox
             title={"Positioning"}
-            effort={1}
+            effort={3}
             effectiveness={53}
-            efficiency={1}
+            efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
             Eine weitere einfach umsetzbare, aber trotz dessen eine häufige Art

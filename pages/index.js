@@ -7,41 +7,74 @@ import { ThemeProvider } from "@material-ui/styles";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import NavBar from "../components/Navigation-bar";
 import theme from "../src/theme";
+import { Grid } from "@material-ui/core";
+import Fade from "@material-ui/core/Fade";
+import Grow from "@material-ui/core/Grow";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     //backgroundImage: "linear-gradient(135deg, black, white)",
   },
-  blackSquare: {
-    backgroundColor: "black",
-    position: "absolute",
-    left: 0,
-    top: 0,
-    width: 300,
-    height: 300,
-    zIndex: -1,
-  },
-  digital: {},
 }));
 
 export default function Home() {
   const classes = useStyles();
   return (
-    <NavBar home={true}>
+    <NavBar home={false} middle="true">
       <div className={classes.root}>
         <ThemeProvider theme={theme}>
           <Head>
             <title>Digital Nudges</title>
           </Head>
+          <Grid
+            spacing={1}
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item xs>
+              <Fade in="true" {...{ timeout: 5000 }}>
+                <Typography style={{ fontSize: "6.5rem" }} variant="h1">
+                  Digital
+                </Typography>
+              </Fade>
+              <Fade
+                in="true"
+                {...{ timeout: 5000 }}
+                style={{ transitionDelay: "500ms" }}
+              >
+                <Typography
+                  style={{ fontSize: "6.5rem" }}
+                  variant="h1"
+                  color="secondary"
+                >
+                  Nudges
+                </Typography>
+              </Fade>
+            </Grid>
+            <Grid item xs>
+              <Fade
+                in="true"
+                {...{ timeout: 5000 }}
+                style={{ transitionDelay: "1500ms" }}
+              >
+                <Typography variant="h4">
+                  Entdecke neue Gestaltungsmöglichkeiten
+                  <Link href="/getting-started">
+                    <Button style={{ marginTop: 16 }} variant="outlined">
+                      Getting Started
+                    </Button>
+                  </Link>
+                </Typography>
+              </Fade>
+            </Grid>
+          </Grid>
+          <Grid container direction="row" justify="center" alignItems="center">
+            <Grid item></Grid>
+          </Grid>
           {/*<div className={classes.blackSquare}></div>*/}
-          <Typography variant="h3" className={classes.digital}>
-            Digital
-          </Typography>
-          <Typography variant="h3" color="secondary">
-            Nudges
-          </Typography>
-
-          <Typography>Enrdecke neue Gestaltungsmöglichkeiten</Typography>
         </ThemeProvider>
       </div>{" "}
     </NavBar>

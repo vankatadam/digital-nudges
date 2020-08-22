@@ -22,5 +22,8 @@
     "react-dom": "16.13.1",
     "responsive-loader": "^2.0.2",
     "sharp": "^0.25.4"
+  },
+  "devDependencies": {
+    "file-loader": "^6.0.0"
   }
 }

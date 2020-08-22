@@ -16,7 +16,15 @@ const theme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: "#fff",
+      default: "transparent",
+    },
+    "#global": {
+      body: {
+        minHeight: "100%",
+        background: "url(public/background.jpg) no-repeat center center fixed",
+        webkitBackgroundSize: "cover",
+        backgroundSize: "cover",
+      },
     },
   },
 });

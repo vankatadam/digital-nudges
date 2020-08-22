@@ -187,8 +187,8 @@ export default function GettingStarted() {
           <TitleBox
             title={"Visualisation"}
             effort={1}
-            effectiveness={53}
-            efficiency={1}
+            effectiveness={47.33}
+            efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
             Der ursprüngliche Nudge von 1 wurde als „Deceptive Visualisation“

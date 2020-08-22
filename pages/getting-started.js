@@ -15,7 +15,7 @@ export async function getStaticProps(context) {
 
 export default function GettingStarted() {
   return (
-    <div>
+    <NavBar>
       <Head>
         <title>Getting Started</title>
         <meta
@@ -39,6 +39,6 @@ export default function GettingStarted() {
       <Typography>
         Wo kann man anfangen?: Design Cycle oder direkt zu Nudges
       </Typography>
-    </div>
+    </NavBar>
   );
 }

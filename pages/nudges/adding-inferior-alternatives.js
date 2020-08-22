@@ -108,8 +108,8 @@ export default function GettingStarted() {
           <TitleBox
             title={"Adding Inferior Alternatives"}
             effort={1}
-            effectiveness={(32, 6)}
-            efficiency={1}
+            effectiveness={32.6}
+            efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
             {" "}
