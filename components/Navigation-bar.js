@@ -158,14 +158,13 @@ export default function NavigationBar(props) {
         >
           Design Cycle
         </ListItem>
+        <ListItem component={ButtonLink} href="/biases" className={classes.a}>
+          Biases
+        </ListItem>
 
         {/* Home, Getting Started are not in separate list, tahts why Cycle and Nudges have bigger space between */}
 
-        <ListItem
-          component={ButtonLink}
-          href="/getting-started"
-          className={classes.a}
-        >
+        <ListItem component={ButtonLink} href="/nudges" className={classes.a}>
           Nudges
         </ListItem>
         <ListItem
