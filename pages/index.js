@@ -36,7 +36,7 @@ export default function Home() {
           >
             <Grid item xs>
               <Fade in="true" {...{ timeout: 5000 }}>
-                <Typography style={{ fontSize: "6.5rem" }} variant="h1">
+                <Typography style={{ fontSize: "6rem" }} variant="h1">
                   Digital
                 </Typography>
               </Fade>
@@ -46,7 +46,7 @@ export default function Home() {
                 style={{ transitionDelay: "500ms" }}
               >
                 <Typography
-                  style={{ fontSize: "6.5rem" }}
+                  style={{ fontSize: "6rem" }}
                   variant="h1"
                   color="secondary"
                 >

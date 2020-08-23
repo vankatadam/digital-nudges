@@ -3,7 +3,7 @@ import Typography from "@material-ui/core/Typography";
 
 export default function designCycle() {
   return (
-    <>
+    <NavBar>
       <Typography variant="h5">Design Cycle</Typography>
 
       <Typography>
@@ -29,6 +29,6 @@ export default function designCycle() {
 
       <Typography variant="h7">4. Test</Typography>
       <Typography></Typography>
-    </>
+    </NavBar>
   );
 }
