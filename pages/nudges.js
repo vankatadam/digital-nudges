@@ -3,6 +3,8 @@ import Typography from "@material-ui/core/Typography";
 import theme from "../src/theme";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
+import Link from "next/link";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,7 +66,56 @@ export default function designCycle() {
         aufgelistet.
       </Typography>
       <Typography variant="h4" gutterBottom>
-        asa
+        Nudge Übersicht
+      </Typography>
+      <Typography gutterBottom>
+        <ol>
+          <li>
+            <Typography>
+              <BoldTypo>Default Nudge</BoldTypo> ist die häufigste Form der
+              Nudges. Es funktioniert dank der Tatsache, dass Menschen den Weg
+              des niedrigsten Widerstandes wählen. Als Beispiel wären dies
+              Newsletter Checkboxen, die "Abbonieren" vorausgewählt haben.
+            </Typography>
+          </li>
+          <Link href="/nudges/defaults">
+            <Button
+              color="secondary"
+              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+            >
+              Zu Defaults
+            </Button>
+          </Link>
+          <li>
+            <Typography>
+              <BoldTypo>Positioning</BoldTypo>
+            </Typography>
+          </li>
+          <Link href="/biases">
+            <Button
+              color="secondary"
+              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+            >
+              Zu Biases
+            </Button>
+          </Link>
+          <li>
+            <Typography>
+              Nachdem theoretische Grundlagen verstanden wurden, kann mit der
+              <BoldTypo> Implementierung</BoldTypo> von Nudges angefangen
+              werden!
+            </Typography>
+
+            <Link href="/nudges">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Nudges
+              </Button>
+            </Link>
+          </li>
+        </ol>
       </Typography>
     </NavBar>
   );

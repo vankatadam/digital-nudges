@@ -105,47 +105,57 @@ export default function GettingStarted() {
           Um mit der Implementierung anzufangen, sollten zuerst folgende
           Schritte durchgeführt werden:
         </Typography>
-        <Typography>
-          1. Um den Fokus dieser Guideline auf die Implementierung zu verstehen,
-          sollte zuerst der in 4 Phasen ablaufende und iterative{" "}
-          <BoldTypo>Design Zyklus von Digital Nudges</BoldTypo> verstanden
-          werden. Dies ist notwendig, da eine erfolgreiche Umsetzung von Digital
-          Nudges nicht nur von der Implementierung abhängig ist, sondern auch
-          von der Planung und dem Testen.
-        </Typography>
-        <Link href="/design-cycle">
-          <Button
-            color="secondary"
-            style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
-          >
-            Zu Design Cycle
-          </Button>
-        </Link>
-        <Typography>
-          2. Um das grundlegende <BoldTypo>Verständnis des Nutzers</BoldTypo> zu
-          bekommen, sollten grundlegende Heuristiken und Biases verstanden
-          werden.
-        </Typography>
-        <Link href="/biases">
-          <Button
-            color="secondary"
-            style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
-          >
-            Zu Biases
-          </Button>
-        </Link>
-        <Typography>
-          3. Nachdem theoretische Grundlagen verstanden wurden, kann mit der
-          <BoldTypo> Implementierung</BoldTypo> von Nudges angefangen werden!
-        </Typography>
-        <Link href="/nudges">
-          <Button
-            color="secondary"
-            style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
-          >
-            Zu Nudges
-          </Button>
-        </Link>
+        <ol>
+          <li>
+            <Typography>
+              Um den Fokus dieser Guideline auf die Implementierung zu
+              verstehen, sollte zuerst der in 4 Phasen ablaufende und iterative{" "}
+              <BoldTypo>Design Zyklus von Digital Nudges</BoldTypo> verstanden
+              werden. Dies ist notwendig, da eine erfolgreiche Umsetzung von
+              Digital Nudges nicht nur von der Implementierung abhängig ist,
+              sondern auch von der Planung und dem Testen.
+            </Typography>
+          </li>
+          <Link href="/design-cycle">
+            <Button
+              color="secondary"
+              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+            >
+              Zu Design Cycle
+            </Button>
+          </Link>
+          <li>
+            <Typography>
+              Um das grundlegende <BoldTypo>Verständnis des Nutzers</BoldTypo>{" "}
+              zu bekommen, sollten grundlegende Heuristiken und Biases
+              verstanden werden.
+            </Typography>
+          </li>
+          <Link href="/biases">
+            <Button
+              color="secondary"
+              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+            >
+              Zu Biases
+            </Button>
+          </Link>
+          <li>
+            <Typography>
+              Nachdem theoretische Grundlagen verstanden wurden, kann mit der
+              <BoldTypo> Implementierung</BoldTypo> von Nudges angefangen
+              werden!
+            </Typography>
+
+            <Link href="/nudges">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Nudges
+              </Button>
+            </Link>
+          </li>
+        </ol>
         <Typography variant="h4" gutterBottom>
           Empfohlene Literatur
         </Typography>
