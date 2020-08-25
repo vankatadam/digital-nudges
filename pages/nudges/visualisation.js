@@ -84,13 +84,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BoldTypo = withStyles({
-  root: {
-    fontWeight: 500,
-    display: "inline",
-  },
-})((props) => <Typography {...props} />);
-
 //Efficiency
 
 function createData(name, source, effectivity) {

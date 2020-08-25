@@ -1,5 +1,13 @@
 import NavBar from "../components/Navigation-bar";
 import Typography from "@material-ui/core/Typography";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+
+const BoldTypo = withStyles({
+  root: {
+    fontWeight: 500,
+    display: "inline",
+  },
+})((props) => <Typography component="span" {...props} />);
 
 export default function designCycle() {
   return (

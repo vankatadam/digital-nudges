@@ -1,7 +1,7 @@
 import NavBar from "../components/Navigation-bar";
 import Typography from "@material-ui/core/Typography";
 import theme from "../src/theme";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +15,7 @@ const BoldTypo = withStyles({
     fontWeight: 500,
     display: "inline",
   },
-})((props) => <Typography {...props} />);
+})((props) => <Typography component="span" {...props} />);
 
 export default function designCycle() {
   const classes = useStyles();
@@ -26,8 +26,9 @@ export default function designCycle() {
         Nudges
       </Typography>
       <Typography gutterBottom>
-        Wie in Getting Started erklärt, sind Nudges kleine Stupse, die die
-        Chance erhöhe, dass ein Nutzer eine bestimmte Entscheidung trifft.{" "}
+        Wie in Getting Started erklärt, sind Nudges{" "}
+        <BoldTypo>kleine Stupse</BoldTypo>, die die Chance erhöhe, dass ein
+        Nutzer eine bestimmte Entscheidung trifft.{" "}
       </Typography>
       <Typography gutterBottom>
         Um sich in der Guideline orientieren zu können wird in der Folgenden
@@ -47,21 +48,23 @@ export default function designCycle() {
         Anschließend werden <BoldTypo>praktische Beispiele</BoldTypo> mit deren
         Umsetzungen erklärt. Jedes Beispiel ist mit einem{" "}
         <BoldTypo>Link auf Codesandbox</BoldTypo> versehen, damit jedes Beispiel
-        nachvollgezogen werden kann und reproduziert werden kann. Abschließend
-        werden <BoldTypo>Design Empfehlungen</BoldTypo> und Literatur erwähnt.
+        nachvollgezogen werden kann und reproduziert werden kann. Der Fokus von
+        den gezeigten Beispielen ist auf die UI Oberfläche gesetzt, sodass
+        eigene Logik für weitere Funktionen selbst eingebunden werden muss.
+        Abschließend werden <BoldTypo>Design Empfehlungen</BoldTypo> und
+        Literatur erwähnt.
       </Typography>
       <Typography gutterBottom>
-        Jeder Nudge wurde auf seine Effektivität in unterschiedlichen Studien
-        betrachtet. Zusätzlich wurde der Umsetzungsaufwand anhand der eigenen
-        Implementierung abgeschätzt. Aus diesen zwei Messgrößen wurde
-        letzendlich die Effizienz abgeleitet. Diese Messgrößen können bei jedem
-        Nudge Titel direkt gesehen werden. Zusätzlich ist eine Tabelle mit
-        betrachteten Studien am Ende jeder Seite aufgelistet.
+        Jeder Nudge wurde auf seine <BoldTypo>Effektivität</BoldTypo> in
+        unterschiedlichen Studien betrachtet. Zusätzlich wurde der
+        Umsetzungsaufwand anhand der eigenen Implementierung abgeschätzt. Aus
+        diesen zwei Messgrößen wurde letzendlich die Effizienz abgeleitet. Diese
+        Messgrößen können bei jedem Nudge Titel direkt gesehen werden.
+        Zusätzlich ist eine Tabelle mit betrachteten Studien am Ende jeder Seite
+        aufgelistet.
       </Typography>
-      <Typography gutterBottom>
-        Der Fokus von den gezeigten Beispielen ist auf die UI Oberfläche
-        gesetzt, sodass eigene Logik für weitere Funktionen selbst eingebunden
-        werden muss.
+      <Typography variant="h4" gutterBottom>
+        asa
       </Typography>
     </NavBar>
   );

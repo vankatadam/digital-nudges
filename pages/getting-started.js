@@ -31,7 +31,7 @@ const BoldTypo = withStyles({
     fontWeight: 500,
     display: "inline",
   },
-})((props) => <Typography {...props} />);
+})((props) => <Typography component="span" {...props} />);
 
 export default function GettingStarted() {
   const classes = useStyles();

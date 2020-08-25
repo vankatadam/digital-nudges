@@ -80,7 +80,7 @@ const BoldTypo = withStyles({
     fontWeight: 500,
     display: "inline",
   },
-})((props) => <Typography {...props} />);
+})((props) => <Typography component="span" {...props} />);
 //3 Example
 const flights = [
   {

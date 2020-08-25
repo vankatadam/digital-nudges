@@ -35,13 +35,13 @@ export default function Home() {
             alignItems="center"
           >
             <Grid item xs>
-              <Fade in="true" {...{ timeout: 5000 }}>
+              <Fade in={true} {...{ timeout: 5000 }}>
                 <Typography style={{ fontSize: "6rem" }} variant="h1">
                   Digital
                 </Typography>
               </Fade>
               <Fade
-                in="true"
+                in={true}
                 {...{ timeout: 5000 }}
                 style={{ transitionDelay: "500ms" }}
               >
@@ -56,7 +56,7 @@ export default function Home() {
             </Grid>
             <Grid item xs>
               <Fade
-                in="true"
+                in={true}
                 {...{ timeout: 5000 }}
                 style={{ transitionDelay: "1500ms" }}
               >
