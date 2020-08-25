@@ -203,12 +203,8 @@ export default function NavigationBar(props) {
           Make Ressources Scarce
         </ListItem>
 
-        <ListItem
-          component={ButtonLink}
-          href="/nudges/defaults"
-          className={classes.a}
-        >
-          Author Info
+        <ListItem component={ButtonLink} href="/author" className={classes.a}>
+          Author
         </ListItem>
       </List>
     </div>
@@ -226,7 +222,7 @@ export default function NavigationBar(props) {
           maxWidth={props.home ? "xl" : "md"}
           styles={{ background: "white" }}
         >
-          {props.middle == "true" ? (
+          {props.middle && props.home == "true" ? (
             ""
           ) : (
             <HideOnScroll {...props}>

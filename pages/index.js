@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
   const classes = useStyles();
   return (
-    <NavBar home={false} middle="true">
+    <NavBar home="true" middle="true">
       <div className={classes.root}>
         <ThemeProvider theme={theme}>
           <Head>
