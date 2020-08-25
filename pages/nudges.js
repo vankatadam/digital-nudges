@@ -72,7 +72,7 @@ export default function designCycle() {
         <ol>
           <li>
             <Typography>
-              <BoldTypo>Default Nudge</BoldTypo> ist die häufigste Form der
+              <BoldTypo>Default Nudge</BoldTypo> ist die häufigste Form von
               Nudges. Es funktioniert dank der Tatsache, dass Menschen den Weg
               des niedrigsten Widerstandes wählen. Als Beispiel wären dies
               Newsletter Checkboxen, die "Abbonieren" vorausgewählt haben.
@@ -88,30 +88,65 @@ export default function designCycle() {
           </Link>
           <li>
             <Typography>
-              <BoldTypo>Positioning</BoldTypo>
+              <BoldTypo>Positioning Nudge</BoldTypo> funbktioniert dank
+              Anordnung von Elementen in einer Auflistung. Beispielsweise wäre
+              dies eine standarte absteigende Sortierung von Waren, um damit
+              höherwertigere Sachen zu verkaufen.
             </Typography>
           </li>
-          <Link href="/biases">
+          <Link href="/nudges/positioning">
             <Button
               color="secondary"
               style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
             >
-              Zu Biases
+              Zu Positioning
             </Button>
           </Link>
           <li>
             <Typography>
-              Nachdem theoretische Grundlagen verstanden wurden, kann mit der
-              <BoldTypo> Implementierung</BoldTypo> von Nudges angefangen
-              werden!
+              <BoldTypo>Adding Inferior Alternatives Nudge</BoldTypo>{" "}
+              funktioniert dank eines "Decoy" Produktes. Dies kann benutzt
+              werden, um ein Produkt im vergleich zu anderem zu bevorzugen.
             </Typography>
 
-            <Link href="/nudges">
+            <Link href="/nudges/adding-inferior-alternatives">
               <Button
                 color="secondary"
                 style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
               >
-                Zu Nudges
+                Zu Inferior Alternatives
+              </Button>
+            </Link>
+          </li>
+          <li>
+            <Typography>
+              <BoldTypo>Adding Inferior Alternatives Nudge</BoldTypo>{" "}
+              funktioniert dank eines "Decoy" Produktes. Dies kann benutzt
+              werden, um ein Produkt im vergleich zu anderem zu bevorzugen.
+            </Typography>
+
+            <Link href="/nudges/adding-inferior-alternatives">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Inferior Alternatives
+              </Button>
+            </Link>
+          </li>
+          <li>
+            <Typography>
+              <BoldTypo>Adding Inferior Alternatives Nudge</BoldTypo>{" "}
+              funktioniert dank eines "Decoy" Produktes. Dies kann benutzt
+              werden, um ein Produkt im vergleich zu anderem zu bevorzugen.
+            </Typography>
+
+            <Link href="/nudges/adding-inferior-alternatives">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Inferior Alternatives
               </Button>
             </Link>
           </li>
