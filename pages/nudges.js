@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const BoldTypo = withStyles({
+  root: {
+    fontWeight: 500,
+    display: "inline",
+  },
+})((props) => <Typography {...props} />);
+
 export default function designCycle() {
   const classes = useStyles();
 
@@ -19,12 +26,12 @@ export default function designCycle() {
         Nudges
       </Typography>
       <Typography gutterBottom>
-        Wie in Getting Started Erklärt, sind Nudges kleine Stupse, die die
+        Wie in Getting Started erklärt, sind Nudges kleine Stupse, die die
         Chance erhöhe, dass ein Nutzer eine bestimmte Entscheidung trifft.{" "}
       </Typography>
       <Typography gutterBottom>
-        In der Folgenden Abbildung können sie finden, wie jede Nudge Seite
-        aufgebaut ist:
+        Um sich in der Guideline orientieren zu können wird in der Folgenden
+        Abbildung gezeigt, wie jede Seite aufgebaut ist:
       </Typography>
       <img
         src="/wireframe.jpg"
@@ -35,11 +42,13 @@ export default function designCycle() {
         }}
       />
       <Typography gutterBottom>
-        Zuerst wird die grundlegende Funktionsweise jedes Nudges erklärt.
-        Anschließend werden praktische Beispiele mit deren Umsetzungen erklärt.
-        Jedes Beispiel ist mit einem Link auf Codesandbox versehen, damit jedes
-        Beispiel nachvollgezogen werden kann und reproduziert werden kann.
-        Abschließend werden Design Empfehlungen und Literatur erwähnt.
+        Zuerst wird die{" "}
+        <BoldTypo>grundlegende Funktionsweise jedes Nudges</BoldTypo> erklärt.
+        Anschließend werden <BoldTypo>praktische Beispiele</BoldTypo> mit deren
+        Umsetzungen erklärt. Jedes Beispiel ist mit einem{" "}
+        <BoldTypo>Link auf Codesandbox</BoldTypo> versehen, damit jedes Beispiel
+        nachvollgezogen werden kann und reproduziert werden kann. Abschließend
+        werden <BoldTypo>Design Empfehlungen</BoldTypo> und Literatur erwähnt.
       </Typography>
       <Typography gutterBottom>
         Jeder Nudge wurde auf seine Effektivität in unterschiedlichen Studien
