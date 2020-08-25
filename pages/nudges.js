@@ -93,28 +93,13 @@ export default function designCycle() {
               dies eine standarte absteigende Sortierung von Waren, um damit
               höherwertigere Sachen zu verkaufen.
             </Typography>
-          </li>
-          <Link href="/nudges/positioning">
-            <Button
-              color="secondary"
-              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
-            >
-              Zu Positioning
-            </Button>
-          </Link>
-          <li>
-            <Typography>
-              <BoldTypo>Adding Inferior Alternatives Nudge</BoldTypo>{" "}
-              funktioniert dank eines "Decoy" Produktes. Dies kann benutzt
-              werden, um ein Produkt im vergleich zu anderem zu bevorzugen.
-            </Typography>
 
-            <Link href="/nudges/adding-inferior-alternatives">
+            <Link href="/nudges/positioning">
               <Button
                 color="secondary"
                 style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
               >
-                Zu Inferior Alternatives
+                Zu Positioning
               </Button>
             </Link>
           </li>
@@ -136,17 +121,33 @@ export default function designCycle() {
           </li>
           <li>
             <Typography>
-              <BoldTypo>Adding Inferior Alternatives Nudge</BoldTypo>{" "}
-              funktioniert dank eines "Decoy" Produktes. Dies kann benutzt
-              werden, um ein Produkt im vergleich zu anderem zu bevorzugen.
+              <BoldTypo>Visualisation Nudge</BoldTypo> funktioniert dank einer
+              visuelle Verdeutlichungen von bestimmten Elementen. Dies könnten
+              beispielsweise Energieetiketten sein.
             </Typography>
 
-            <Link href="/nudges/adding-inferior-alternatives">
+            <Link href="/nudges/vis">
               <Button
                 color="secondary"
                 style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
               >
-                Zu Inferior Alternatives
+                Zu Visualisation
+              </Button>
+            </Link>
+          </li>
+          <li>
+            <Typography>
+              <BoldTypo>Make Ressources Scarce Nudge</BoldTypo> funktioniert
+              dank einer Reduzierung der wahrgenommenen Verfügbarkeit. Dies
+              könnten limitierte Angebote bei Amazon sein.
+            </Typography>
+
+            <Link href="/nudges/make-ressources-scarce">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Make Ressources Scarce
               </Button>
             </Link>
           </li>
