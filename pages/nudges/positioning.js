@@ -340,80 +340,95 @@ export default function GettingStarted() {
             efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
-            Eine weitere einfach umsetzbare, aber trotz dessen häufige Art von
-            Nudges in Webseiten, ist „Positioning“ [vgl. 1]. Dieser Nudge
-            basiert, ähnlich wie „Defaults“, auf dem Status-Quo Bias [vgl. 1],
-            sowie in den meisten Beispielen zu diesem Nudge auch auf der
-            Anchoring Heuristik [vgl. 2]. Die Funktionsweise dieses Nudges hängt
-            von der Anordnung der Elemente in einer Auflistung, beispielweise
-            von verschiedenen Produkten, ab [vgl. 1]. Wie 2 bewiesen haben,
-            hängt die Wahl des Nutzers von dem ersten Element in der Auflistung,
-            welches als Anker dient, sowie von der Anordnung, die nach diesem
-            Element folgt, ab [vgl. 2]. Wenn die Elemente nach der Qualität
-            sortiert wurden und das erste Element die höchste Qualität hat,
-            werden die andere Elemente mit dem ersten verglichen [vgl. 2]. Dies
-            hat zur Folge, dass im Durchschnitt Produkte mit einer höheren
-            Qualität ausgewählt werden [vgl. 2]. Dies gilt auch für den Preis
-            [vgl. 2]. Da die Produkte mit dem Anker verglichen werden, sehen die
-            Nutzer eine niedrigere Qualität oder einen höheren Preis als ein
-            Verlust und somit kommt auch der Loss Aversion Bias zum Einsatz
-            [vgl. 2].{" "}
+            Eine weitere <BoldTypo>häufige Art von Nudges</BoldTypo> in
+            Webseiten, ist „Positioning“ [vgl. 1]. Dieser Nudge basiert, ähnlich
+            wie „Defaults“, auf dem <BoldTypo>Status-Quo Bias</BoldTypo> [vgl.
+            1], sowie in den meisten Beispielen zu diesem Nudge auch auf der
+            <BoldTypo>Anchoring</BoldTypo> Heuristik [vgl. 2]. Die
+            Funktionsweise dieses Nudges hängt von der{" "}
+            <BoldTypo>Anordnung der Elemente</BoldTypo> in einer Auflistung,
+            beispielweise von verschiedenen Produkten, ab [vgl. 1]. Wie 2
+            bewiesen haben, hängt die Wahl des Nutzers von dem
+            <BoldTypo>ersten Element</BoldTypo> in der Auflistung, welches als{" "}
+            <BoldTypo>Anker</BoldTypo> dient, sowie von der Anordnung, die nach
+            diesem Element folgt, ab [vgl. 2]. Wenn die Elemente nach der{" "}
+            <BoldTypo>Qualität sortiert</BoldTypo> wurden und das erste Element
+            die höchste Qualität hat, werden die{" "}
+            <BoldTypo>andere Elemente mit dem ersten verglichen</BoldTypo> [vgl.
+            2]. Dies hat zur Folge, dass im Durchschnitt Produkte mit einer
+            höheren Qualität ausgewählt werden [vgl. 2]. Dies gilt auch für den
+            Preis [vgl. 2]. Da die Produkte mit dem Anker verglichen werden,
+            sehen die Nutzer eine niedrigere Qualität oder einen höheren Preis
+            als ein Verlust und somit kommt auch der{" "}
+            <BoldTypo>Loss Aversion Bias</BoldTypo> zum Einsatz [vgl. 2].{" "}
           </Typography>
           <Typography gutterBottom>
-            Eine Anordnung von Elementen kann auch im Bereich der IT-Sicherheit
+            Eine Anordnung von Elementen kann auch im Bereich der{" "}
+            <BoldTypo>IT-Sicherheit</BoldTypo>
             angewendet werden [vgl. 3]. Eine reine Anordnung von verfügbaren
-            Wi-Fis, sicherste Wi-Fis wurden als erstes angezeigt, führte zu
-            einer Erhöhung der Auswahl von sicheren Netzwerken um 6,6% [vgl. 3].
-            Dieser Effekt konnte durch eine visuelle Darstellung, wie grüne
-            Farben für sichere Netzwerke und rote Farben für unsichere
-            Netzwerke, um weitere 21,7% verstärk werden [vgl. 3]. Der Effekt der
-            visuellen Darstellungen wird im Kapitel 3.4.4 „Visualisation“
-            behandelt.{" "}
+            Wi-Fis,{" "}
+            <BoldTypo>sicherste Wi-Fis wurden als erstes angezeigt</BoldTypo>,
+            führte zu einer <BoldTypo>Erhöhung der Auswahl</BoldTypo> von
+            sicheren Netzwerken um <BoldTypo> 6,6%</BoldTypo> [vgl. 3]. Dieser
+            Effekt konnte durch eine <BoldTypo>visuelle Darstellung</BoldTypo>,
+            wie grüne Farben für sichere Netzwerke und rote Farben für unsichere
+            Netzwerke, <BoldTypo>um weitere 21,7% verstärk werden</BoldTypo>{" "}
+            [vgl. 3]. Der Effekt der visuellen Darstellungen wird im Kapitel
+            3.4.4 „Visualisation“ behandelt.{" "}
           </Typography>
           <Typography gutterBottom>
-            Um diesen Effekt zu einem großen Teil zu vermeiden, da eine Auswahl
-            von einer Anordnung notwendig ist um dem Nutzer eine freiere Wahl zu
-            überlassen, können die Elemente in Gitter-Anordnungen aufgelistet
+            Um <BoldTypo>diesen Effekt</BoldTypo> zu einem großen Teil zu{" "}
+            <BoldTypo> vermeiden</BoldTypo>, da eine Auswahl von einer Anordnung
+            notwendig ist um dem Nutzer eine freiere Wahl zu überlassen, können
+            die Elemente in <BoldTypo>Gitter-Anordnungen</BoldTypo> aufgelistet
             werden [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
-            Dieser Nudge ist sehr eng mit dem „Hiding“ Nudge verbunden und daher
-            wird der „Hiding“ Nudge zur Vereinfachung für den Leser dieser
-            Guideline in den „Positioning“ Nudge aufgenommen. Der „Hiding“ Nudge
-            funktioniert auch, dank einer Veränderung der Anordnung von
-            Elementen, nur mit einem gegensätzlichen Ziel als der des
-            „Positioning“ und zwar, mit einer verringerten Auswahl-Quote eines
-            bestimmten Elements [vgl. 1]. Dies kann beispielweise im Healthcare
-            Sektor nützlich sein, da man dadurch den Verkauf von ungesundem
-            Essen verringern kann [vgl. 5].{" "}
+            Dieser Nudge ist sehr eng mit dem{" "}
+            <BoldTypo>„Hiding“ Nudge verbunden</BoldTypo> und daher wird der
+            „Hiding“ Nudge zur Vereinfachung für den Leser dieser Guideline in
+            den „Positioning“ Nudge aufgenommen. Der „Hiding“ Nudge funktioniert{" "}
+            <BoldTypo>auch</BoldTypo>, dank einer{" "}
+            <BoldTypo>Veränderung der Anordnung</BoldTypo> von Elementen, nur
+            mit einem{" "}
+            <BoldTypo>gegensätzlichen Ziel als der des „Positioning“</BoldTypo>{" "}
+            und zwar, mit einer <BoldTypo>verringerten Auswahl-Quote</BoldTypo>{" "}
+            eines bestimmten Elements [vgl. 1]. Dies kann beispielweise im
+            Healthcare Sektor nützlich sein, da man dadurch den Verkauf von
+            ungesundem Essen verringern kann [vgl. 5].{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
           <Typography gutterBottom>
             Wie erwähnt, erfolgt die Umsetzung vom „Positioning“ Nudge mit Hilfe
-            von Listen, Gitter-Listen und zusätzlichen Elementen wie Ikonen zur
-            Unterstützung. Das Ziel solch einer Implementierung ist entweder
-            eine Erhöhung der Wahl bestimmten Produktklassen, wie beispielweise
-            Produkte mit einer hohen Qualität, das Verringern einer Wahl von
-            bestimmten Produkten, wie ungesunde Ernährungsprodukte, oder die
-            Vermeidung dieser Effekte und eine Erhöhung der freien Wahl des
-            Nutzers [vgl. 2–5].{" "}
+            von <BoldTypo>Listen, Gitter-Listen</BoldTypo> und{" "}
+            <BoldTypo>zusätzlichen Elementen</BoldTypo> wie{" "}
+            <BoldTypo> Ikonen</BoldTypo> zur Unterstützung. Das Ziel solch einer
+            Implementierung ist entweder eine{" "}
+            <BoldTypo>Erhöhung der Wahl bestimmten Produktklassen</BoldTypo>,
+            wie beispielweise Produkte mit einer hohen Qualität, das Verringern
+            einer Wahl von bestimmten Produkten, wie ungesunde
+            Ernährungsprodukte, oder die Vermeidung dieser Effekte und eine
+            Erhöhung der freien Wahl des Nutzers [vgl. 2–5].{" "}
           </Typography>
           <Typography gutterBottom>
-            Das erste Beispiel wird ein grundlegendes Beispiel inspiriert von
-            [2] sein. In diesem Beispiel wird die Anordnung der Elemente
-            verändert, je nachdem welche Elemente bevorzugt werden. Dies kann
-            eine Anordnung anhand der Qualität sein [vgl. 2], aber es können
-            auch zuerst bevorzugte oder empfohlene Produkte, wie bei Amazon
-            [vgl. 9], angezeigt werden. In dem umgesetzten Beispiel wird nach
-            den geringsten Kalorien sortiert. Das Beispiel wurde mit Hilfe von
-            Material-UI Tabellen entworfen [vgl. 10]. Dieses Beispiel wurde von
-            Material-UI Tabellen Beispielen entnommen und leicht angepasst [vgl.
-            10]. Material-UI übernimmt nicht die Logik, wie das Sortieren von
-            Daten, also müssen einige Funktionen selbst definiert werden. Dies
-            erschwert zuerst die Arbeit, aber ermöglicht eine höhere
-            Flexibilität.{" "}
+            Das <BoldTypo> erste Beispiel</BoldTypo> wird ein grundlegendes
+            Beispiel inspiriert von [2] sein. In diesem Beispiel wird die
+            Anordnung der Elemente verändert, je nachdem{" "}
+            <BoldTypo>welche Elemente bevorzugt</BoldTypo> werden. Dies kann
+            eine Anordnung anhand der <BoldTypo>Qualität</BoldTypo> sein [vgl.
+            2], aber es können auch zuerst bevorzugte oder{" "}
+            <BoldTypo>empfohlene Produkte, wie bei Amazon </BoldTypo>[vgl. 9],
+            angezeigt werden. In dem umgesetzten Beispiel wird nach den
+            <BoldTypo>geringsten Kalorien sortiert</BoldTypo>. Das Beispiel
+            wurde mit Hilfe von Material-UI Tabellen entworfen [vgl. 10]. Dieses
+            Beispiel wurde von Material-UI Tabellen Beispielen entnommen und
+            leicht angepasst [vgl. 10].{" "}
+            <BoldTypo>Material-UI übernimmt nicht die Logik</BoldTypo>, wie das
+            Sortieren von Daten, also müssen einige Funktionen selbst definiert
+            werden. Dies <BoldTypo>erschwert zuerst die Arbeit</BoldTypo>, aber
+            ermöglicht eine höhere Flexibilität.{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -493,16 +508,22 @@ export default function GettingStarted() {
             </div>
           </Example>
           <Typography gutterBottom>
-            Das zweite Beispiel beschäftigt sich mit der Verstärkung dieses
-            Effektes im ersten Beispiel [vgl. 3]. Dies wird anhand von einer
-            visuellen Darstellung in Form von gefärbten Ikonen, beispielweise in
-            Farben zwischen grün (das bevorzugte Element) und rot, erreicht
-            [vgl. 3]. Dieses Beispiel zeigt einen positiven Zusammenhang
-            zwischen „Visualisation“ Nudge und „Positioning“ Nudge. Das
-            aufgeführte Beispiel wurde gleich wie das Beispiel in der Abbildung
-            14 umgesetzt. Die Ikonen wurden von Material-UI übernommen, mit
-            Farben angepasst und mithilfe von „If/Else“ Abfragen in Bezug auf
-            Kalorien angewendet.{" "}
+            Das <BoldTypo>zweite Beispiel</BoldTypo> beschäftigt sich mit der{" "}
+            <BoldTypo>Verstärkung dieses Effektes im ersten Beispiel</BoldTypo>{" "}
+            [vgl. 3]. Dies wird anhand von einer
+            <BoldTypo> visuellen Darstellung </BoldTypo>in Form von{" "}
+            <BoldTypo>gefärbten Ikonen</BoldTypo>, beispielweise in Farben
+            zwischen grün (das bevorzugte Element) und rot, erreicht [vgl. 3].
+            Dieses Beispiel zeigt einen
+            <BoldTypo>
+              positiven Zusammenhang zwischen „Visualisation“ Nudge und
+              „Positioning“ Nudge
+            </BoldTypo>
+            . Das aufgeführte Beispiel wurde gleich wie das obere Beispiel
+            umgesetzt. Die Ikonen wurden von Material-UI übernommen,{" "}
+            <BoldTypo>mit Farben angepasst</BoldTypo> und mithilfe von
+            <BoldTypo> „If/Else“ Abfragen</BoldTypo> in Bezug auf Kalorien
+            angewendet.{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -595,35 +616,45 @@ export default function GettingStarted() {
             </div>
           </Example>
           <Typography gutterBottom>
-            Ein weiteres Beispiel wäre eine Verringerung der Wahl eines
-            bestimmten Elements. Dies wird gleich wie im Beispiel eins erreicht,
-            nur umgekehrt angewendet [vgl. 5]. Somit werden die unerwünschten
-            Elemente an das Ende der Liste sortiert [vgl. 5]. Die Umsetzung wird
-            hier nicht wiederholend aufgeführt, da bei den Beispielen in
-            Abbildungen 14 und 15 die Spaltennamen wie bspw. Kalorien anklickbar
-            sind, und der Filter somit umgekehrt angewendet wird. Um diesen
-            Effekt für den Nutzer von Anfang an (seit dem ersten
+            Ein <BoldTypo>weiteres Beispiel</BoldTypo> wäre eine Verringerung
+            der Wahl eines bestimmten Elements. Dies wird gleich{" "}
+            <BoldTypo>wie im Beispiel eins</BoldTypo> erreicht, nur{" "}
+            <BoldTypo>umgekehrt angewendet</BoldTypo> [vgl. 5]. Somit werden die
+            unerwünschten Elemente an das Ende der Liste sortiert [vgl. 5]. Die
+            Umsetzung wird hier{" "}
+            <BoldTypo>nicht wiederholend aufgeführt</BoldTypo>, da bei den
+            Beispielen in Abbildungen 14 und 15 die Spaltennamen wie bspw.
+            Kalorien anklickbar sind, und der Filter somit umgekehrt angewendet
+            wird. Um diesen Effekt für den Nutzer von Anfang an (seit dem ersten
             Webseitenbesuch) zu erhalten (in diesem Fall eine absteigende
-            Sortierung), muss in dem Sourcecode nur ein Eigenschaftsfeld zu
-            „desc“ (eine Abkürzung zu descending) geändert werden.{" "}
+            Sortierung), muss in dem Sourcecode nur{" "}
+            <BoldTypo>ein Eigenschaftsfeld zu „desc“</BoldTypo> (eine Abkürzung
+            zu descending) geändert werden.{" "}
           </Typography>
           <Typography gutterBottom>
-            Das letzte Beispiel beschäftigt sich mit einer Erhöhung der freien
-            Wahl für den Nutzer und somit einer Verringerung dieses
-            „Positioning“ Effekts. Dies wird dank einer Auflistung in einer
-            alternativen Form von Listen und zwar in einer Gitter Form [vgl. 4].
-            Material-UI bietet für diese Umsetzung eigene „Grids“ die mit
-            verschiedenen „Properities“ versehen werden können. Zuerst werden
-            „container Grids“ definiert, in denen sich „item Grids“ befinden.
-            Diese „Grids“ werden dann mit gewöhnlichen CSS „Properities“, bspw.
+            Das <BoldTypo>letzte Beispiel</BoldTypo> beschäftigt sich mit einer{" "}
+            <BoldTypo>Erhöhung der freien Wahl</BoldTypo> für den Nutzer und
+            somit einer{" "}
+            <BoldTypo>Verringerung dieses „Positioning“ Effekts</BoldTypo>. Dies
+            wird <BoldTypo>dank </BoldTypo>einer Auflistung in einer
+            alternativen Form von Listen und zwar in einer{" "}
+            <BoldTypo>Gitter Form</BoldTypo> [vgl. 4]. Material-UI bietet für
+            diese Umsetzung eigene „Grids“ die mit verschiedenen „Properities“
+            versehen werden können. Zuerst werden{" "}
+            <BoldTypo>„container Grids“</BoldTypo> definiert, in denen sich{" "}
+            <BoldTypo>„item Grids“</BoldTypo> befinden. Diese „Grids“ werden
+            dann mit gewöhnlichen <BoldTypo>CSS</BoldTypo> „Properities“, bspw.
             „direction“, „justify“ oder „alignItems“, versehen, und somit werden
             die Elemente korrekt in deren Zellen gerendert. Auf Webseiten wie
             pexels.com oder unsplash.com können tausende freie Bilder gefunden
             werden, um die auf eigenen Webseiten umsetzen zu können [vgl. 11,
-            12]. Für eine optimale Umsetzung von Bildern auf Webseiten (um
-            schnelle Ladezeiten zu gewährleisten) sollten die Bilder eine
-            kleinere Größe haben, sowie durch ein Framework wie
-            „next-optimized-images“ zusätzlich optimiert werden [vgl. 13].{" "}
+            12]. Für eine <BoldTypo>optimale Umsetzung von Bildern</BoldTypo>{" "}
+            auf Webseiten (um schnelle Ladezeiten zu gewährleisten) sollten die
+            Bilder eine kleinere Größe haben, sowie durch ein{" "}
+            <BoldTypo>
+              Framework wie „next-optimized-images“ zusätzlich optimiert werden
+            </BoldTypo>{" "}
+            [vgl. 13].{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/positioning3sortinggrid-u4oiy">
             <div className={classes.root}>
@@ -659,10 +690,13 @@ export default function GettingStarted() {
             Abschließend werden mehrere Design-Berücksichtigungen und
             Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [1]:
             Wie kann die gewünschte Alternative mehr auffallen und wie kann die
-            andere Alternative weniger zugänglich werden? Wie kann das System
-            klar und verständlich angeben, was gefördert wird und warum?
-            Alternativen, die oben oder links platziert sind, werden eher
-            ausgewählt und als wertvoller wahrgenommen.{" "}
+            andere Alternative weniger zugänglich werden?{" "}
+            <BoldTypo> Wie</BoldTypo> kann das System klar und{" "}
+            <BoldTypo> verständlich angeben</BoldTypo>,{" "}
+            <BoldTypo> was gefördert wird</BoldTypo> und
+            <BoldTypo> warum</BoldTypo>? Alternativen, die{" "}
+            <BoldTypo>oben oder links platziert</BoldTypo> sind, werden eher
+            ausgewählt und <BoldTypo>als wertvoller wahrgenommen</BoldTypo>.{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Effektivität</Typography>
