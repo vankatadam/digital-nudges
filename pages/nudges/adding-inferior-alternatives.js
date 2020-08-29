@@ -153,28 +153,31 @@ export default function GettingStarted() {
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
           <Typography gutterBottom>
-            Wie erwähnt, erfolgt die Umsetzung von „Adding Inferior
-            Alternatives“ Nudge mithilfe von einem „Decoy“ Element [vgl. 8–10].
-            Bei der Erstellung dieses Elements sollte beachtet werden, dass das
-            „Decoy“ Element in allen wichtigen Faktoren schlechter ist als das
-            Element, das bevorzugt werden soll [vgl. 9]. Falls es ein
-            Konkurrenzprodukt gibt, sollte das „Decoy“ Element mindestens bei
-            einem wichtigen Faktor besser als das Konkurrenz Element sein [vgl.
-            9]. Falls diese Regeln beachtet werden, sollte der erwünschte Effekt
-            erzielt werden und zwar eine erhöhte Wahl des bevorzugten Produktes
-            [vgl. 9].{" "}
+            Wie im Kapitel 3.4.3 erwähnt, erfolgt die Umsetzung von „Adding
+            Inferior Alternatives“ Nudge mit Hilfe von einem „Decoy“ Element
+            [vgl. 2–4]. Bei der Erstellung dieses Elements sollte beachtet
+            werden, dass das „Decoy“ Element in allen wichtigen Faktoren
+            schlechter ist als das Element, das bevorzugt werden soll [vgl. 4].
+            Falls es ein Konkurrenzprodukt gibt, sollte das „Decoy“ Element
+            mindestens bei einem wichtigen Faktor besser als das Konkurrenz
+            Element sein [vgl. 4]. Falls diese Regeln beachtet werden, sollte
+            der erwünschte Effekt erzielt werden und zwar eine erhöhte Wahl des
+            bevorzugten Produktes [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
             Als Beispiel wird das in der Forschung von Fasolo et al. aufgeführte
             Beispiel mit Laptops genommen, da es aus der Umgebung eines online
-            E-shops stamm und somit perfekt zu dieser Guideline, die ein Fokus
+            E-shops stamm und somit perfekt zu dieser Guideline, die einen Fokus
             auf webbasierte Technologien setzt, passt. Dieses Beispiel ist ein
-            Vergleich zwischen drei Laptops [vgl. 9]: Der erste Laptop A wird
+            Vergleich zwischen drei Laptops [vgl. 4]: Der erste Laptop A wird
             die Konkurrenz darstellen, Laptop B das erwünschte Produkt und
             Laptop C wird den „Decoy“ darstellen. Der „Decoy“ Laptop wird die
-            Regeln verfolgen, also die aufgeführte Laptopspezifikationen werden
-            geringer als bei dem Laptop B sein und das Laptop C wird günstiger
-            als Laptop A sein.{" "}
+            aufgestellten Regeln verfolgen. Dies heißt, dass die aufgeführte
+            Laptopspezifikationen geringer als bei dem Laptop B werden und das
+            Laptop C günstiger als Laptop A sein wird. Dieses Beispiel wurde mit
+            Hilfe von Material-UI „Grids“ und „Cards“ umgesetzt [vgl. 5, 6].
+            Über die „CardMedia“ Komponente können Bilder eingefügt werden, die
+            sich automatisch an die Karte anpassen [vgl. 6].{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -373,7 +376,7 @@ export default function GettingStarted() {
               </Grid>
             </Grid>
           </Example>
-          https://material-ui.com/components/cards/
+
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
@@ -381,7 +384,7 @@ export default function GettingStarted() {
             Abschließend werden mehrere Design-Berücksichtigungen und
             Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [1]:
             Kann das System eine Reihe unterschiedlicher, minderwertiger
-            alternativen Optionen präsentieren? Wie kann der „Decoy“ die
+            Alternativ- Optionen präsentieren? Wie kann der „Decoy“ die
             gewünschte Alternative fördern? Kann das System auf maximal drei bis
             vier Elementen, zwischen denen entschieden wird, verringert werden?{" "}
           </Typography>
@@ -416,21 +419,33 @@ export default function GettingStarted() {
           </TableContainer>
           <Typography gutterBottom>
             Die Effektivität stellt bei „Inferior Alternatives“-Studien die
-            prozentuelle Erhöhung der Auswahlrate von der gewünschten/gezielten
+            prozentuelle Erhöhung der Auswahlrate von der gewünschten
             Alternative im Vergleich zu der Auswahlrate ohne der Anwendung von
-            diesem Nudge, genauso, wie bei beiden vorherigen Nudges, dar (siehe
-            K 3.4.1 und 3.4.2).{" "}
+            diesem Nudge, genauso, wie bei beiden vorherigen Nudges, dar.{" "}
           </Typography>
           <Typography gutterBottom>
-            Die Effektivität der Studie von 3 wurde als ein Durchschnitt deren
+            Die Effektivität der Studie von 3 wurde als ein Durchschnitt der
             vier Untersuchungen berechnet. Genauso wurde auch ein Durchschnitt
             aus beiden Experimenten von 4 berechnet.{" "}
           </Typography>
           <Typography gutterBottom>
-            Die Studien zeigen, dass „Inferior Alternatives“ Nudge im Vergleich
-            zu vorherigen zwei Nudges schlechter abschneidet. Somit wird dieser
-            Nudge mit der durchschnittlichen Effektivität von 32,6% in die
-            Effizienzklasse mittel angeordnet.{" "}
+            Die Studien zeigen, dass der „Inferior Alternatives“ Nudge im
+            Vergleich zu den vorherigen zwei Nudges schlechter abschneidet.
+            Somit wird dieser Nudge mit der durchschnittlichen Effektivität von
+            32,6% in der Effizienzklasse im mittleren Abschnitt angeordnet.{" "}
+          </Typography>
+          <Typography gutterBottom>
+            Da Material-UI Grids und Cards leicht zu erstellen sind, liegt der
+            Aufwand in der reinen Umsetzung unter eine Stunde. Der
+            Planungsaufwand ist hierbei hoch, da die Produkte manuell für einen
+            Vergleich ausgewählt werden müssen. Da nur der reine
+            Umsetzungsaufwand gemessen wird, wird der „Adding Inferior
+            Alternatives” Nudge in der Klasse niedrig eingestuft.
+          </Typography>
+          <Typography gutterBottom>
+            Da die Effektivitätsklasse bei „Adding Inferior Alternatives“ Nudge
+            mittelhoch ist und der Aufwand niedrig ist, wird die Effizienz als
+            mittelgroß eingeschätzt.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
@@ -458,20 +473,20 @@ export default function GettingStarted() {
             Psychol Mark 23: 799–811. https://doi.org/10.1002/mar.20134
           </Typography>
           <Typography gutterBottom>
-            5. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
-            to design persuasive technology for healthy choices. In: Tan D,
-            Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
-            extended abstracts / the 29th Annual CHI Conference on Human Factors
-            in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
-            ACM, New York, NY, pp 325–334
+            5. Material-UI (2020) Grid React component.
+            https://material-ui.com/components/grid/#grid. Accessed 05 Jul 2020
           </Typography>
           <Typography gutterBottom>
             6. Material-UI (2020) Card React component.
             https://material-ui.com/components/cards/. Accessed 10 Jul 2020
           </Typography>
           <Typography gutterBottom>
-            7. Material-UI (2020) Grid React component.
-            https://material-ui.com/components/grid/#grid. Accessed 05 Jul 2020
+            7. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
+            to design persuasive technology for healthy choices. In: Tan D,
+            Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
+            extended abstracts / the 29th Annual CHI Conference on Human Factors
+            in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
+            ACM, New York, NY, pp 325–334
           </Typography>
         </div>
       </ThemeProvider>
