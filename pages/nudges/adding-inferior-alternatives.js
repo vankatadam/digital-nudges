@@ -113,71 +113,96 @@ export default function GettingStarted() {
           ></TitleBox>
           <Typography gutterBottom>
             {" "}
-            „Adding Inferior Alternatives“ Nudge basiert auf dem „Decoy Effect“,
-            einem kognitivem Bias, [vgl. 1, 2], der in manchen Literaturquellen
-            auch unter dem Begriff „Attraction Effect“ [vgl. 3, 4] oder
-            „Asymmetric Dominance Effect“ zu finden ist [vgl. 3]. Dieser Effekt
-            zeigt eine inkonsistente Wahl, wenn zwei gute Produkte, beide aus
-            anderen Gründen gut, präsentiert werden und ein schlechteres
-            Produkt, das als ein „Decoy“ agiert [vgl. 2–4]. Dieser Effekt kann
-            genutzt werden, wenn in der Regel drei Produkte angezeigt werden,
-            und ein Produkt im Gegensatz zu einem Konkurrenzprodukt, bevorzugt
-            werden soll [vgl. 4].{" "}
+            <BoldTypo>„Adding Inferior Alternatives“</BoldTypo> Nudge{" "}
+            <BoldTypo> basiert</BoldTypo> auf dem{" "}
+            <BoldTypo> „Decoy Effect“</BoldTypo>, einem kognitivem Bias, [vgl.
+            1, 2], der in manchen Literaturquellen auch unter dem Begriff
+            <BoldTypo>„Attraction Effect“</BoldTypo> [vgl. 3, 4] oder{" "}
+            <BoldTypo> „Asymmetric Dominance Effect“</BoldTypo>
+            zu finden ist [vgl. 3]. Dieser Effekt zeigt eine{" "}
+            <BoldTypo>inkonsistente Wahl</BoldTypo>, wenn{" "}
+            <BoldTypo>zwei gute Produkte</BoldTypo>, beide aus anderen Gründen
+            gut, präsentiert werden und ein
+            <BoldTypo>schlechteres Produkt</BoldTypo>, das{" "}
+            <BoldTypo>als ein „Decoy“ agiert</BoldTypo> [vgl. 2–4]. Dieser
+            Effekt kann genutzt werden, wenn in der Regel drei Produkte
+            angezeigt werden, und <BoldTypo>ein Produkt</BoldTypo> im Gegensatz
+            zu einem Konkurrenzprodukt, <BoldTypo>bevorzugt</BoldTypo> werden
+            soll [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
             Ein passendes Beispiel kommt aus dem Bereich Online-Shopping [vgl.
             4]: In dieser Forschung wurde der „Decoy Effect“ bei einer Auswahl
             von Laptops nachgewiesen. In der ersten Phase wurden nur zwei
             Produkte A und B zur Auswahl angeboten. Nach der erste Auswahlrunde
-            entschied sich die erste Testgruppe für das Produkt A mit 65% und
-            für das Produkt B mit 35%. Nachdem ein „Decoy“ Produkt C hinzugefügt
-            wurde, das in allen Kategorien schlechter als B, aber mit einem
+            entschied sich die erste Testgruppe für das{" "}
+            <BoldTypo>Produkt A mit 65% und für das Produkt B mit 35%</BoldTypo>
+            .{" "}
+            <BoldTypo>Nachdem ein „Decoy“ Produkt C hinzugefügt wurde</BoldTypo>
+            , das in allen Kategorien schlechter als B, aber mit einem
             vergleichbaren Preis zu B und günstiger als C war, wurde die zweite
             Testgruppe zur Auswahl gelassen. Dies führte zu einer Wahl von
-            Produkt B von 69% und C von 31%.
+            <BoldTypo> Produkt B von 69% und C von 31%</BoldTypo>.
           </Typography>
           <Typography gutterBottom>
             Aus dieser Studie wurde ersichtlich, dass anhand des „Decoy Effects“
             im Bereich E-Shopping ein bestimmtes Produkt einem anderen bevorzugt
-            werden kann. Dies hat jedoch ein paar Regeln, die beachtet werden
-            müssen und auch in dieser Studie beobachtet wurden [vgl. 4]: Die
-            Produkte A und B müssen beide gleichwertig visuell dargestellt
-            werden oder das bevorzugte Produkt B besser als A. Das „Decoy“
-            Produkt muss in allen Bereichen schlechter als B aber trotzdem in
-            etwas besser als C sein (wie in diesem Fall der Preis) und immer
-            noch z.B. anhand des Preises mit B vergleichbar sein. Durch eine
-            bessere Visuelle Darstellung, wie beispielweise Animationen bei
-            Produkt B, kann der „Decoy Effect“ leicht verstärkt werden.{" "}
+            werden kann. Dies hat jedoch <BoldTypo> ein paar Regeln</BoldTypo>,
+            die beachtet werden müssen und auch in dieser Studie beobachtet
+            wurden [vgl. 4]: Die
+            <BoldTypo> Produkte A und B</BoldTypo> müssen beide{" "}
+            <BoldTypo> gleichwertig visuell dargestellt</BoldTypo>
+            werden oder das bevorzugte Produkt B besser als A. Das{" "}
+            <BoldTypo> „Decoy“ Produkt</BoldTypo> muss in{" "}
+            <BoldTypo> allen Bereichen schlechter als B</BoldTypo> aber trotzdem{" "}
+            <BoldTypo> in etwas besser als C</BoldTypo> sein (wie in diesem Fall
+            der Preis) und immer noch z.B. anhand des Preises mit B vergleichbar
+            sein. Durch eine bessere Visuelle Darstellung, wie beispielweise
+            <BoldTypo> Animationen</BoldTypo> bei Produkt B, kann der{" "}
+            <BoldTypo>„Decoy Effect“ leicht verstärkt</BoldTypo>
+            werden.{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
           <Typography gutterBottom>
-            Wie im Kapitel 3.4.3 erwähnt, erfolgt die Umsetzung von „Adding
-            Inferior Alternatives“ Nudge mit Hilfe von einem „Decoy“ Element
+            Wie erwähnt, erfolgt die <BoldTypo>Umsetzung</BoldTypo> von „Adding
+            Inferior Alternatives“ Nudge mit Hilfe von einem{" "}
+            <BoldTypo> „Decoy“ Element</BoldTypo>
             [vgl. 2–4]. Bei der Erstellung dieses Elements sollte beachtet
-            werden, dass das „Decoy“ Element in allen wichtigen Faktoren
-            schlechter ist als das Element, das bevorzugt werden soll [vgl. 4].
-            Falls es ein Konkurrenzprodukt gibt, sollte das „Decoy“ Element
-            mindestens bei einem wichtigen Faktor besser als das Konkurrenz
-            Element sein [vgl. 4]. Falls diese Regeln beachtet werden, sollte
-            der erwünschte Effekt erzielt werden und zwar eine erhöhte Wahl des
-            bevorzugten Produktes [vgl. 4].{" "}
+            werden, dass das <BoldTypo> „Decoy“ Element</BoldTypo> in allen
+            wichtigen Faktoren
+            <BoldTypo> schlechter</BoldTypo> ist als das Element, das bevorzugt
+            werden soll [vgl. 4]. Falls es ein Konkurrenzprodukt gibt, sollte
+            das{" "}
+            <BoldTypo>
+              „Decoy“ Element mindestens bei einem wichtigen Faktor besser als
+              das Konkurrenz Element sein
+            </BoldTypo>{" "}
+            [vgl. 4]. Falls diese Regeln beachtet werden, sollte der erwünschte
+            Effekt erzielt werden und zwar eine erhöhte Wahl des bevorzugten
+            Produktes [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
             Als Beispiel wird das in der Forschung von Fasolo et al. aufgeführte
-            Beispiel mit Laptops genommen, da es aus der Umgebung eines online
-            E-shops stamm und somit perfekt zu dieser Guideline, die einen Fokus
-            auf webbasierte Technologien setzt, passt. Dieses Beispiel ist ein
-            Vergleich zwischen drei Laptops [vgl. 4]: Der erste Laptop A wird
-            die Konkurrenz darstellen, Laptop B das erwünschte Produkt und
-            Laptop C wird den „Decoy“ darstellen. Der „Decoy“ Laptop wird die
-            aufgestellten Regeln verfolgen. Dies heißt, dass die aufgeführte
-            Laptopspezifikationen geringer als bei dem Laptop B werden und das
-            Laptop C günstiger als Laptop A sein wird. Dieses Beispiel wurde mit
-            Hilfe von Material-UI „Grids“ und „Cards“ umgesetzt [vgl. 5, 6].
-            Über die „CardMedia“ Komponente können Bilder eingefügt werden, die
-            sich automatisch an die Karte anpassen [vgl. 6].{" "}
+            <BoldTypo> Beispiel mit Laptops</BoldTypo> genommen, da es aus der
+            Umgebung eines online E-shops stamm und somit perfekt zu dieser
+            Guideline, die einen Fokus auf webbasierte Technologien setzt,
+            passt. Dieses Beispiel ist ein Vergleich zwischen drei Laptops [vgl.
+            4]: Der erste <BoldTypo>Laptop A</BoldTypo> wird die{" "}
+            <BoldTypo> Konkurrenz </BoldTypo>darstellen,{" "}
+            <BoldTypo> Laptop B</BoldTypo> das
+            <BoldTypo> erwünschte Produkt</BoldTypo> und{" "}
+            <BoldTypo> Laptop C</BoldTypo> wird den{" "}
+            <BoldTypo> „Decoy“</BoldTypo> darstellen. Der „Decoy“ Laptop wird
+            die aufgestellten Regeln verfolgen. Dies heißt, dass die{" "}
+            <BoldTypo> aufgeführte Laptopspezifikationen geringer</BoldTypo> als
+            bei dem Laptop B werden und das Laptop C{" "}
+            <BoldTypo> günstiger als Laptop A</BoldTypo> sein wird. Dieses
+            Beispiel wurde mit Hilfe von Material-UI „Grids“ und „Cards“
+            umgesetzt [vgl. 5, 6]. Über die „CardMedia“ Komponente können Bilder
+            eingefügt werden, die sich automatisch an die Karte anpassen [vgl.
+            6].{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -383,10 +408,14 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             Abschließend werden mehrere Design-Berücksichtigungen und
             Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [1]:
-            Kann das System eine Reihe unterschiedlicher, minderwertiger
-            Alternativ- Optionen präsentieren? Wie kann der „Decoy“ die
-            gewünschte Alternative fördern? Kann das System auf maximal drei bis
-            vier Elementen, zwischen denen entschieden wird, verringert werden?{" "}
+            Kann das System eine Reihe unterschiedlicher,{" "}
+            <BoldTypo>
+              minderwertiger Alternativ- Optionen präsentieren
+            </BoldTypo>
+            ? Wie kann der „Decoy“ die
+            <BoldTypo> gewünschte Alternative fördern</BoldTypo>? Kann das
+            System auf <BoldTypo> maximal drei bis vier</BoldTypo> Elementen,
+            zwischen denen entschieden wird, verringert werden?{" "}
           </Typography>
           <Typography gutterBottom></Typography>
           <hr />
@@ -432,20 +461,25 @@ export default function GettingStarted() {
             Die Studien zeigen, dass der „Inferior Alternatives“ Nudge im
             Vergleich zu den vorherigen zwei Nudges schlechter abschneidet.
             Somit wird dieser Nudge mit der durchschnittlichen Effektivität von
-            32,6% in der Effizienzklasse im mittleren Abschnitt angeordnet.{" "}
+            <BoldTypo>
+              {" "}
+              32,6% in der Effizienzklasse im mittleren Abschnitt
+            </BoldTypo>{" "}
+            angeordnet.{" "}
           </Typography>
           <Typography gutterBottom>
             Da Material-UI Grids und Cards leicht zu erstellen sind, liegt der
             Aufwand in der reinen Umsetzung unter eine Stunde. Der
             Planungsaufwand ist hierbei hoch, da die Produkte manuell für einen
             Vergleich ausgewählt werden müssen. Da nur der reine
-            Umsetzungsaufwand gemessen wird, wird der „Adding Inferior
-            Alternatives” Nudge in der Klasse niedrig eingestuft.
+            <BoldTypo> Umsetzungsaufwand</BoldTypo> gemessen wird, wird der
+            „Adding Inferior Alternatives” Nudge in der Klasse{" "}
+            <BoldTypo> niedrig</BoldTypo> eingestuft.
           </Typography>
           <Typography gutterBottom>
             Da die Effektivitätsklasse bei „Adding Inferior Alternatives“ Nudge
-            mittelhoch ist und der Aufwand niedrig ist, wird die Effizienz als
-            mittelgroß eingeschätzt.
+            mittelhoch ist und der Aufwand niedrig ist, wird die{" "}
+            <BoldTypo> Effizienz als mittelgroß</BoldTypo> eingeschätzt.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>

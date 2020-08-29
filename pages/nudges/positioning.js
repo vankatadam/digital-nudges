@@ -745,7 +745,8 @@ export default function GettingStarted() {
             verbunden ist. Trotzt der unterschiedlichen Ergebnisse zeigt die
             durchschnittliche Effektivität, dass „Positioning“ Nudges eine hohe
             Erfolgsrate aufweisen können und daher werden sie mit der
-            durchschnittlichen Effektivität von 53% in der Effizienzklasse hoch
+            <BoldTypo> durchschnittlichen Effektivität von 53%</BoldTypo> in der
+            <BoldTypo> Effizienzklasse hoch</BoldTypo>
             angeordnet. Da die Effektivität von diesem Nudge nur in zwei Studien
             auffindbar war und zusätzlich mit zwei stark abweichenden
             Effektivitätszahlen, soll bei der eigenen Implementierung ein
@@ -760,15 +761,17 @@ export default function GettingStarted() {
             war mit einigen Herausforderungen verbunden. Da Material-UI keine
             Logik für Filter anbietet, müssen diese selbst definiert werden oder
             von den Material-UI Beispielen übernommen werden und angepasst
-            werden. Daher wurde der Aufwand mit über 3 Stunden pro Beispiel,
+            werden. Daher wurde der{" "}
+            <BoldTypo> Aufwand mit über 3 Stunden pro Beispiel</BoldTypo>,
             insbesondere bei der ersten Begegnung mit Material-UI, bewertet.
-            Somit wird der „Positioning“ Nudge in der Aufwandskategorie hoch
+            Somit wird der „Positioning“ Nudge in der{" "}
+            <BoldTypo> Aufwandskategorie hoch </BoldTypo>
             eingestuft.
           </Typography>
           <Typography gutterBottom>
             Da der „Positioning“ Nudge eine hohe Effektivität aufweist, aber
-            auch einen hohen Aufwand, wird dieser Nudge in die Effizienzklasse
-            Mittel eingestuft.
+            auch einen hohen Aufwand, wird dieser Nudge in die{" "}
+            <BoldTypo> Effizienzklasse Mittel </BoldTypo>eingestuft.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
