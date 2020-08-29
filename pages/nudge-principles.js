@@ -48,13 +48,13 @@ export default function designCycle() {
         Begriff Nudges bezeichnet wurden. Diese Nudges, sowie das Werk von
         Thaler und Sunstein 2009 dienen als eine Inspiration für weitere
         Forschungen wie beispielsweise Weinmann et a. 2016 und Schneider et al.
-        (2018) von deren Werken Kapitel 2.2.2 Design Zyklus inspiriert wurde.
-        Das Werk wurde außerdem bereits über 16000 Male zitiert [vgl. 4].
-        Weitere Auflistungen wie beispielsweise eine Auflistung von 23 Nudges
-        von 5 [5], politische Nudges von 6 [6] oder „Privacy“ Nudges von 7 [7]
-        beziehen sich auf spezifische Nudges in spezifischen Kontexten, die ein
-        bereits ausgeprägtes Verständnis von Nudges voraussetzten. Daher sind
-        Nudges von Thaler und Sunstein (2009) in Punkten der Einfachheit und
+        (2018) von deren Design Zyklus von Digital Nudges entworfen wurde. Das
+        Werk wurde außerdem bereits über 16000 Male zitiert [vgl. 4]. Weitere
+        Auflistungen wie beispielsweise eine Auflistung von 23 Nudges von 5 [5],
+        politische Nudges von 6 [6] oder „Privacy“ Nudges von 7 [7] beziehen
+        sich auf spezifische Nudges in spezifischen Kontexten, die ein bereits
+        ausgeprägtes Verständnis von Nudges voraussetzten. Daher sind Nudges von
+        Thaler und Sunstein (2009) in Punkten der Einfachheit und
         Verständlichkeit als eine Grundlage für die generelle Erklärung der
         Funktionsweise von Nudge Mechanismen geeignet.
       </Typography>
@@ -193,16 +193,13 @@ export default function designCycle() {
       <Typography variant="h4">Referencen</Typography>
       <hr />
       <Typography gutterBottom>
-        1. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to Nudge.
-        In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019: Proceedings
-        of the 2019 CHI Conference on Human Factors in Computing Systems : May
-        4-9, 2019, Glasgow, Scotland, UK. The Association for Computing
-        Machinery, New York, New York, pp 1–15
+        1. Weinmann M, Schneider C, vom Brocke J (2016) Digital Nudging. Bus Inf
+        Syst Eng 58: 433–436. https://doi.org/10.1007/s12599-016-0453-1
       </Typography>
       <Typography gutterBottom>
-        2. Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging: guiding
-        online user choices through interface design. Commun ACM 61: 67–73.
-        https://doi.org/10.1145/3213765
+        2. Cass R. Sunstein (2015) Nudges, Agency, Navigability, and
+        Abstraction: A Reply to Critics. Review of Philosophy and Psychology:
+        511–529
       </Typography>
       <Typography gutterBottom>
         3. Thaler RH, Sunstein CR (2009) Nudge: Improving decisions about
@@ -210,13 +207,63 @@ export default function designCycle() {
         afterword and a new chapter. Penguin, New York, NY
       </Typography>
       <Typography gutterBottom>
-        4. Kahneman D (2011) Thinking, fast and slow, First edition. Farrar
-        Straus and Giroux, New York
+        4. Google LLC (2020) ‪Richard Thaler‬ - ‪Google Scholar‬.
+        https://scholar.google.com/citations?user=Tvzd5GgAAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DTvzd5GgAAAAJ%26citation_for_view%3DTvzd5GgAAAAJ%3A1sJd4Hv_s6UC%26tzom%3D-120.
+        Accessed 08 Aug 2020
       </Typography>
       <Typography gutterBottom>
-        5. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies: The Endowment
+        5. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to Nudge.
+        In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019: Proceedings
+        of the 2019 CHI Conference on Human Factors in Computing Systems : May
+        4-9, 2019, Glasgow, Scotland, UK. The Association for Computing
+        Machinery, New York, New York, pp 1–15
+      </Typography>
+      <Typography gutterBottom>
+        6. Bruttel LV, Stolley F, Güth W et al. (2014) Nudging als politisches
+        Instrument — gute Absicht oder staatlicher Übergriff? Wirtschaftsdienst
+        94: 767–791. https://doi.org/10.1007/s10273-014-1748-9
+      </Typography>
+      <Typography gutterBottom>
+        7. Wang Y, Leon PG, Scott K et al. (2013) Privacy nudges for social
+        media. In: Proceedings of the 22nd international conference on World
+        Wide Web companion. International World Wide Web Conferences Steering
+        Committee, Republic and Canton of Geneva, pp 763–770
+      </Typography>
+      <Typography gutterBottom>
+        8. Cartwright E (2011) Behavioral economics. Routledge advanced texts in
+        economics and finance, vol 16. Routledge, London, New York NY
+      </Typography>
+      <Typography gutterBottom>
+        9. Kahneman D, Knetsch JL, Thaler RH (1991) Anomalies: The Endowment
         Effect, Loss Aversion, and Status Quo Bias. Journal of Economic
         Perspectives 5: 193–206. https://doi.org/10.1257/jep.5.1.193
+      </Typography>
+      <Typography gutterBottom>
+        10. Barnet ER (1992) The Sound of Silence: Default Rules and Contractual
+        Consent. Virginia Law Review 78: 821–911
+      </Typography>
+      <Typography gutterBottom>
+        11. Johnson EJ, Goldstein D (2003) Medicine. Do defaults save lives?
+        Science 302: 1338–1339. https://doi.org/10.1126/science.1091721
+      </Typography>
+      <Typography gutterBottom>
+        12. Thaler RH, Sunstein CR, Balz JP (2013) Choice Architecture. In:
+        Shafir E (ed) The Behavioral Foundations of Public Policy. Princeton
+        University Press, Princeton, pp 428–439
+      </Typography>
+      <Typography gutterBottom>
+        13. Tversky A (1972) Elimination by aspects: A theory of choice.
+        Psychological Review 79: 281–299. https://doi.org/10.1037/h0032955
+      </Typography>
+      <Typography gutterBottom>
+        14. Taylor SE, Thompson SC (1982) Stalking the elusive "vividness"
+        effect. Psychological Review 89: 155–181.
+        https://doi.org/10.1037/0033-295X.89.2.155
+      </Typography>
+      <Typography gutterBottom>
+        15. Juskan M (2018) Sound change, priming, salience: Producing and
+        perceiving variation in Liverpool English. Language variation, vol 3.
+        Language Science Press, Berlin
       </Typography>
     </NavBar>
   );
