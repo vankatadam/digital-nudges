@@ -638,7 +638,10 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Effektivität</Typography>
           <hr />
-          <TableContainer component={Paper}>
+          <TableContainer
+            component={Paper}
+            style={{ marginTop: 8, marginBottom: 8 }}
+          >
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>

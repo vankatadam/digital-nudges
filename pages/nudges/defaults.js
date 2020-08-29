@@ -40,11 +40,6 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-//Quellen:
-//Passwort:
-//https://material-ui.com/components/text-fields/
-//https://codesandbox.io/s/q3xj3?file=/demo.js:1319-1512
-// not used, maybe later :https://www.npmjs.com/package/react-password-with-generator
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -212,9 +207,10 @@ export default function GettingStarted() {
             niedrigsten Widerstandes wählen [vgl. 5]. Der Weg des niedrigsten
             Widerstandes ist in einer Entscheidungsumgebung die Option, die
             gewählt wird, wenn sich der Nutzer entscheidet nichts zu wählen und
-            die Wahl dem Entscheidungsarchitekten überlässt [vgl. 6]. Dies
-            können verschiedene Opt-In oder Opt-Out Entscheidungen bei der Wahl
-            zwischen wenigen Alternativen [vgl. 4], aber auch Empfehlungen bei
+            die Wahl dem Entscheidungsarchitekten überlässt [vgl. 6]. Wie im
+            Kapitel 1.1 in gezeigten Beispielen erwähnt, können dies
+            verschiedene Opt-In oder Opt-Out Entscheidungen bei der Wahl
+            zwischen wenigen Alternativen [vgl. 4] aber auch Empfehlungen bei
             einer Wahl von vielen Alternativen sein [vgl. 2]. Durch empirische
             Untersuchungen wurde bewiesen, dass sich bei einer Wahl zwischen
             mehreren Alternativen bei einer steigenden Anzahl an Alternativen
@@ -246,17 +242,38 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             Da Defaults auf mehreren verschiedenen Wegen und mit verschiedenen
             UI Elementen umgesetzt werden können, werden anschließend mehrere
-            Beispiele aufgeführt:{" "}
+            Beispiele aufgeführt{" "}
           </Typography>
           <Typography gutterBottom>
-            Das <BoldTypo>erste</BoldTypo> Beispiel wird sich mit dem UI Element
-            „Checkbox“ beschäftigen. Dieses Beispiel orientiert sich an Mobile
-            Square App, die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
+            Das erste Beispiel wird sich mit dem UI Element „Checkbox“
+            beschäftigen. Dieses Beispiel orientiert sich an der Mobile Square
+            App, die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
             Bezahlmethode, das gegebene Trinkgeld innerhalb eines Jahres
             verdoppelt hat [vgl. 13]. Solch eine Opt-Out Methode wird
-            Beispielweise auch bei Newslettern bei den meisten Webseiten mit
+            beispielweise auch bei Newslettern bei den meisten Webseiten mit
             Newslettern angewendet. Somit wird dieses Beispiel als eine
-            vorangekreuzte „Checkbox“ dargestellt.{" "}
+            vorangekreuzte „Checkbox“ dargestellt. Mit Material UI können
+            „Checkboxen“ leicht verändert und voreingestellt werden [vgl. 14].
+            Für eine Voreinstellung gibt es ein Eigenschaftsfeld mit dem Namen
+            „checked“, das auf „true“ gesetzt werden kann. Mit dem Feld „color“
+            können Farben verändert werden. Diese Farben sind jedoch nur zwei
+            grundlegende Farben des gewählten Themas, plus ein paar
+            vordefinierten Farben, wie z.B. rot für den Wert „error“. Andere
+            Farben müssen mit normalem CSS oder mit „withStyles“ [vgl. 15]
+            geändert werden. „WithStyles“ dient in Material-UI, unter anderen,
+            zu einer Veränderung der grundlegenden Eigenschaften der
+            Komponenten, wie in diesem Fall „Checkboxen“. Somit können auch
+            unterschiedliche Farben für unterschiedliche Zustände der
+            „Checkboxen“ (angekreuzt/nicht angekreuzt) definiert werden. In dem
+            unten gezeigten Beispiel sind dies zwei unterschiedliche Farbtöne
+            von grün für angekreuzte und nicht angekreuzte Checkbox. Eine
+            weitere Variante von Veränderung der Checkboxen ist eine andere
+            Ikone. Die Ikone kann über das Eigenschaftsfeld „icon“ und
+            „checkedIcon“ verändert werden [vgl. 16], in dem eine
+            Ikonen-Komponente, die auch leicht von Material UI importiert werden
+            kann [vgl. 17], an diese Eigenschaftsfelder übergegeben wird. Mit
+            solchen verstellbaren „Checkboxen“, wie beispielsweise mit einem
+            Herz oder Farbe, kann der Effekt von „Defaults“ verstärkt werden .{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/defaults1checkboxen-0x8se?file=/index.js">
             {" "}
@@ -313,18 +330,25 @@ export default function GettingStarted() {
               Bezahlen
             </Button>
           </Example>
-          https://material-ui.com/components/checkboxes/ ; Verschiedene Farben,
-          da es Emotionen Wecken könnte (Visualisation, Welt von Social Norms)
           <Typography gutterBottom>
             Das zweite Beispiel bezieht sich auf Schieberegeln und
-            vordefinierbare Textfelder. Wie [6] in deren Beispiel mit Spenden
-            erklären (siehe Anchoring ={">"} Link auf Biases??), beziehen sich
-            Menschen bei einer Entscheidung auf einen initialen Wert und passen
-            diesen nach deren Urteil an [vgl. 6]. Somit wird mit einer
-            Voreinstellung von Schieberegeln oder vordefiniertem Text in
-            Texteingabe-Feldern die Chance erhöht, dass der Nutzer auch bei
-            einem ähnlichen Wert landet. Somit können z.B. Spenden erhöht
-            werden, in dem ein höherer Wert eingestellt wird [vgl. 6].{" "}
+            vordefinierbare Textfelder. Wie 6 in deren Beispiel mit Spenden
+            erklären, beziehen sich Menschen bei einer Entscheidung auf einen
+            initialen Wert und passen diesen nach deren Urteil an [vgl. 6].
+            Somit wird mit einer Voreinstellung von Schieberegeln oder
+            vordefiniertem Text in Texteingabe-Feldern die Chance erhöht, dass
+            der Nutzer auch bei einem ähnlichen Wert landet. Somit können z.B.
+            Spenden erhöht werden, in dem ein höherer Wert eingestellt wird
+            [vgl. 6]. Material-UI bietet für diese Beispiele (siehe Beispiele
+            unten) veränderbare Schieberegeln, sowie Eingabefelder [vgl. 18,
+            19]. Es gibt ein breites Spektrum an verschiedenen Schieberegeln zur
+            Auswahl. Um den Effekt von „Anchoring“ zu verstärken, wurde die
+            Variante mit vordefinierbaren Checkpoints gewählt . Das gleiche
+            Beispiel wurde mit vordefinierbaren Eingabefeldern umgesetzt, sodass
+            zuerst die Eingabe von dem Nutzer gelöscht werden muss, damit ein
+            neuer Wert eingegeben werden kann . Somit wird dem Nutzer ein Anker
+            gesetzt und die Wahrscheinlichkeit erhöht, dass sein neuer Wert nah
+            an den gewählten vordefinierten Wert liegt.{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/defaults2slider-5wg65?file=/index.js">
             {" "}
@@ -375,19 +399,22 @@ export default function GettingStarted() {
               Spenden
             </Button>
           </Example>
-          https://material-ui.com/components/slider/;
-          https://material-ui.com/components/text-fields/;
-          https://medium.com/google-design/the-evolution-of-material-designs-text-fields-603688b3fe03;
-          der letzte Link sagt, dass man den Filled variant, oder OUtlined
-          benutzen soll (research); die Spannweite ist nur von 0-100 als
-          default, sonst muss man selber die Werte berechnen. Je mehr man fragt,
-          desto mehr bekommt man in der Regel (THaler?)
           <Typography gutterBottom>
             Das dritte Beispiel bezieht sich auch auf vordefinierte
             Text-Eingaben, diesmal jedoch im Kontext von Passwort Management.
-            Dieses Beispiel wurde von Studien von [9] inspiriert, indem als
+            Dieses Beispiel wurde von Studien von 9 inspiriert, indem als
             „Default“ Einstellung ein automatisch generiertes Passwort bei der
-            Erstellung eines Kontos vorlag [vgl. 9].{" "}
+            Erstellung eines Kontos vorlag [vgl. 9]. Dies wird mit der gleichen
+            Komponente „Input“ wie in der Abbildung 11 gelöst. An diese
+            Komponente wird je nachdem, ob das Passwort gezeigt werden soll oder
+            nicht, ein Wert (in React nennt man diese Werte „Properities“,
+            abgekürzt mit „Props“) „text“ oder „password“ übergegeben.
+            Zusätzliche muss zu diesem Feld eine Ikone erstellt werden, die beim
+            Anklicken einen „Handler“ aufruft, der diese „Properity“ verändert.
+            Das vordefinierte Passwort (sollte später in der Produktion nach
+            Sicherheitsstandarts generiert werden) wird über ein „useState“ von
+            React gespeichert und an die „Input“ Komponente übergeben, sodass
+            ein Standardfeld vorliegt.{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/great-currying-rjio2?file=/index.js">
             <Typography variant={"h6"}>
@@ -444,13 +471,19 @@ export default function GettingStarted() {
               Passwort erstellen
             </Button>
           </Example>
-          https://material-ui.com/components/text-fields/;
           <Typography gutterBottom>
             Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
             Antwortmöglichkeiten. Es funktioniert ähnlich wie das erste
-            Beispiel. Eine oder mehrere Antworten, in Form von „Checkboxen“ oder
-            „Radio Buttons“, werden vorausgewählt und somit wird die Chance
-            erhöht, dass der Nutzer diese auch tatsächlich wählt [vgl. 14].{" "}
+            Beispiel. Eine Antwort, in Form von „Radio Buttons“, wird
+            vorausgewählt und somit wird die Chance erhöht, dass der Nutzer
+            diese auch tatsächlich wählt [vgl. 20]. Der Standartwert von
+            Material UI Checkboxen kann über „useState“ und einem Handler
+            eingestellt werden. Zusätzlich dazu können einstellbare Komponenten
+            über die Felder „control“ und „label“ eingestellt werden [vgl. 21].
+            Über das Feld „control“ können eigene Ikonen mit verschiedenen
+            Farben für die „Checkboxen“ gewählt werden und über das Feld „label“
+            können eigene Beschriftungen mit verschiedenen Fonts, Farben, etc.
+            eingestellt werden (siehe Beispiel unten).{" "}
           </Typography>{" "}
           <Example link="https://codesandbox.io/s/defaults4checkbox-rtwrk?file=/index.js">
             <Typography variant={"h6"}>
@@ -492,7 +525,7 @@ export default function GettingStarted() {
           <hr />
           <Typography gutterBottom>
             Anschließend werden mehrere Design-Berücksichtigungen und
-            Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [19]:
+            Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [26]:
             Was ist eine angemessene Standardauswahl oder ein angemessener Wert
             und warum? Wie einfach können die Nutzer aus der Entscheidung
             austreten (opt-out)? Auf unethische und gesetzwidrige Richtlinien
@@ -502,7 +535,10 @@ export default function GettingStarted() {
           <hr />
           <Typography variant={"h4"}>Effektivität</Typography>
           <hr />
-          <TableContainer component={Paper}>
+          <TableContainer
+            component={Paper}
+            style={{ marginTop: 8, marginBottom: 8 }}
+          >
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
@@ -524,7 +560,7 @@ export default function GettingStarted() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Typography variant="body1" color="initial">
+          <Typography variant="body1" color="initial" gutterBottom>
             Die Effektivität stellt bei „Defaults“-Studien die prozentuelle
             Erhöhung der Auswahlra-te von der gewünschten/gezielten Alternative
             im Vergleich zu der Auswahlrate ohne der Anwendung von diesem Nudge,
@@ -543,11 +579,22 @@ export default function GettingStarted() {
             durchschnittli-chen Effektivität von 85,1% in die Effizienzklasse
             hoch angeordnet.
           </Typography>
+          <Typography>
+            Der Aufwand von „Defaults“ liegt hauptsächlich in dem
+            Planungsaufwand, da die Umsetzung von den tatsächlichen Beispielen
+            sehr schnell erfolgen kann. Mit einer kurzen Einarbeitung in
+            Material-UI, kann jedes einzelne Beispiel unter einer Stunde
+            umgesetzt werden, da Material-UI genügend eigene ähnliche Beispiele
+            mit Code-Umsetzungen bereitstellt. Daher kann deren Code-Umsetzung
+            übernommen werden und in die eigene Umgebung mit Anpassungen
+            integriert werden. Mit dem Aufwand unter eine Stunde werden
+            „Defaults“ in die Kategorie niedrig eingeordnet. Da die Effektivität
+            von „Defaults“ hoch ist und der Aufwand klein ist, werden „Defaults“
+            in die Effizienzklasse hoch eingestuft.
+          </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
           <hr />
-          {/** Example Passwörter */}
-          {/** 3 Design Empfehlungen, Literatur..  */}
           <Typography gutterBottom>
             1. Cartwright E (2011) Behavioral economics. Routledge advanced
             texts in economics and finance, vol 16. Routledge, London, New York
@@ -615,57 +662,71 @@ export default function GettingStarted() {
             Tips. Fast Company
           </Typography>
           <Typography gutterBottom>
-            14. Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging:
-            guiding online user choices through interface design. Commun ACM 61:
-            67–73. https://doi.org/10.1145/3213765
-          </Typography>
-          <Typography gutterBottom>
-            15. Material-UI (2020) Checkbox React component.
+            14. Material-UI (2020) Checkbox React component.
             https://material-ui.com/components/checkboxes/. Accessed 07 Feb 2020
           </Typography>
           <Typography gutterBottom>
-            16. Material-UI (2020) Radio buttons React component.
-            https://material-ui.com/components/radio-buttons/. Accessed 07 Feb
+            15. Material-UI (2020) TypeScript.
+            https://material-ui.com/guides/typescript/#usage-of-withstyles.
+            Accessed 21 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            16. Material-UI (2020) Checkbox API.
+            https://material-ui.com/api/checkbox/. Accessed 21 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            17. Material-UI (2020) Material Icons.
+            https://material-ui.com/components/material-icons/. Accessed 05 Jul
             2020
           </Typography>
           <Typography gutterBottom>
-            17. Material-UI (2020) Slider React component.
+            18. Material-UI (2020) Slider React component.
             https://material-ui.com/components/slider/. Accessed 07 Jan 2020
           </Typography>
           <Typography gutterBottom>
-            18. Material-UI (2020) Text Field React component.
+            19. Material-UI (2020) Text Field React component.
             https://material-ui.com/components/text-fields/. Accessed 04 Jul
             2020
           </Typography>
           <Typography gutterBottom>
-            19. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
-            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
-            Proceedings of the 2019 CHI Conference on Human Factors in Computing
-            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
-            Computing Machinery, New York, New York, pp 1–15
+            20. Schneider C, Weinmann M, vom Brocke J (2018) Digital nudging:
+            guiding online user choices through interface design. Commun ACM 61:
+            67–73. https://doi.org/10.1145/3213765
           </Typography>
           <Typography gutterBottom>
-            20. Bellman S, Johnson EJ, Lohse GL (2001) On site: to opt-in or
+            21. Material-UI (2020) Radio buttons React component.
+            https://material-ui.com/components/radio-buttons/. Accessed 07 Feb
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            22. Bellman S, Johnson EJ, Lohse GL (2001) On site: to opt-in or
             opt-out?: it depends on the question. Commun ACM 44: 25–27.
             https://doi.org/10.1145/359205.359241
           </Typography>
           <Typography gutterBottom>
-            21. Madrian BC, Shea DF (2001) The Power of Suggestion: Inertia in
+            23. Madrian BC, Shea DF (2001) The Power of Suggestion: Inertia in
             401(k) Participation and Savings Behavior. The Quarterly Journal of
             Economics 116: 1149–1187. https://doi.org/10.1162/003355301753265543
           </Typography>
           <Typography gutterBottom>
-            22. Ölander F, Thøgersen J (2014) Informing Versus Nudging in
+            24. Ölander F, Thøgersen J (2014) Informing Versus Nudging in
             Environmental Policy. J Consum Policy 37: 341–356.
             https://doi.org/10.1007/s10603-014-9256-2
           </Typography>
           <Typography gutterBottom>
-            23. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
+            25. Lee MK, Kiesler S, Forlizzi J (2011) Mining behavioral economics
             to design persuasive technology for healthy choices. In: Tan D,
             Fitzpatrick G, Gutwin C et al. (eds) Conference proceedings and
             extended abstracts / the 29th Annual CHI Conference on Human Factors
             in Computing Systems: CHI 2011, Vancouver, BC, May 7 - 12, 2011.
             ACM, New York, NY, pp 325–334
+          </Typography>
+          <Typography gutterBottom>
+            26. Caraban A, Karapanos E, Gonçalves D et al. (2019) 23 Ways to
+            Nudge. In: Brewster S, Fitzpatrick G, Cox A et al. (eds) CHI 2019:
+            Proceedings of the 2019 CHI Conference on Human Factors in Computing
+            Systems : May 4-9, 2019, Glasgow, Scotland, UK. The Association for
+            Computing Machinery, New York, New York, pp 1–15
           </Typography>
         </div>
       </ThemeProvider>

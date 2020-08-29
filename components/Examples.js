@@ -9,9 +9,13 @@ const useStyles = makeStyles({
   root: {
     minWidth: 200,
     maxWidth: 500,
+    marginTop: 8,
+    marginBottom: 8,
   },
   container: {
     justifyContent: "center",
+    marginTop: 8,
+    marginBottom: 8,
   },
 });
 
