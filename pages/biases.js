@@ -2,6 +2,7 @@ import NavBar from "../components/Navigation-bar";
 import Typography from "@material-ui/core/Typography";
 import theme from "../src/theme";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import Head from "next/head";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -19,6 +20,13 @@ export default function designCycle() {
 
   return (
     <NavBar>
+      <Head>
+        <title>Biases</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
       <Typography variant="h3" gutterBottom>
         Biasese
       </Typography>

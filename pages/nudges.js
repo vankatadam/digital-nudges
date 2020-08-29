@@ -5,6 +5,7 @@ import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import Link from "next/link";
 import Button from "@material-ui/core/Button";
+import Head from "next/head";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,13 @@ export default function designCycle() {
 
   return (
     <NavBar>
+      <Head>
+        <title>Nudges</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
       <Typography variant="h3" gutterBottom>
         Nudges
       </Typography>
@@ -65,9 +73,11 @@ export default function designCycle() {
         Zusätzlich ist eine Tabelle mit betrachteten Studien am Ende jeder Seite
         aufgelistet.
       </Typography>
+      <hr />
       <Typography variant="h4" gutterBottom>
         Nudge Übersicht
       </Typography>
+      <hr />
       <Typography gutterBottom>
         <ol>
           <li>

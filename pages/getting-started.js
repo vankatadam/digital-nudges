@@ -60,9 +60,9 @@ export default function GettingStarted() {
             </Link>
           </Typography>
         </div>
-        <Typography variant="h4" gutterBottom>
-          Was sind Nudges
-        </Typography>
+        <hr />
+        <Typography variant="h4">Was sind Nudges</Typography>
+        <hr />
         <Typography gutterBottom>
           Ähnlich wie in den Definitionen von Nudge in Business-Wörterbüchern,
           sind Nudges in der Regel nur <BoldTypo>kleine Stupser</BoldTypo> oder
@@ -95,9 +95,11 @@ export default function GettingStarted() {
           -umgebung und ihr Architekt werden folgend näher erläutert.
         </Typography>
         <Typography gutterBottom></Typography>
-        <Typography variant="h4" gutterBottom>
+        <hr />
+        <Typography variant="h4">
           Wie kann mir diese Guideline helfen und wo soll ich anfangen?
         </Typography>
+        <hr />
         <Typography gutterBottom>
           Fokus dieser Guideline liegt auf der beispielhaften Implementierung
           mithilfe React und Material-UI (Planung und Testen nicht inbegriffen)
@@ -156,9 +158,9 @@ export default function GettingStarted() {
             </Link>
           </li>
         </ol>
-        <Typography variant="h4" gutterBottom>
-          Empfohlene Literatur
-        </Typography>
+        <hr />
+        <Typography variant="h4">Empfohlene Literatur</Typography>
+        <hr />
         <Typography>
           Falls nur ein Buch gelesen werden soll, dann dieses:{" "}
         </Typography>
@@ -174,9 +176,11 @@ export default function GettingStarted() {
           23 Ways to Nudge: Kahneman von Caraban et al., DOI:
           10.1145/3290605.3300733
         </Typography>
+        <hr />
         <Typography gutterBottom variant="h4">
           Referencen
         </Typography>
+        <hr />
         <Typography gutterBottom>
           1. O'Shea S (ed) (2011) Cambridge business english dictionary. Ernst
           Klett Sprachen GmbH; Cambridge Unversity Press, Stuttgart, Cambrigde
