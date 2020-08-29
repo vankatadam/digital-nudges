@@ -168,13 +168,13 @@ export default function GettingStarted() {
           ></TitleBox>
           <Typography gutterBottom>
             „Make Resources Scarce” Nudge basiert auf dem “Scarcity Bias” [vgl.
-            1]. “Scarcity Bias” beschreibt die Neigung zu einer Überbewertung
-            von Elementen, über die gedacht wird, dass die in der Zukunft nur in
-            einer geringen Menge oder gar nicht verfügbar sein werden [vgl. 2].
-            Diese Überbewertung findet auch bei Sachen statt, die nicht
-            unbedingt von den Menschen gebraucht werden und vor der Realisierung
-            der geringen Verfügbarkeit, waren diese Elemente auch oft nicht
-            gewollt [vgl. 1].{" "}
+            1]. Der “Scarcity Bias” beschreibt die Neigung zu einer
+            Überbewertung von Elementen, von denen angenommen wird, dass sie in
+            der Zukunft nur in einer geringen Menge oder gar nicht verfügbar
+            sein werden [vgl. 2]. Diese Überbewertung findet auch bei Sachen
+            statt, die nicht unbedingt von den Menschen gebraucht werden und bei
+            der Realisierung der geringen Verfügbarkeit, waren diese Elemente
+            auch oft nicht gewollt [vgl. 1].{" "}
           </Typography>
           <Typography gutterBottom>
             Die Umsetzung dieses Nudges wird durch eine Reduzierung der
@@ -185,37 +185,37 @@ export default function GettingStarted() {
             Dies führte die Nutzer dazu, dass eine physische Aktivität mehrmals
             am Tag durchgeführt wurde [vgl. 3]. In webbasierten Umgebungen
             befindet sich dieser Nudge in jedem größeren E-Shop wie Amazon oder
-            Ebay [vgl. 4, 5]. Dieser Nudge wird in Form einer Anzeige einen
-            geringeren Verfügbarkeit von Produkten, die absichtlich zur
-            Verstärkung des Effektes aus dem Kontext hervorgehoben werden und
-            mit Worten, die das Gefühl einen geringen Verfügbarkeit noch
-            verstärken, wie „nur noch x Produkte verfügbar“ kennengezeichnet
-            [vgl. 4, 5].{" "}
+            Ebay [vgl. 4, 5]. Dieser Nudge tritt in Form einer Anzeige mit der
+            Kennzeichnung von geringer Verfügbarkeit von Produkten, die
+            absichtlich zur Verstärkung des Effektes aus dem Kontext
+            hervorgehoben werden und mit Worten, die das Gefühl einen geringen
+            Verfügbarkeit noch verstärken, wie „nur noch x Produkte verfügbar“,
+            auf [vgl. 4, 5].{" "}
           </Typography>
           <Typography gutterBottom>
-            Dieser Nudge, in Bezug auf eine geringe Mengen Verfügbarkeit,
+            Dieser Nudge, in Bezug auf eine geringe Mengenverfügbarkeit,
             funktioniert am besten bei Elementen oder Produkten, die
-            zeitkritisch sind oder die ablaufen können [vgl. 6, 7]. Dies können
-            beispielsweise Hotelzimmer, Flugzeugtickets, oder einmalige
+            zeitkritisch sind oder ablaufen können [vgl. 6, 7]. Dies können
+            beispielsweise Hotelzimmer, Flugzeugtickets oder einmalige
             Sammelobjekte sein [vgl. 6, 7]. Zusätzlich wurde bei der Studie von
             6 im Bereich „Online Retail“ ein positiver Effekt dieses Nudges nur
             bei den unteren 51% meistverkauften Artikeln gemessen. Dies weißt
-            darauf hin, dass dieser Nudge neben zeitkritischen Produkten, ein
+            darauf hin, dass dieser Nudge neben zeitkritischen Produkten, einen
             Effekt auf nicht oft verkaufte Artikel hat [6].{" "}
           </Typography>
           <Typography gutterBottom>
-            Im Gegensatz dazu funktioniert dieser Nudge nicht, bis hin zu
-            negativen Effekten (bis zu 17,6% Verringerung der Verkaufsquote),
-            bei beständigen, haltbaren Sachen wie Küchengeräten da der Eindruck
-            entsteht, dass diese Ware geringerwertig sind und der Verkäufer
-            diese als ungewünschte Restware schnell verkaufen muss [vgl. 6, 7].
-            Zusätzlich, wie im Oberen Abschnitt erwähnt, weißt die Studie von 6
-            darauf hin, dass dieser Nudge bei oft verkauften Artikeln, zumindest
-            im Bereich „Online Retail“, nicht funktioniert.{" "}
+            Im Gegensatz dazu funktioniert dieser Nudge nicht und erzielt zum
+            Teil sogar negative Effekte (bis zu 17,6% Verringerung der
+            Verkaufsquote), bei beständigen, haltbaren Sachen wie Küchengeräten,
+            da der Eindruck entsteht, dass diese Ware geringwertig ist und der
+            Verkäufer diese als ungewünschte Restware schnell verkaufen muss
+            [vgl. 6, 7]. Zusätzlich, wie im oberen Abschnitt erwähnt, weist die
+            Studie von 6 darauf hin, dass dieser Nudge bei oft verkauften
+            Artikeln, zumindest im Bereich „Online Retail“, nicht funktioniert.{" "}
           </Typography>
           <Typography gutterBottom>
             Die Umsetzung dieses Nudges auf Webseiten erfolgt mit Hilfe von
-            Text, Datenbankabfragen in Bezug auf verfügbare Artikel, oder einer
+            Text, Datenbankabfragen in Bezug auf verfügbare Artikel oder einer
             graphischen Darstellung in Form von Bildern. Diese Funktionen können
             mit Hilfe vom reinen JavaScript und dem Reactjs Frameworks erfolgen.{" "}
           </Typography>
@@ -224,29 +224,33 @@ export default function GettingStarted() {
           <hr />
           <Typography gutterBottom>
             In webbasierten Umgebungen befindet sich dieser Nudge in den
-            gängigsten E-Shops, sowie in den meisten Flugtickets Vermittlern
-            Webseiten aus dessen das aufgeführte Beispiel in das Guideline
-            entnommen wird [vgl. 4, 5, vgl. 8].{" "}
+            gängigsten E-Shops, sowie auf den meisten
+            Flugtickets-Vermittler-Webseiten aus welchen das aufgeführte
+            Beispiel für die Guideline entnommen wird [vgl. 4, 5, vgl. 8].{" "}
           </Typography>
           <Typography gutterBottom>
-            Das erste Beispiel ist von einem limitierten Angebot bei Amazon. In
-            diesem Beispiel sind mehrere Nudges, wie es für Amazon üblich ist
-            [vgl. 9], vorhanden und zur Verdeutlichung bereits erwähnten Nudges
-            von vorherigen Kapitel, werden auch diese kurz erwähnt. Zuerst wird
-            eine Empfehlung von Amazon angezeigt, die zu einer Hervorhebung
-            dient (vgl. 9), ein großer Rabatt, sowie eine Darstellung, wie viel
-            man insgesamt gespart hat. Daneben wird visuell dargestellt, welche
-            Energieeffizienzklasse dieser Fernseher hat, sowie Positionierung
-            von den wichtigsten Informationen auf gut sichtbaren Stellen, die
-            zusätzlich mit einer Schriftgröße, Schriftstärke und Schriftfarbe
-            hervorgehoben werden. Das wichtige Element für „Make Resources
+            Das erste Beispiel ist von einem limitierten Angebot bei Amazon
+            inspiriert worden. In diesem Beispiel sind mehrere Nudges, wie es
+            für Amazon üblich ist [vgl. 9], vorhanden und zur Verdeutlichung von
+            bereits erwähnten Nudges von vorherigen Kapiteln, werden auch diese
+            kurz erwähnt. Zuerst wird eine Empfehlung von Amazon angezeigt, die
+            als Hervorhebung dient (vgl. 9), ein großer Rabatt, sowie eine
+            Darstellung, wie viel man insgesamt gespart hat. Daneben werden die
+            Energieeffizienzklasse des Fernsehers visuell dargestellt und die
+            wichtigsten Informationen auf gut sichtbaren Stellen, die zusätzlich
+            mit einer Schriftgröße, Schriftstärke und Schriftfarbe hervorgehoben
+            werden, positioniert. Das wichtige Element für „Make Resources
             Scarce“ Nudge besteht in dem limitierten Angebot. Dies ist zuerst
-            auf der Homepage hervorgehoben, da Limitierte Angebote angezeigt
+            auf der Homepage hervorgehoben, da limitierte Angebote angezeigt
             werden, sowie auf der tatsächlichen Produktpage, auf der die Zeit
-            angegeben wird, in der das Angebot abläuft und die Preise zu deren
-            normalen Preisen umgestellt werden. Die Zeitliche Beschränkung wird
-            das erste Beispiel in der Guideline sein. Es wird also ein Produkt
-            dargestellt, das eine Zeitliche Beschränkung hat.{" "}
+            angegeben wird, in der das Angebot abläuft und die Preise zu den
+            jeweiligen normalen Preisen umgestellt werden. Die zeitliche
+            Beschränkung wird das erste Beispiel in der Guideline sein. Es wird
+            also ein Produkt dargestellt, das eine zeitliche Beschränkung hat.
+            Dieses Beispiel wurde mit Hilfe von „Grids“, unterschiedlichen
+            „Typography“ Stylen, Energieetiketten umgesetzt [vgl. 10–12].
+            Zusätzlich wurde das Framework „react-countdown“ eingebunden, um die
+            Umsetzung des Countdowns zu erleichtern [vgl. 13].{" "}
           </Typography>
           <Example
             maxWidth="700"
@@ -329,14 +333,16 @@ export default function GettingStarted() {
           </Example>
           https://github.com/ndresx/react-countdown für einfaches countdown
           <Typography gutterBottom>
-            Das zweite Beispiel ist ein Produktangebot bei E-Bay. Hierbei
-            werden, wie bei Amazon, auch viele ähnliche Nudges angewendet. Der
-            Unterschied zu dem Angebot von Amazon ist in einer anderen Art von
-            „Make Resources Scarce“ Nudge. Es besteht keine Zeitbeschränkung,
-            aber ein Hinweis darauf, dass nur eine begrenzte Anzahl an Waren
-            verfügbar ist, sowie Angaben zu verkauften Artikeln, die auch darauf
-            hinweisen, dass dieses Produkt oft verkauft wird und somit schnell
-            ausverkauft werden kann.{" "}
+            Das zweite Beispiel bezieht sich auf ein Produktangebot bei E-Bay.
+            Hierbei werden, wie bei Amazon, auch viele ähnliche Nudges
+            angewendet. Der Unterschied zu dem Angebot von Amazon liegt in einer
+            anderen Art von einem „Make Resources Scarce“ Nudge. Es besteht
+            keine Zeitbeschränkung, aber ein Hinweis darauf, dass nur eine
+            begrenzte Anzahl an Waren verfügbar ist, sowie Angaben zu verkauften
+            Artikeln, die auch darauf hinweisen, dass dieses Produkt oft
+            verkauft wird und somit schnell ausverkauft werden kann. Dieses
+            Beispiel wurde mit Hilfe von „Grids“, unterschiedlichen „Typography“
+            Stylen und einen Material-UI Ikone umgesetzt [vgl. 11, 12, vgl. 14].{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/naughty-allen-sngwi?file=/index.js">
             <Grid container justify="center" direction="row">
@@ -463,7 +469,9 @@ export default function GettingStarted() {
             Lufthansa. In diesem Fall ist das limitierte Angebot durch ein
             Flugdatum begrenzt, sowie einem Limit bei Flugplätzen. Zusätzlich
             wird zu einem bestimmten Preis nur eine begrenzte Anzahl an Tickets
-            verkauft.{" "}
+            verkauft. Dieses Beispiel wurde genau wie das Beispiel in der
+            Abbildung 22 mit Hilfe von „Grids“, unterschiedlichen „Typography“
+            Stylen und Material-UI Ikonen umgesetzt [vgl. 11, 12, vgl. 14].{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -574,16 +582,29 @@ export default function GettingStarted() {
             </Table>
           </TableContainer>
           <Typography variant="body1" color="initial">
-            Gleich wie bei „Positioning“ Nudge muss berücksichtigt werden, dass
-            die Effektivität, durch die begrenzte Anzahl an Studien mit
+            Genau wie bei dem „Positioning“ Nudge muss berücksichtigt werden,
+            dass die Effektivität durch die begrenzte Anzahl an Studien mit
             unterschiedlichen Ergebnissen, stark abweichen kann. Zusätzlich
             müssen bei diesem Nudge, wie in oberen Abschnitten erklärt,
-            Anwendungseinschränkungen berücksichtigt werden, da dieser Nudge bei
-            einem anwenden in falschen Situationen bis zu einen negativen
-            Effizienz führen kann [6]. Die Studien, trotz den
-            Anwendungseinschränkungen, zeigen dass „Make ressources scarce“ mit
-            der durchschnittlichen Effektivität von 32,5% in die Effizienzklasse
-            mittel angeordnet werden kann.
+            Anwendungseinschränkungen berücksichtigt werden, da dieser Nudge
+            beim Anwenden in falschen Situationen sogar zu einer negativen
+            Effizienz führen kann [6]. Die Studien zeigen, trotz der
+            Anwendungseinschränkungen, dass „Make ressources scarce“ mit der
+            durchschnittlichen Effektivität von 32,5% in der Effizienzklasse
+            mittig angeordnet werden kann.
+          </Typography>
+          <Typography>
+            Der „Make Resources Scarce“ Nudge ist mit Hilfe von „Grids“ und
+            vordefinierten Countern leicht umzusetzen. Falls die Kennzahlen, wie
+            verfügbare Produkte im Lager, verfügbar sind, können diese aus der
+            Datenbank abgefragt werden und in den Beispielen gerendert werden
+            werden. Daher wird dieser Nudge in die Aufwandsklasse niedrig
+            eingestuft. Trotz dem niedrigen Aufwand in der Umsetzung, sollte der
+            Planungsaufwand nicht unterschätzt werden, da dieser Nudge bei
+            falschen Planung auch negative Effekte erzielen kann [vgl. 6, 7]. Da
+            dieser Nudge in der Effektivitätsklasse mittel ist, und der Aufwand
+            niedrig ist, wird die daraus abgeleitete Effizienzklasse Mittel
+            sein.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
@@ -631,6 +652,30 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             9. Mills S (2020) Amazon is Changing How it Nudges in Response to
             Coronavirus. The Startup
+          </Typography>
+          <Typography gutterBottom>
+            10. The Publications Office of the European Union (2020) EUR-Lex -
+            32014R0518.
+            https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=CELEX:32014R0518.
+            Accessed 22 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            11. Material-UI (2020) Grid React component.
+            https://material-ui.com/components/grid/#grid. Accessed 05 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            12. Material-UI (2020) Typography.
+            https://material-ui.com/components/typography/#typography. Accessed
+            22 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            13. ndresx (2020) react-countdown.
+            https://www.npmjs.com/package/react-countdown. Accessed 22 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            14. Material-UI (2020) Material Icons.
+            https://material-ui.com/components/material-icons/. Accessed 05 Jul
+            2020
           </Typography>
         </div>
       </ThemeProvider>

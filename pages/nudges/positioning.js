@@ -340,16 +340,16 @@ export default function GettingStarted() {
             efficiency={2}
           ></TitleBox>
           <Typography gutterBottom>
-            Eine weitere einfach umsetzbare, aber trotz dessen eine häufige Art
-            von Nudges in Webseiten, ist „Positioning“ [vgl. 1]. Dieser Nudge
+            Eine weitere einfach umsetzbare, aber trotz dessen häufige Art von
+            Nudges in Webseiten, ist „Positioning“ [vgl. 1]. Dieser Nudge
             basiert, ähnlich wie „Defaults“, auf dem Status-Quo Bias [vgl. 1],
             sowie in den meisten Beispielen zu diesem Nudge auch auf der
             Anchoring Heuristik [vgl. 2]. Die Funktionsweise dieses Nudges hängt
             von der Anordnung der Elemente in einer Auflistung, beispielweise
             von verschiedenen Produkten, ab [vgl. 1]. Wie 2 bewiesen haben,
             hängt die Wahl des Nutzers von dem ersten Element in der Auflistung,
-            dieses dient als ein Anker, sowie der Anordnung, die nach diesem
-            Element folgt ab [vgl. 2]. Wenn die Elemente nach der Qualität
+            welches als Anker dient, sowie von der Anordnung, die nach diesem
+            Element folgt, ab [vgl. 2]. Wenn die Elemente nach der Qualität
             sortiert wurden und das erste Element die höchste Qualität hat,
             werden die andere Elemente mit dem ersten verglichen [vgl. 2]. Dies
             hat zur Folge, dass im Durchschnitt Produkte mit einer höheren
@@ -362,37 +362,39 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             Eine Anordnung von Elementen kann auch im Bereich der IT-Sicherheit
             angewendet werden [vgl. 3]. Eine reine Anordnung von verfügbaren
-            Wi-Fis, sicherste Wi-Fis wurden als erste angezeigt, führte zu einer
-            Erhöhung der Auswahl von sicheren Netzwerken um 6,6% [vgl. 3].
-            Dieser Effekt konnte durch eine Visuelle Darstellung, wie grüne
+            Wi-Fis, sicherste Wi-Fis wurden als erstes angezeigt, führte zu
+            einer Erhöhung der Auswahl von sicheren Netzwerken um 6,6% [vgl. 3].
+            Dieser Effekt konnte durch eine visuelle Darstellung, wie grüne
             Farben für sichere Netzwerke und rote Farben für unsichere
             Netzwerke, um weitere 21,7% verstärk werden [vgl. 3]. Der Effekt der
-            visuellen Darstellungen wird im Nudge „Visualisation“ behandelt.{" "}
+            visuellen Darstellungen wird im Kapitel 3.4.4 „Visualisation“
+            behandelt.{" "}
           </Typography>
           <Typography gutterBottom>
-            Um dieses Effekt zu einem großen Teil zu vermeiden, da eine Auswahl
-            von einer Anordnung notwendig ist, und somit dem Nutzer eine freiere
-            Wahl überlassen, können die Elemente in Gitter Anordnungen
-            aufgelistet werden [vgl. 4].{" "}
+            Um diesen Effekt zu einem großen Teil zu vermeiden, da eine Auswahl
+            von einer Anordnung notwendig ist um dem Nutzer eine freiere Wahl zu
+            überlassen, können die Elemente in Gitter-Anordnungen aufgelistet
+            werden [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
             Dieser Nudge ist sehr eng mit dem „Hiding“ Nudge verbunden und daher
-            wird der „Hiding“ Nudge zur Vereinfachung in den „Positioning“ Nudge
-            aufgenommen. Der „Hiding“ Nudge funktioniert auch dank einer
-            Veränderung der Anordnung von Elementen, nur mit einem umgekehrten
-            Ziel als der des „Positioning“ und zwar, mit einer verringerten
-            Auswahl-Quote eines bestimmten Elementes [vgl. 1]. Dies kann
-            beispielweise im Healthcare Sektor nützlich sein, da man dadurch den
-            Verkauf von ungesundem Essen verringern kann [vgl. 5].{" "}
+            wird der „Hiding“ Nudge zur Vereinfachung für den Leser dieser
+            Guideline in den „Positioning“ Nudge aufgenommen. Der „Hiding“ Nudge
+            funktioniert auch, dank einer Veränderung der Anordnung von
+            Elementen, nur mit einem gegensätzlichen Ziel als der des
+            „Positioning“ und zwar, mit einer verringerten Auswahl-Quote eines
+            bestimmten Elements [vgl. 1]. Dies kann beispielweise im Healthcare
+            Sektor nützlich sein, da man dadurch den Verkauf von ungesundem
+            Essen verringern kann [vgl. 5].{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
           <hr />
           <Typography gutterBottom>
-            Wie erwähnt, erfolgt die Umsetzung von „Positioning“ Nudge mit Hilfe
+            Wie erwähnt, erfolgt die Umsetzung vom „Positioning“ Nudge mit Hilfe
             von Listen, Gitter-Listen und zusätzlichen Elementen wie Ikonen zur
-            Unterstützung. Das Ziel solcher Implementierung ist entweder eine
-            Erhöhung der Wahl bestimmten Produktklassen, wie beispielweise
+            Unterstützung. Das Ziel solch einer Implementierung ist entweder
+            eine Erhöhung der Wahl bestimmten Produktklassen, wie beispielweise
             Produkte mit einer hohen Qualität, das Verringern einer Wahl von
             bestimmten Produkten, wie ungesunde Ernährungsprodukte, oder die
             Vermeidung dieser Effekte und eine Erhöhung der freien Wahl des
@@ -400,11 +402,18 @@ export default function GettingStarted() {
           </Typography>
           <Typography gutterBottom>
             Das erste Beispiel wird ein grundlegendes Beispiel inspiriert von
-            [2] sein [vgl. 2]. In diesem Beispiel wird die Anordnung der
-            Elemente verändert, je nachdem welche Elemente bevorzugt werden.
-            Dies kann eine Anordnung anhand der Qualität sein [vgl. 2], aber es
-            können auch zuerst bevorzugte oder empfohlene Produkte, wie bei
-            Amazon [vgl. 6], angezeigt werden.{" "}
+            [2] sein. In diesem Beispiel wird die Anordnung der Elemente
+            verändert, je nachdem welche Elemente bevorzugt werden. Dies kann
+            eine Anordnung anhand der Qualität sein [vgl. 2], aber es können
+            auch zuerst bevorzugte oder empfohlene Produkte, wie bei Amazon
+            [vgl. 9], angezeigt werden. In dem umgesetzten Beispiel wird nach
+            den geringsten Kalorien sortiert. Das Beispiel wurde mit Hilfe von
+            Material-UI Tabellen entworfen [vgl. 10]. Dieses Beispiel wurde von
+            Material-UI Tabellen Beispielen entnommen und leicht angepasst [vgl.
+            10]. Material-UI übernimmt nicht die Logik, wie das Sortieren von
+            Daten, also müssen einige Funktionen selbst definiert werden. Dies
+            erschwert zuerst die Arbeit, aber ermöglicht eine höhere
+            Flexibilität.{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -483,13 +492,17 @@ export default function GettingStarted() {
               />
             </div>
           </Example>
-          https://material-ui.com/components/tables/ Sorting & Selecting Example
           <Typography gutterBottom>
             Das zweite Beispiel beschäftigt sich mit der Verstärkung dieses
             Effektes im ersten Beispiel [vgl. 3]. Dies wird anhand von einer
             visuellen Darstellung in Form von gefärbten Ikonen, beispielweise in
             Farben zwischen grün (das bevorzugte Element) und rot, erreicht
-            [vgl. 3].{" "}
+            [vgl. 3]. Dieses Beispiel zeigt einen positiven Zusammenhang
+            zwischen „Visualisation“ Nudge und „Positioning“ Nudge. Das
+            aufgeführte Beispiel wurde gleich wie das Beispiel in der Abbildung
+            14 umgesetzt. Die Ikonen wurden von Material-UI übernommen, mit
+            Farben angepasst und mithilfe von „If/Else“ Abfragen in Bezug auf
+            Kalorien angewendet.{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -582,17 +595,35 @@ export default function GettingStarted() {
             </div>
           </Example>
           <Typography gutterBottom>
-            Das dritte Beispiel bezieht sich auf eine Verringerung der Wahl
-            eines bestimmten Elements. Dies wird ähnlich wie im Beispiel eins
-            erreicht, nur umgekehrt angewendet [vgl. 5]. Somit werden die
-            unerwünschten Elemente an das Ende den Listen eingefügt [vgl. 5].{" "}
+            Ein weiteres Beispiel wäre eine Verringerung der Wahl eines
+            bestimmten Elements. Dies wird gleich wie im Beispiel eins erreicht,
+            nur umgekehrt angewendet [vgl. 5]. Somit werden die unerwünschten
+            Elemente an das Ende der Liste sortiert [vgl. 5]. Die Umsetzung wird
+            hier nicht wiederholend aufgeführt, da bei den Beispielen in
+            Abbildungen 14 und 15 die Spaltennamen wie bspw. Kalorien anklickbar
+            sind, und der Filter somit umgekehrt angewendet wird. Um diesen
+            Effekt für den Nutzer von Anfang an (seit dem ersten
+            Webseitenbesuch) zu erhalten (in diesem Fall eine absteigende
+            Sortierung), muss in dem Sourcecode nur ein Eigenschaftsfeld zu
+            „desc“ (eine Abkürzung zu descending) geändert werden.{" "}
           </Typography>
-          NUR ORDER HÄTTE MAN ZU DESC geändert
           <Typography gutterBottom>
             Das letzte Beispiel beschäftigt sich mit einer Erhöhung der freien
             Wahl für den Nutzer und somit einer Verringerung dieses
-            „Positioning“ Effektes. Dies wird dank einer Auflistung in einer
-            alternativen Form von Listen und zwar in einer Gitter Form [vgl. 4].{" "}
+            „Positioning“ Effekts. Dies wird dank einer Auflistung in einer
+            alternativen Form von Listen und zwar in einer Gitter Form [vgl. 4].
+            Material-UI bietet für diese Umsetzung eigene „Grids“ die mit
+            verschiedenen „Properities“ versehen werden können. Zuerst werden
+            „container Grids“ definiert, in denen sich „item Grids“ befinden.
+            Diese „Grids“ werden dann mit gewöhnlichen CSS „Properities“, bspw.
+            „direction“, „justify“ oder „alignItems“, versehen, und somit werden
+            die Elemente korrekt in deren Zellen gerendert. Auf Webseiten wie
+            pexels.com oder unsplash.com können tausende freie Bilder gefunden
+            werden, um die auf eigenen Webseiten umsetzen zu können [vgl. 11,
+            12]. Für eine optimale Umsetzung von Bildern auf Webseiten (um
+            schnelle Ladezeiten zu gewährleisten) sollten die Bilder eine
+            kleinere Größe haben, sowie durch ein Framework wie
+            „next-optimized-images“ zusätzlich optimiert werden [vgl. 13].{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/positioning3sortinggrid-u4oiy">
             <div className={classes.root}>
@@ -621,8 +652,6 @@ export default function GettingStarted() {
               </GridList>
             </div>
           </Example>
-          Bilder werden automatisch in die Grid größe reingepasst
-          https://material-ui.com/components/grid-list/
           <hr />
           <Typography variant={"h4"}>Design Berücksichtigungen</Typography>
           <hr />
@@ -663,27 +692,49 @@ export default function GettingStarted() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Typography variant="body1" color="initial">
+          <Typography gutterBottom>
             Die Effektivität stellt bei „Positioning“-Studien die prozentuelle
-            Erhöhung der Auswahl-rate von der gewünschten/gezielten Alternative
-            im Vergleich zu der Auswahlrate ohne der Anwendung von diesem Nudge,
-            genauso, wie es bei „Default“ Nudges dar. Die Effektivität der
-            Studie von Lee et al. 2011, S. 328–332 wurde als ein Durchschnitt
-            deren beiden Untersuchungen, einem E-shop Experiment mit gesunden
-            und unge-sunden Snacks sowie mit einer Reorganisierung des Angebots
-            von verschiedenen Snacks, die von einem Roboter angeboten wurden,
-            berechnet. Die zwei Studien zeigen, dass „Positioning“ Nudge in
+            Erhöhung der Auswahlrate von der gewünschten Alternative im
+            Vergleich zu der Auswahlrate ohne der Anwendung von diesem Nudge,
+            genauso, wie es auch schon bei „Default“ Nudges der Fall war, dar.
+          </Typography>
+          <Typography gutterBottom>
+            Die Effektivität der Studie von 5 wurde als ein Durchschnitt der
+            beiden Untersuchungen, einem E-shop Experiment mit gesunden und
+            ungesunden Snacks sowie mit einer Reorganisierung des Angebots von
+            verschiedenen Snacks, die von einem Roboter angeboten wurden,
+            berechnet.
+          </Typography>
+          <Typography gutterBottom>
+            Die zwei Studien zeigen, dass der „Positioning“ Nudge in
             unterschiedlichen Kontexten mit unterschiedlichen Ergebnissen
-            verbunden ist. Trotzt den unterschiedlichen Ergebnis-sen zeigt die
+            verbunden ist. Trotzt der unterschiedlichen Ergebnisse zeigt die
             durchschnittliche Effektivität, dass „Positioning“ Nudges eine hohe
-            Er-folgsrate aufweisen können und daher werden sie mit der
-            durchschnittlichen Effektivi-tät von 53% in die Effizienzklasse hoch
-            angeordnet. Da die Effektivität zu diesem Nudge nur in zwei Studien
+            Erfolgsrate aufweisen können und daher werden sie mit der
+            durchschnittlichen Effektivität von 53% in der Effizienzklasse hoch
+            angeordnet. Da die Effektivität von diesem Nudge nur in zwei Studien
             auffindbar war und zusätzlich mit zwei stark abweichenden
-            Effektivitätszahlen, soll bei eigener Implementierung ein starker
-            Fokus auf das Testen dieses Nudges gelegt werden, da die
-            Effektivität stärker als bei anderen Nudges die-ser Studie abweichen
+            Effektivitätszahlen, soll bei der eigenen Implementierung ein
+            starker Fokus auf das Testen dieses Nudges gelegt werden, da die
+            Effektivität stärker als bei anderen Nudges dieser Studie abweichen
             kann.
+          </Typography>
+          <Typography gutterBottom>
+            Die Umsetzung vom „Positioning“ Nudges war verglichen mit anderen
+            Nudges in dieser Arbeit der aufwendigste Nudge. Die Umsetzung von
+            der „Grid“ Darstellung war leicht, aber die Umsetzung von Tabellen
+            war mit einigen Herausforderungen verbunden. Da Material-UI keine
+            Logik für Filter anbietet, müssen diese selbst definiert werden oder
+            von den Material-UI Beispielen übernommen werden und angepasst
+            werden. Daher wurde der Aufwand mit über 3 Stunden pro Beispiel,
+            insbesondere bei der ersten Begegnung mit Material-UI, bewertet.
+            Somit wird der „Positioning“ Nudge in der Aufwandskategorie hoch
+            eingestuft.
+          </Typography>
+          <Typography gutterBottom>
+            Da der „Positioning“ Nudge eine hohe Effektivität aufweist, aber
+            auch einen hohen Aufwand, wird dieser Nudge in die Effizienzklasse
+            Mittel eingestuft.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>
