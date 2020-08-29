@@ -119,40 +119,35 @@ export default function GettingStarted() {
             „Asymmetric Dominance Effect“ zu finden ist [vgl. 3]. Dieser Effekt
             zeigt eine inkonsistente Wahl, wenn zwei gute Produkte, beide aus
             anderen Gründen gut, präsentiert werden und ein schlechteres
-            Produkt, das als ein „decoy“ agiert [vgl. 2–4]. Dieser Effekt kann
+            Produkt, das als ein „Decoy“ agiert [vgl. 2–4]. Dieser Effekt kann
             genutzt werden, wenn in der Regel drei Produkte angezeigt werden,
             und ein Produkt im Gegensatz zu einem Konkurrenzprodukt, bevorzugt
             werden soll [vgl. 4].{" "}
           </Typography>
           <Typography gutterBottom>
             Ein passendes Beispiel kommt aus dem Bereich Online-Shopping [vgl.
-            4]: In dieser Forschung wurde „Decoy Effect“ bei einer Auswahl von
-            Laptops nachgewiesen. In der ersten Phase wurden nur zwei Produkte A
-            und B zur Auswahl angeboten. Nach der erste Auswahlrunde hat sich
-            die erste Testgruppe für das Produkt A mit 65% und für das Produkt B
-            mit 35% entschieden. Nachdem ein „Decoy“ Produkt C hinzugefügt
-            wurde, der in allen Kategorien schlechter als B war, aber mit einem
-            vergleichbaren Preis als B und günstiger als C, wurde die zweite
+            4]: In dieser Forschung wurde der „Decoy Effect“ bei einer Auswahl
+            von Laptops nachgewiesen. In der ersten Phase wurden nur zwei
+            Produkte A und B zur Auswahl angeboten. Nach der erste Auswahlrunde
+            entschied sich die erste Testgruppe für das Produkt A mit 65% und
+            für das Produkt B mit 35%. Nachdem ein „Decoy“ Produkt C hinzugefügt
+            wurde, das in allen Kategorien schlechter als B, aber mit einem
+            vergleichbaren Preis zu B und günstiger als C war, wurde die zweite
             Testgruppe zur Auswahl gelassen. Dies führte zu einer Wahl von
-            Produkt B in 69% und C von 31%.
+            Produkt B von 69% und C von 31%.
           </Typography>
           <Typography gutterBottom>
-            Aus dieser Studie wurde ersichtlich, dass anhand „Decoy Effect“ im
-            Bereich E-Shopping ein bestimmtes Produkt vor einem anderen
-            bevorzugt werden kann. Dies hat jedoch ein paar Regeln, die beachtet
-            werden müssen, die auch in dieser Studie beobachtet wurden [vgl. 4]:
-            Die Produkte A und B müssen beide gleichwertig visuell dargestellt
+            Aus dieser Studie wurde ersichtlich, dass anhand des „Decoy Effects“
+            im Bereich E-Shopping ein bestimmtes Produkt einem anderen bevorzugt
+            werden kann. Dies hat jedoch ein paar Regeln, die beachtet werden
+            müssen und auch in dieser Studie beobachtet wurden [vgl. 4]: Die
+            Produkte A und B müssen beide gleichwertig visuell dargestellt
             werden oder das bevorzugte Produkt B besser als A. Das „Decoy“
             Produkt muss in allen Bereichen schlechter als B aber trotzdem in
             etwas besser als C sein (wie in diesem Fall der Preis) und immer
             noch z.B. anhand des Preises mit B vergleichbar sein. Durch eine
-            bessere Visuelle Darstellung, wie beispielweise Animationen von
+            bessere Visuelle Darstellung, wie beispielweise Animationen bei
             Produkt B, kann der „Decoy Effect“ leicht verstärkt werden.{" "}
-          </Typography>
-          <Typography gutterBottom>
-            {" "}
-            „Decoy“ Produkte und deren Eigenschaften wie Bilder, Beschriftungen
-            und Preis, können leicht mit Material UI umgesetzt werden.{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>

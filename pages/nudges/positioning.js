@@ -775,8 +775,39 @@ export default function GettingStarted() {
             ACM, New York, NY, pp 325–334
           </Typography>
           <Typography gutterBottom>
-            6. Amazon.com Inc. (2020) Amazon.com. https://www.amazon.com/.
+            6. Material-UI (2020) Grid React component.
+            https://material-ui.com/components/grid/#grid. Accessed 05 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            7. Material-UI (2020) List React component.
+            https://material-ui.com/components/lists/#lists. Accessed 05 Jul
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            8. Material-UI (2020) Material Icons.
+            https://material-ui.com/components/material-icons/. Accessed 05 Jul
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            9. Amazon.com Inc. (2020) Amazon.com. https://www.amazon.com/.
             Accessed 05 Jul 2020
+          </Typography>
+          <Typography gutterBottom>
+            10. Material-UI (2020) Table React component.
+            https://material-ui.com/components/tables/. Accessed 21 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            11. Unsplash Inc. (2020) Unsplash. https://unsplash.com/. Accessed
+            21 Aug 2020
+          </Typography>
+          <Typography gutterBottom>
+            12. Pexels (2020) Pexels. https://www.pexels.com/. Accessed 21 Aug
+            2020
+          </Typography>
+          <Typography gutterBottom>
+            13. Cyril Wanner (2020) next-optimized-images.
+            https://github.com/cyrilwanner/next-optimized-images. Accessed 21
+            Aug 2020
           </Typography>
         </div>
       </ThemeProvider>
