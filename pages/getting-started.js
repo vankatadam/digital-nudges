@@ -132,15 +132,32 @@ export default function GettingStarted() {
               zu bekommen, sollten grundlegende Heuristiken und Biases
               verstanden werden.
             </Typography>
+            <Link href="/biases">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Biases
+              </Button>
+            </Link>
           </li>
-          <Link href="/biases">
-            <Button
-              color="secondary"
-              style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
-            >
-              Zu Biases
-            </Button>
-          </Link>
+          <li>
+            <Typography>
+              Bevor mit den genauen Nudges angefangen wird, kann optional das
+              Verständnis über allgemeine "offline" Nudges vertieft werden, in
+              dem die Seite mit grundlegenden Nudge Prinzipien von Thaler und
+              Sunstein (2009) gelesen wird.
+            </Typography>
+
+            <Link href="/nudge-principles">
+              <Button
+                color="secondary"
+                style={{ paddingLeft: 0, marginBottom: 0, paddingTop: 2 }}
+              >
+                Zu Nudge Prinzipien
+              </Button>
+            </Link>
+          </li>
           <li>
             <Typography>
               Nachdem theoretische Grundlagen verstanden wurden, kann mit der
