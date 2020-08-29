@@ -198,43 +198,49 @@ export default function GettingStarted() {
           {/** auf K 3.4.1 nehmen + von */}
           <Typography gutterBottom>
             {" "}
-            Die gängigste Form von Nudges, die in vielen verschiedenen
-            Bereichen, wie in der Verhaltensökonomik [vgl. 1], Psychologie [vgl.
-            2], Jura [vgl. 3] oder Medizin [vgl. 4], bereits erforscht und
-            verwendet wird, nennt sich „Defaults“. In der Psychologie wird sie
-            auch unter den Begriff Status Quo [vgl. 2] gefasst. Dieser Nudge
-            funktioniert dank der Tatsache, dass Menschen den Weg des
-            niedrigsten Widerstandes wählen [vgl. 5]. Der Weg des niedrigsten
-            Widerstandes ist in einer Entscheidungsumgebung die Option, die
-            gewählt wird, wenn sich der Nutzer entscheidet nichts zu wählen und
-            die Wahl dem Entscheidungsarchitekten überlässt [vgl. 6]. Wie im
-            Kapitel 1.1 in gezeigten Beispielen erwähnt, können dies
-            verschiedene Opt-In oder Opt-Out Entscheidungen bei der Wahl
+            Die <BoldTypo>gängigste Form von Nudges</BoldTypo>, die in vielen
+            verschiedenen Bereichen, wie in der Verhaltensökonomik [vgl. 1],
+            Psychologie [vgl. 2], Jura [vgl. 3] oder Medizin [vgl. 4], bereits
+            erforscht und verwendet wird, nennt sich „Defaults“. In der
+            Psychologie wird sie auch unter den Begriff Status Quo [vgl. 2]
+            gefasst. Dieser Nudge funktioniert dank der Tatsache, dass Menschen
+            den <BoldTypo>Weg des niedrigsten Widerstandes</BoldTypo> wählen
+            [vgl. 5]. Der Weg des niedrigsten Widerstandes ist in einer
+            Entscheidungsumgebung die Option, die gewählt wird, wenn sich der
+            Nutzer entscheidet nichts zu wählen und die Wahl dem
+            Entscheidungsarchitekten überlässt [vgl. 6]. Wie gezeigt Beispielen
+            erwähnt, können dies verschiedene{" "}
+            <BoldTypo>Opt-In oder Opt-Out</BoldTypo> Entscheidungen bei der Wahl
             zwischen wenigen Alternativen [vgl. 4] aber auch Empfehlungen bei
             einer Wahl von vielen Alternativen sein [vgl. 2]. Durch empirische
             Untersuchungen wurde bewiesen, dass sich bei einer Wahl zwischen
             mehreren Alternativen bei einer steigenden Anzahl an Alternativen
             der „Nudging“-Effekt verstärkt und somit auch die Tendenz zu einer
             „Default“-Entscheidung [vgl. 2]. Die Stärke von „Defaults“ liegt in
-            der Unvermeidbarkeit [vgl. 6]. Jeder Entscheidungsarchitekt muss
-            sich somit die Frage stellen, wie das Ergebnis aussehen wird, wenn
-            sich der Nutzer entscheidet nichts zu tun [vgl. 6].{" "}
+            der <BoldTypo>Unvermeidbarkeit </BoldTypo>[vgl. 6]. Jeder
+            Entscheidungsarchitekt muss sich somit die Frage stellen, wie das
+            Ergebnis aussehen wird, wenn sich der Nutzer entscheidet nichts zu
+            tun [vgl. 6].{" "}
           </Typography>
           <Typography gutterBottom>
-            Da „Defaults“ mit gängigen Web-Elementen wie „Radio Buttons,
-            „Checkboxen“, Schieberegeln, oder vordefinierten Eingabe-Feldern
-            umgesetzt werden können, kann dieser Nudge auf fast jede Website,
-            die eine Nutzer-Eingabe benötigt, angewendet werden. Es gibt bereits
-            viele empirisch bewiesene Forschungen und Beispiele, die diesen
-            Nudge Mechanismus bestätigen [vgl. 3, 4, vgl. 7–11]. Die Beispiele,
-            die auch im Web umgesetzt werden können, beziehen sich auf
-            Voreinstellungen von UI Komponenten, bzw. eine Vorauswahl von
-            Alternativen, die ausgewählt werden können [vgl. 12]. Für eine
-            Umsetzung von Opt-In oder Opt-Out Politiken eignen sich „Checkboxen“
-            und für eine Vorauswahl von mehreren Elementen eignen sich „Radio
-            Buttons“ sowie Schieberegeln [vgl. 12]. Um komplexere Entscheidung
-            zu unterstützen, wie Passwortauswahl, eignen sich vordefinierbare
-            Text-Felder [vgl. 9].{" "}
+            Da „Defaults“ mit gängigen Web-Elementen wie{" "}
+            <BoldTypo>„Radio Buttons</BoldTypo>,
+            <BoldTypo> „Checkboxen“</BoldTypo>,{" "}
+            <BoldTypo> Schieberegeln</BoldTypo>, oder vordefinierten{" "}
+            <BoldTypo>Eingabe-Feldern</BoldTypo>
+            umgesetzt werden können, kann dieser Nudge auf{" "}
+            <BoldTypo>fast jede Website</BoldTypo>, die eine Nutzer-Eingabe
+            benötigt, angewendet werden. Es gibt bereits
+            <BoldTypo>viele empirisch bewiesene Forschungen</BoldTypo> und
+            Beispiele, die diesen Nudge Mechanismus bestätigen [vgl. 3, 4, vgl.
+            7–11]. Die Beispiele, die auch im Web umgesetzt werden können,
+            beziehen sich auf Voreinstellungen von UI Komponenten, bzw. eine
+            Vorauswahl von Alternativen, die ausgewählt werden können [vgl. 12].
+            Für eine Umsetzung von Opt-In oder Opt-Out Politiken eignen sich
+            „Checkboxen“ und für eine Vorauswahl von mehreren Elementen eignen
+            sich „Radio Buttons“ sowie Schieberegeln [vgl. 12]. Um komplexere
+            Entscheidung zu unterstützen, wie Passwortauswahl, eignen sich
+            vordefinierbare Text-Felder [vgl. 9].{" "}
           </Typography>
           <hr />
           <Typography variant={"h4"}>Konkrete Beispiele</Typography>
@@ -245,35 +251,41 @@ export default function GettingStarted() {
             Beispiele aufgeführt{" "}
           </Typography>
           <Typography gutterBottom>
-            Das erste Beispiel wird sich mit dem UI Element „Checkbox“
-            beschäftigen. Dieses Beispiel orientiert sich an der Mobile Square
-            App, die dank vorausgewähltem Trinkgeld (Opt-Out) bei einer
-            Bezahlmethode, das gegebene Trinkgeld innerhalb eines Jahres
-            verdoppelt hat [vgl. 13]. Solch eine Opt-Out Methode wird
-            beispielweise auch bei Newslettern bei den meisten Webseiten mit
-            Newslettern angewendet. Somit wird dieses Beispiel als eine
-            vorangekreuzte „Checkbox“ dargestellt. Mit Material UI können
-            „Checkboxen“ leicht verändert und voreingestellt werden [vgl. 14].
-            Für eine Voreinstellung gibt es ein Eigenschaftsfeld mit dem Namen
-            „checked“, das auf „true“ gesetzt werden kann. Mit dem Feld „color“
-            können Farben verändert werden. Diese Farben sind jedoch nur zwei
-            grundlegende Farben des gewählten Themas, plus ein paar
-            vordefinierten Farben, wie z.B. rot für den Wert „error“. Andere
-            Farben müssen mit normalem CSS oder mit „withStyles“ [vgl. 15]
-            geändert werden. „WithStyles“ dient in Material-UI, unter anderen,
-            zu einer Veränderung der grundlegenden Eigenschaften der
+            Das <BoldTypo> erste Beispiel</BoldTypo> wird sich mit dem UI
+            Element <BoldTypo>„Checkbox“</BoldTypo>
+            beschäftigen. Dieses Beispiel orientiert sich an der{" "}
+            <BoldTypo>Mobile Square App</BoldTypo>, die dank vorausgewähltem
+            Trinkgeld (Opt-Out) bei einer Bezahlmethode, das gegebene Trinkgeld
+            innerhalb eines Jahres verdoppelt hat [vgl. 13]. Solch eine Opt-Out
+            Methode wird beispielweise auch bei Newslettern bei den meisten
+            Webseiten mit
+            <BoldTypo> Newslettern</BoldTypo> angewendet. Somit wird dieses
+            Beispiel als eine vorangekreuzte „Checkbox“ dargestellt. Mit
+            Material UI können „Checkboxen“{" "}
+            <BoldTypo>leicht verändert und voreingestellt</BoldTypo>
+            werden [vgl. 14]. Für eine Voreinstellung gibt es ein
+            Eigenschaftsfeld mit dem Namen <BoldTypo>„checked“</BoldTypo>, das
+            auf „true“ gesetzt werden kann. Mit dem Feld{" "}
+            <BoldTypo>„color“</BoldTypo> können Farben verändert werden. Diese
+            Farben sind jedoch nur <BoldTypo>zwei grundlegende Farben</BoldTypo>{" "}
+            des gewählten Themas, plus ein paar vordefinierten Farben, wie z.B.
+            rot für den Wert „error“. <BoldTypo>Andere Farben</BoldTypo> müssen
+            mit normalem <BoldTypo> CSS</BoldTypo> oder mit „withStyles“ [vgl.
+            15] geändert werden. „WithStyles“ dient in Material-UI, unter
+            anderen, zu einer Veränderung der grundlegenden Eigenschaften der
             Komponenten, wie in diesem Fall „Checkboxen“. Somit können auch
             unterschiedliche Farben für unterschiedliche Zustände der
             „Checkboxen“ (angekreuzt/nicht angekreuzt) definiert werden. In dem
-            unten gezeigten Beispiel sind dies zwei unterschiedliche Farbtöne
-            von grün für angekreuzte und nicht angekreuzte Checkbox. Eine
-            weitere Variante von Veränderung der Checkboxen ist eine andere
-            Ikone. Die Ikone kann über das Eigenschaftsfeld „icon“ und
-            „checkedIcon“ verändert werden [vgl. 16], in dem eine
-            Ikonen-Komponente, die auch leicht von Material UI importiert werden
-            kann [vgl. 17], an diese Eigenschaftsfelder übergegeben wird. Mit
-            solchen verstellbaren „Checkboxen“, wie beispielsweise mit einem
-            Herz oder Farbe, kann der Effekt von „Defaults“ verstärkt werden .{" "}
+            unten gezeigten Beispiel sind dies zwei
+            <BoldTypo> unterschiedliche Farbtöne</BoldTypo> von grün für
+            angekreuzte und nicht angekreuzte Checkbox. Eine weitere Variante
+            von Veränderung der Checkboxen ist eine andere Ikone. Die Ikone kann
+            über das Eigenschaftsfeld „icon“ und „checkedIcon“ verändert werden
+            [vgl. 16], in dem eine Ikonen-Komponente, die auch leicht von
+            Material UI importiert werden kann [vgl. 17], an diese
+            Eigenschaftsfelder übergegeben wird. Mit solchen verstellbaren
+            „Checkboxen“, wie beispielsweise mit einem Herz oder Farbe, kann der
+            Effekt von „Defaults“ <BoldTypo>verstärkt</BoldTypo> werden .{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/defaults1checkboxen-0x8se?file=/index.js">
             {" "}
@@ -331,24 +343,30 @@ export default function GettingStarted() {
             </Button>
           </Example>
           <Typography gutterBottom>
-            Das zweite Beispiel bezieht sich auf Schieberegeln und
-            vordefinierbare Textfelder. Wie 6 in deren Beispiel mit Spenden
-            erklären, beziehen sich Menschen bei einer Entscheidung auf einen
-            initialen Wert und passen diesen nach deren Urteil an [vgl. 6].
-            Somit wird mit einer Voreinstellung von Schieberegeln oder
-            vordefiniertem Text in Texteingabe-Feldern die Chance erhöht, dass
-            der Nutzer auch bei einem ähnlichen Wert landet. Somit können z.B.
-            Spenden erhöht werden, in dem ein höherer Wert eingestellt wird
-            [vgl. 6]. Material-UI bietet für diese Beispiele (siehe Beispiele
-            unten) veränderbare Schieberegeln, sowie Eingabefelder [vgl. 18,
-            19]. Es gibt ein breites Spektrum an verschiedenen Schieberegeln zur
-            Auswahl. Um den Effekt von „Anchoring“ zu verstärken, wurde die
-            Variante mit vordefinierbaren Checkpoints gewählt . Das gleiche
-            Beispiel wurde mit vordefinierbaren Eingabefeldern umgesetzt, sodass
-            zuerst die Eingabe von dem Nutzer gelöscht werden muss, damit ein
-            neuer Wert eingegeben werden kann . Somit wird dem Nutzer ein Anker
-            gesetzt und die Wahrscheinlichkeit erhöht, dass sein neuer Wert nah
-            an den gewählten vordefinierten Wert liegt.{" "}
+            Das <BoldTypo>zweite Beispiel</BoldTypo> bezieht sich auf{" "}
+            <BoldTypo>Schieberegeln</BoldTypo> und{" "}
+            <BoldTypo>vordefinierbare Textfelder</BoldTypo>. Wie 6 in deren
+            Beispiel mit Spenden erklären, beziehen sich Menschen bei einer
+            Entscheidung auf einen <BoldTypo>initialen Wert</BoldTypo> und
+            passen diesen nach deren Urteil an [vgl. 6]. Somit wird mit einer{" "}
+            <BoldTypo>Voreinstellung</BoldTypo>
+            von Schieberegeln oder vordefiniertem Text in Texteingabe-Feldern
+            die <BoldTypo>Chance erhöht</BoldTypo>, dass der Nutzer auch bei
+            einem <BoldTypo>ähnlichen Wert</BoldTypo>
+            landet. Somit können z.B. <BoldTypo>Spenden erhöht werden</BoldTypo>
+            , in dem ein höherer Wert eingestellt wird [vgl. 6]. Material-UI
+            bietet für diese Beispiele (siehe Beispiele unten) veränderbare
+            Schieberegeln, sowie Eingabefelder [vgl. 18, 19]. Es gibt ein
+            breites Spektrum an verschiedenen Schieberegeln zur Auswahl. Um den
+            Effekt von
+            <BoldTypo>„Anchoring“</BoldTypo> zu verstärken, wurde die Variante
+            mit vordefinierbaren Checkpoints gewählt . Das gleiche Beispiel
+            wurde mit vordefinierbaren Eingabefeldern umgesetzt, sodass zuerst
+            die Eingabe von dem Nutzer <BoldTypo>gelöscht werden muss</BoldTypo>
+            , damit ein neuer Wert eingegeben werden kann . Somit wird dem
+            Nutzer ein Anker gesetzt und die Wahrscheinlichkeit erhöht, dass
+            sein neuer Wert{" "}
+            <BoldTypo>nah an den gewählten vordefinierten Wert</BoldTypo> liegt.{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/defaults2slider-5wg65?file=/index.js">
             {" "}
@@ -400,21 +418,25 @@ export default function GettingStarted() {
             </Button>
           </Example>
           <Typography gutterBottom>
-            Das dritte Beispiel bezieht sich auch auf vordefinierte
-            Text-Eingaben, diesmal jedoch im Kontext von Passwort Management.
-            Dieses Beispiel wurde von Studien von 9 inspiriert, indem als
-            „Default“ Einstellung ein automatisch generiertes Passwort bei der
+            Das <BoldTypo>dritte Beispiel</BoldTypo> bezieht sich auch auf{" "}
+            <BoldTypo>vordefinierte Text-Eingaben</BoldTypo>, diesmal jedoch im
+            Kontext von <BoldTypo>Passwort Management</BoldTypo>. Dieses
+            Beispiel wurde von Studien von 9 inspiriert, indem als „Default“
+            Einstellung ein{" "}
+            <BoldTypo>automatisch generiertes Passwort</BoldTypo> bei der
             Erstellung eines Kontos vorlag [vgl. 9]. Dies wird mit der gleichen
-            Komponente „Input“ wie in der Abbildung 11 gelöst. An diese
-            Komponente wird je nachdem, ob das Passwort gezeigt werden soll oder
-            nicht, ein Wert (in React nennt man diese Werte „Properities“,
-            abgekürzt mit „Props“) „text“ oder „password“ übergegeben.
-            Zusätzliche muss zu diesem Feld eine Ikone erstellt werden, die beim
-            Anklicken einen „Handler“ aufruft, der diese „Properity“ verändert.
-            Das vordefinierte Passwort (sollte später in der Produktion nach
-            Sicherheitsstandarts generiert werden) wird über ein „useState“ von
-            React gespeichert und an die „Input“ Komponente übergeben, sodass
-            ein Standardfeld vorliegt.{" "}
+            <BoldTypo>Komponente „Input“</BoldTypo> wie in der Abbildung 11
+            gelöst. An diese Komponente wird je nachdem, ob das Passwort gezeigt
+            werden soll oder nicht, ein Wert (in React nennt man diese Werte
+            „Properities“, abgekürzt mit „Props“){" "}
+            <BoldTypo>„text“ oder „password“</BoldTypo> übergegeben. Zusätzliche
+            muss zu diesem Feld eine Ikone erstellt werden, die beim Anklicken
+            einen <BoldTypo>„Handler“</BoldTypo> aufruft, der diese „Properity“
+            verändert. Das vordefinierte Passwort (sollte später in der
+            Produktion nach Sicherheitsstandarts generiert werden) wird über ein{" "}
+            <BoldTypo>„useState“</BoldTypo> von React gespeichert und an die
+            „Input“ Komponente übergeben, sodass ein{" "}
+            <BoldTypo>Standardfeld</BoldTypo> vorliegt.{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/great-currying-rjio2?file=/index.js">
             <Typography variant={"h6"}>
@@ -472,18 +494,23 @@ export default function GettingStarted() {
             </Button>
           </Example>
           <Typography gutterBottom>
-            Das letzte Beispiel bezieht sich auf Entscheidungen mit mehreren
-            Antwortmöglichkeiten. Es funktioniert ähnlich wie das erste
-            Beispiel. Eine Antwort, in Form von „Radio Buttons“, wird
-            vorausgewählt und somit wird die Chance erhöht, dass der Nutzer
-            diese auch tatsächlich wählt [vgl. 20]. Der Standartwert von
-            Material UI Checkboxen kann über „useState“ und einem Handler
-            eingestellt werden. Zusätzlich dazu können einstellbare Komponenten
-            über die Felder „control“ und „label“ eingestellt werden [vgl. 21].
-            Über das Feld „control“ können eigene Ikonen mit verschiedenen
-            Farben für die „Checkboxen“ gewählt werden und über das Feld „label“
-            können eigene Beschriftungen mit verschiedenen Fonts, Farben, etc.
-            eingestellt werden (siehe Beispiel unten).{" "}
+            Das <BoldTypo>letzte Beispiel</BoldTypo> bezieht sich auf
+            Entscheidungen mit{" "}
+            <BoldTypo>mehreren Antwortmöglichkeiten</BoldTypo>. Es funktioniert
+            ähnlich wie das erste Beispiel. Eine <BoldTypo>Antwort</BoldTypo>,
+            in Form von <BoldTypo>„Radio Buttons“</BoldTypo>, wird
+            <BoldTypo> vorausgewählt</BoldTypo> und somit wird die Chance
+            erhöht, dass der Nutzer diese auch tatsächlich wählt [vgl. 20]. Der
+            Standartwert von Material UI Checkboxen kann über{" "}
+            <BoldTypo>„useState“</BoldTypo> und einem{" "}
+            <BoldTypo>Handler </BoldTypo>eingestellt werden. Zusätzlich dazu
+            können einstellbare Komponenten über die Felder{" "}
+            <BoldTypo>„control“ und „label“</BoldTypo>
+            eingestellt werden [vgl. 21]. Über das Feld „control“ können{" "}
+            <BoldTypo>eigene Ikonen</BoldTypo> mit verschiedenen Farben für die
+            „Checkboxen“ gewählt werden und über das Feld „label“ können{" "}
+            <BoldTypo>eigene Beschriftungen</BoldTypo> mit verschiedenen Fonts,
+            Farben, etc. eingestellt werden (siehe Beispiel unten).{" "}
           </Typography>{" "}
           <Example link="https://codesandbox.io/s/defaults4checkbox-rtwrk?file=/index.js">
             <Typography variant={"h6"}>
@@ -526,10 +553,11 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             Anschließend werden mehrere Design-Berücksichtigungen und
             Fragestellungen zu diesem Nudge von Caraban et al. aufgeführt [26]:
-            Was ist eine angemessene Standardauswahl oder ein angemessener Wert
-            und warum? Wie einfach können die Nutzer aus der Entscheidung
-            austreten (opt-out)? Auf unethische und gesetzwidrige Richtlinien
-            achten.{" "}
+            Was ist eine <BoldTypo>angemessene Standardauswahl</BoldTypo> oder
+            ein angemessener Wert und warum? <BoldTypo>Wie einfach</BoldTypo>{" "}
+            können die Nutzer aus der Entscheidung austreten (opt-out)? Auf{" "}
+            <BoldTypo>unethische</BoldTypo> und{" "}
+            <BoldTypo>gesetzwidrige</BoldTypo> Richtlinien achten.{" "}
           </Typography>
           {/** 2 Beispiele */}
           <hr />
@@ -571,15 +599,19 @@ export default function GettingStarted() {
             der Studie von Johnson und Goldstein 2003 wurde als ein Durchschnitt
             deren beiden Untersuchungen, einem Online-Experiment und einer
             Analyse der realen Organ-Spenderraten zwischen 1991 und 2001 Daten,
-            berechnet. Die Studien zeigen, dass „Default“ Nudge in vielen
-            unterschiedlichen Kontexten mit vielen unterschiedlichen Ergebnissen
-            angewendet werden kann. Trotzt den unter-schiedlichen Ergebnissen
-            zeigt die durchschnittliche Effektivität, dass Default Nudges eine
-            hohe Erfolgsrate aufweisen können und daher werden sie mit der
-            durchschnittli-chen Effektivität von 85,1% in die Effizienzklasse
-            hoch angeordnet.
+            berechnet.
           </Typography>
-          <Typography>
+          <Typography gutterBottom>
+            Die Studien zeigen, dass „Default“ Nudge in{" "}
+            <BoldTypo>vielen unterschiedlichen Kontexten </BoldTypo>mit{" "}
+            <BoldTypo>vielen unterschiedlichen Ergebnissen</BoldTypo> angewendet
+            werden kann. Trotzt den unter-schiedlichen Ergebnissen zeigt die
+            <BoldTypo> durchschnittliche Effektivität</BoldTypo>, dass Default
+            Nudges eine <BoldTypo>hohe Erfolgsrate</BoldTypo> aufweisen können
+            und daher werden sie mit der durchschnittli-chen Effektivität von
+            85,1% in die Effizienzklasse hoch angeordnet.
+          </Typography>
+          <Typography gutterBottom>
             Der Aufwand von „Defaults“ liegt hauptsächlich in dem
             Planungsaufwand, da die Umsetzung von den tatsächlichen Beispielen
             sehr schnell erfolgen kann. Mit einer kurzen Einarbeitung in
@@ -587,10 +619,14 @@ export default function GettingStarted() {
             umgesetzt werden, da Material-UI genügend eigene ähnliche Beispiele
             mit Code-Umsetzungen bereitstellt. Daher kann deren Code-Umsetzung
             übernommen werden und in die eigene Umgebung mit Anpassungen
-            integriert werden. Mit dem Aufwand unter eine Stunde werden
-            „Defaults“ in die Kategorie niedrig eingeordnet. Da die Effektivität
-            von „Defaults“ hoch ist und der Aufwand klein ist, werden „Defaults“
-            in die Effizienzklasse hoch eingestuft.
+            integriert werden. Mit dem <BoldTypo>Aufwand</BoldTypo> unter eine
+            Stunde werden „Defaults“ in die Kategorie{" "}
+            <BoldTypo>niedrig</BoldTypo> eingeordnet.
+          </Typography>
+          <Typography gutterBottom>
+            Da die Effektivität von „Defaults“ hoch ist und der Aufwand klein
+            ist, werden „Defaults“ in die{" "}
+            <BoldTypo>Effizienzklasse hoch</BoldTypo> eingestuft.
           </Typography>
           <hr />
           <Typography variant={"h4"}>Referencen</Typography>

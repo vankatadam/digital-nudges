@@ -27,24 +27,30 @@ export default function designCycle() {
       </Typography>
 
       <Typography gutterBottom>
-        Digital Nudges und deren Effektivität sind von dem genauen
-        Anwendungsfall, den Nutzern und der tatsächlichen Implementierung
-        abhängig [vgl. 1]. Aus diesem Grund ist eine kontextuelle Anpassung bzw.
-        eine Erstellung von personalisierten Nudges notwendig, damit das
-        erwünschte Ergebnis erzielt werden kann. Digital Nudges sind ähnlich wie
-        Software Artefakte nach einem geregelten Ablauf entworfen [vgl. 2]. Um
-        einen geregelten Ablauf erzielen zu können, wird ein Entwurfsdesign von
-        Schneider, Weinmann und Brocke vorgestellt [vgl. 2]. Dieser Design
-        Zyklus, der in der Abbildung unten zu sehen ist, läuft ähnlich wie agile
-        Methoden iterativ ab. Zuerst werden die Ziele der Entscheidung
-        festgelegt (Schritt „Define the goal“), danach werden die Biases und
-        Heuristiken identifiziert (Schritt „Understand the user“), die den
-        Nutzer in dieser Entscheidung beeinflussen könnten, anschließend wird
-        der Nudge mit der Hilfe von geeigneten Frameworks und UI Elemente
-        entworfen (Schritt „Design the nudge“) und abschließend wird die Wirkung
-        dieser Nudges getestet (Schritt „Test the nudge“) [vgl. 2]. Falls die
-        gezielte Wirkung nicht erreicht wurde, wird die Ursache identifiziert
-        und der Prozess geht einen entsprechenden Schritt zurück [vgl. 2].
+        Digital Nudges und deren Effektivität sind von dem{" "}
+        <BoldTypo> genauen Anwendungsfall</BoldTypo>, den Nutzern und der
+        tatsächlichen Implementierung
+        <BoldTypo> abhängig</BoldTypo> [vgl. 1]. Aus diesem Grund ist eine
+        <BoldTypo> kontextuelle Anpassung</BoldTypo> bzw. eine Erstellung von
+        personalisierten Nudges
+        <BoldTypo> notwendig</BoldTypo>, damit das erwünschte Ergebnis erzielt
+        werden kann. Digital Nudges sind ähnlich wie Software Artefakte nach
+        einem geregelten Ablauf entworfen [vgl. 2]. Um einen geregelten Ablauf
+        erzielen zu können, wird ein Entwurfsdesign von Schneider, Weinmann und
+        Brocke vorgestellt [vgl. 2]. Dieser Design Zyklus, der in der Abbildung
+        unten zu sehen ist, läuft ähnlich wie agile Methoden iterativ ab. Zuerst
+        werden die <BoldTypo>Ziele der Entscheidung</BoldTypo> festgelegt
+        (Schritt „Define the goal“), danach werden die{" "}
+        <BoldTypo>Biases und Heuristiken</BoldTypo> identifiziert (Schritt
+        „Understand the user“), die den Nutzer in dieser Entscheidung
+        beeinflussen könnten, anschließend wird der <BoldTypo>Nudge</BoldTypo>{" "}
+        mit der Hilfe von geeigneten Frameworks und UI Elemente entworfen
+        (Schritt „Design the nudge“) und abschließend wird die{" "}
+        <BoldTypo>Wirkung </BoldTypo> dieser Nudges{" "}
+        <BoldTypo>getestet </BoldTypo>
+        (Schritt „Test the nudge“) [vgl. 2]. Falls die gezielte Wirkung nicht
+        erreicht wurde, wird die Ursache identifiziert und der Prozess geht
+        einen entsprechenden Schritt zurück [vgl. 2].
       </Typography>
       <img
         src="/cycle.PNG"
@@ -58,33 +64,36 @@ export default function designCycle() {
         1. Define the goal
       </Typography>
       <Typography gutterBottom>
-        Wie bereits kurz erwähnt, müssen in dem ersten Schritt die Ziele der
-        Organisation von dem Entscheidungsarchitekten verinnerlicht werden [vgl.
-        2]. Aus solchen Zielen, wie beispielweise einer Erhöhung der
-        Verkaufsquoten durch Newsletter, wird der Entscheidungstyp abgeleitet
-        [vgl. 2]. Bei dem bereits genannten Beispiel mit einem Newsletter, wäre
-        dies ein binärer Entscheidungstyp bzw. eine Ja/Nein-Entscheidung. Bei
-        diesem Schritt sollten auch die ethischen Fragen gestellt und mit den
-        Zielen der Organisation in Einklang gebracht werden [vgl. 2]. Dabei muss
-        die Frage nach der langfristigen Wirkung solcher Nudges beantwortet
-        werden, da falsch entworfene Nudges die Reputation und das Ansehen der
-        Firma beschädigen können (vgl. 2; vgl. 1).
+        Wie bereits kurz erwähnt, müssen in dem ersten Schritt die{" "}
+        <BoldTypo>Ziele der Organisation</BoldTypo> von dem
+        Entscheidungsarchitekten verinnerlicht werden [vgl. 2]. Aus solchen
+        Zielen, wie beispielweise einer Erhöhung der Verkaufsquoten durch
+        Newsletter, wird der Entscheidungstyp abgeleitet [vgl. 2]. Bei dem
+        bereits genannten Beispiel mit einem Newsletter, wäre dies ein binärer
+        Entscheidungstyp bzw. eine Ja/Nein-Entscheidung. Bei diesem Schritt
+        sollten auch die <BoldTypo>ethischen Fragen</BoldTypo> gestellt und mit
+        den Zielen der Organisation in Einklang gebracht werden [vgl. 2]. Dabei
+        muss die Frage nach der <BoldTypo>langfristigen Wirkung</BoldTypo>{" "}
+        solcher Nudges beantwortet werden, da falsch entworfene Nudges die
+        Reputation und das Ansehen der Firma beschädigen können (vgl. 2; vgl.
+        1).
       </Typography>
       <Typography gutterBottom variant="h5">
         2. Understand the users
       </Typography>
       <Typography gutterBottom>
-        Im zweiten Schritt werden die Nutzer in dieser Entscheidung analysiert
-        [vgl. 2]. Wie bereits erwähnt, sind Menschen für Urteilsfehler anfällig.
-        Das Erkennen der Urteilsfehler, die in der zu treffenden Entscheidung
-        eine Rolle spielen, dient der Auswahl der Nudge Mechanismen, die
-        letztendlich angewendet werden (vgl. 3; vgl. 4; vgl. 2). Es dient auch
-        einem besseren Entwurf der ganzen Entscheidungsarchitektur und einer
-        besseren Umsetzung der Ziele, da Verhaltensmuster erkannt werden, die zu
-        einer nicht erwünschten Entscheidung oder zu einem nicht erwünschten
-        Verhalten des Nutzers führen könnten [vgl. 2]. Bei dem Beispiel mit
-        Newslettern und einer einfacheren binären Entscheidung, wäre einer von
-        den Urteilsfehlern die Tendenz zum Status Quo [vgl. 5].
+        Im zweiten Schritt werden die <BoldTypo>Nutzer</BoldTypo> in dieser
+        Entscheidung analysiert [vgl. 2]. Wie bereits erwähnt, sind Menschen für
+        <BoldTypo> Urteilsfehler</BoldTypo> anfällig. Das Erkennen der
+        Urteilsfehler, die in der zu treffenden Entscheidung eine Rolle spielen,
+        dient der Auswahl der Nudge Mechanismen, die letztendlich angewendet
+        werden (vgl. 3; vgl. 4; vgl. 2). Es dient auch einem besseren Entwurf
+        der ganzen Entscheidungsarchitektur und einer besseren Umsetzung der
+        Ziele, da Verhaltensmuster erkannt werden, die zu einer nicht
+        erwünschten Entscheidung oder zu einem nicht erwünschten Verhalten des
+        Nutzers führen könnten [vgl. 2]. Bei dem Beispiel mit Newslettern und
+        einer einfacheren binären Entscheidung, wäre einer von den
+        Urteilsfehlern die Tendenz zum Status Quo [vgl. 5].
       </Typography>
 
       <Typography gutterBottom>
@@ -108,7 +117,8 @@ export default function designCycle() {
 
       <Typography gutterBottom>
         Anschließend wird anhand der Ziele, des erkannten Entscheidungstypen und
-        der erkannten Urteilsfehlern der entsprechende Nudge Mechanismus
+        der erkannten Urteilsfehlern der entsprechende{" "}
+        <BoldTypo> Nudge Mechanismus</BoldTypo>
         ausgewählt [vgl. 2]. In dem Fall von Newslettern wäre das Ziel eine
         Umsatzerhöhung, der Entscheidungstyp eine binäre Entscheidung und der
         Urteilsfehler ist eine Tendenz zum Status Quo [vgl. 5]. Der zugehörige
@@ -142,13 +152,15 @@ export default function designCycle() {
       <Typography gutterBottom>
         Um zu sehen, ob durch die gesetzten Ziele, wie im genannten Beispiel,
         eine Umsatzerhöhung durch eine erhöhte Anzahl an Newslettern erreicht
-        wurde, muss der umgesetzte Nudge getestet werden [vgl. 2]. In digitalen
-        Umgebungen ist es meistens leicht, mehrere Alternativen zu generieren,
-        die für Tests benutzt werden können [vgl. 2]. In den meisten Umgebungen
-        ist es auch möglich, diese zu testen, indem den Nutzern verschiedene
-        Alternativen angezeigt werden und die Ergebnisse der verschiedenen
-        Alternativen verglichen werden [vgl. 2]. Dies ist insbesondere leicht
-        auf Websites, da es bereits viele Tools für das Tracking des
+        wurde, muss der umgesetzte Nudge <BoldTypo>getestet</BoldTypo> werden
+        [vgl. 2]. In digitalen Umgebungen ist es meistens leicht,{" "}
+        <BoldTypo>mehrere Alternativen zu entwerfen</BoldTypo>, die für Tests
+        benutzt werden können [vgl. 2]. In den meisten Umgebungen ist es auch
+        möglich, diese zu testen, indem den Nutzern verschiedene Alternativen
+        angezeigt werden und die <BoldTypo>Ergebnisse</BoldTypo> der
+        verschiedenen Alternativen
+        <BoldTypo>verglichen</BoldTypo> werden [vgl. 2]. Dies ist insbesondere
+        leicht auf Websites, da es bereits viele Tools für das Tracking des
         Nutzerverhaltens gibt [vgl. 2]. In manchen Fällen ist es auch nötig,
         größere Änderungen durchzuführen. In solchen Fällen sollte überlegt
         werden, ob es sinnvoll wäre die Ziele anzupassen, das Nutzerverhalten
@@ -162,8 +174,9 @@ export default function designCycle() {
       <Typography variant="h4">Empfohlene Literatur</Typography>
       <hr />
       <Typography>
-        Um mehr über den Design Zyklus zu erfahren, wird das Paper von
-        Schneider, Weinmann und Brocke empfohlen:
+        Um <BoldTypo>mehr</BoldTypo> über den Design Zyklus zu{" "}
+        <BoldTypo>erfahren</BoldTypo>, wird das Paper von Schneider, Weinmann
+        und Brocke empfohlen:
       </Typography>
       <Typography gutterBottom>
         Digital nudging: guiding online user choices through interface design,
