@@ -84,6 +84,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const BoldTypo = withStyles({
+  root: {
+    fontWeight: 500,
+    display: "inline",
+  },
+})((props) => <Typography component="span" {...props} />);
+
 //Efficiency
 
 function createData(name, source, effectivity) {
@@ -189,18 +196,21 @@ export default function GettingStarted() {
             gelegt wurde [vgl. 1]. In dieser Guideline wird dieser Nudge um
             visuelle Darstellungen erweitert, die nicht ausschließlich visuelle
             Täuschung umfassen und daher wurde der Name zu „Visualisation“
-            abgekürzt. Der „Visualisation“ Nudge basiert auf Salienz [vgl. 1].
-            Salienz bedeutet, dass sich Menschen mit einer höheren
-            Wahrscheinlichkeit auf die Elemente konzentrieren, die hervorgehoben
-            sind, und die ignorieren, die es nicht sind [vgl. 2]. Dieser Nudge
-            nutzt diese Tatsache aus, um die Wahrnehmung der Nutzer zu verändern
-            und um den Fokus auf gewünschte Elemente zu setzen [vgl. 1]. Der
-            „Visualisation“ Nudge besitz viele Ähnlichkeiten mit einem
+            abgekürzt. Der „Visualisation“ Nudge basiert auf{" "}
+            <BoldTypo> Salienz</BoldTypo> [vgl. 1]. Salienz bedeutet, dass sich
+            Menschen mit einer höheren Wahrscheinlichkeit auf die{" "}
+            <BoldTypo>Elemente konzentrieren</BoldTypo>, die{" "}
+            <BoldTypo>hervorgehoben</BoldTypo> sind, und die ignorieren, die es
+            nicht sind [vgl. 2]. Dieser Nudge nutzt diese Tatsache aus, um die
+            Wahrnehmung der Nutzer zu verändern und um den{" "}
+            <BoldTypo>Fokus auf gewünschte Elemente zu setzen</BoldTypo> [vgl.
+            1]. Der „Visualisation“ Nudge besitz viele Ähnlichkeiten mit einem
             ursprünglichen grundlegenden Nudge von Thaler et al. mit dem Namen
-            Incentives.
+            <BoldTypo> Incentives</BoldTypo>.
           </Typography>
           <Typography gutterBottom>
-            Dieser Nudge kann, wie bereits erwähnt, in einer visuelle Täuschung
+            Dieser Nudge kann, wie bereits erwähnt, in einer{" "}
+            <BoldTypo> visuelle Täuschung</BoldTypo>
             umgesetzt werden [vgl. 1]. Dies wäre beispielweise eine gezielte
             Beleuchtung der Mitte von einem Teller, um damit die Portion größer
             aussehend zu lassen und somit das ein Gefühl hervorzurufen, welches
@@ -208,19 +218,24 @@ export default function GettingStarted() {
             3].{" "}
           </Typography>
           <Typography gutterBottom>
-            In den digitalen Umgebungen, können dies visuelle Verdeutlichungen
+            In den digitalen Umgebungen, können dies{" "}
+            <BoldTypo>visuelle Verdeutlichungen </BoldTypo>
             von bestimmten Elementen sein, die eine bestimmte Tatsache
             hervorheben [vgl. 1, vgl. 3, 4]. Dies können beispielweise visuelle
-            Verdeutlichungen von „Buttons“ für ältere Nutzer sein, damit das
-            Ziel schneller auffällt und größer aussieht und somit die „point and
-            click“ Aufgaben schneller und effizienter erledigt werden können
-            [vgl. 4]. Im Bereich Healthcare können dies „Healthy Labels“ sein,
-            die visuell zeigen, wie gesund bestimmte Waren sind und somit wird
-            erzielt, dass gesündere Waren gekauft werden [vgl. 5]. Im
-            Energiesektor sind dies Energieetiketten, die Farbenverdeutlichen
+            Verdeutlichungen von „Buttons“{" "}
+            <BoldTypo> für ältere Nutzer</BoldTypo> sein, damit das Ziel
+            schneller auffällt und größer aussieht und somit die „point and
+            click“{" "}
+            <BoldTypo> Aufgaben schneller und effizienter erledigt</BoldTypo>{" "}
+            werden können [vgl. 4]. Im Bereich Healthcare können dies{" "}
+            <BoldTypo>„Healthy Labels“</BoldTypo> sein, die visuell zeigen, wie
+            gesund bestimmte Waren sind und somit wird erzielt, dass gesündere
+            Waren gekauft werden [vgl. 5]. Im Energiesektor sind dies{" "}
+            <BoldTypo> Energieetiketten</BoldTypo>, die Farbenverdeutlichen
             aufweisen, welche veranschaulichen, wie energieeffizient bestimmte
             Geräte sind [vgl. 6]. Im Bereich der IT-Sicherheit kann dies eine
-            farbige Darstellung von sicheren und unsicheren Netzwerken sein.
+            farbige Darstellung von{" "}
+            <BoldTypo> sicheren und unsicheren Netzwerken</BoldTypo> sein.
           </Typography>
           <Typography gutterBottom>
             Die meiste Nudges versuchen in einen oder anderen Weise die
@@ -228,15 +243,15 @@ export default function GettingStarted() {
             „Positioning“ Nudge mit einer Veränderung der Anordnung von
             Elementen, oder der „Adding Inferior Alternatives“ Nudge mit einem
             Hinzufügen von „decoy“ Alternativen. Der „Visualisation“ Nudge
-            unterscheidet sich im Gegensatz zu anderen Nudges, indem der Fokus
-            auf die reine visuelle Darstellung gesetzt wird. Dies wäre
-            beispielsweise, wie in den oberen Absätzen erklärt, eine alternative
-            Darstellung von bereits bestehenden Informationen, wie
-            Energieetiketten, die nebeneinander in verschiedenen Farbtönen
-            angezeigt werden, oder eine Darstellung von „Buttons“ um die ein
-            Kreis gezeichnet wird, damit sie besser zu sehen sind oder eine
-            Darstellung von sicheren Netzwerken in grünen Farben und von
-            unsicheren Netzwerken in roten.
+            unterscheidet sich im Gegensatz zu anderen Nudges, indem der
+            <BoldTypo> Fokus auf die reine visuelle Darstellung</BoldTypo>{" "}
+            gesetzt wird. Dies wäre beispielsweise, wie in den oberen Absätzen
+            erklärt, eine alternative Darstellung von bereits bestehenden
+            Informationen, wie Energieetiketten, die nebeneinander in
+            verschiedenen Farbtönen angezeigt werden, oder eine Darstellung von
+            „Buttons“ um die ein Kreis gezeichnet wird, damit sie besser zu
+            sehen sind oder eine Darstellung von sicheren Netzwerken in grünen
+            Farben und von unsicheren Netzwerken in roten.
           </Typography>
 
           <hr />
@@ -244,32 +259,43 @@ export default function GettingStarted() {
           <hr />
           <Typography gutterBottom>
             Wie erwähnt, erfolgt die Umsetzung des „Visualisation“ Nudge dank
-            der Tatsache, dass Menschen einen Fokus auf hervorgehobene Elemente
+            der Tatsache, dass Menschen einen{" "}
+            <BoldTypo>Fokus auf hervorgehobene Elemente</BoldTypo>
             setzen [vgl. 2]. In webbasierten Umgebungen können verschiedene
-            Elemente hervorgehoben werden, oder visuell statt nur textuell
+            <BoldTypo>Elemente hervorgehoben</BoldTypo> werden, oder{" "}
+            <BoldTypo>visuell statt nur textuell</BoldTypo>
             leicht dargestellt werden. Daher werden folgende passende Beispiele
             umgesetzt:{" "}
           </Typography>
           <Typography gutterBottom>
-            Das erste Beispiel bezieht sich auf „Healthy Labels“ [vgl. 5, vgl.
-            7]. Das Ziel von „Healthy Labels“ ist eine erhöhte Konzentration der
-            Nutzer auf wichtige Informationen bei Lebensmitteletiketten und eine
-            Hervorhebung, welche enthaltene Nährwerte zu einer gesunden
-            Ernährung führen könnten [vgl. 5]. Ein anderes Ziel ist eine
-            Erleichterung bei dem Ignorieren von Marketing-Aspekten, das in
-            vielen Fällen die wichtige Informationen über eine ungesunde
-            Ernährung versteckt [vgl. 5]. Solch eine Umsetzung eignet sich nicht
-            nur für Etiketten in einem Lebensmittelgeschäft, sondern auch für
-            Online-Shops, die Lebensmittel verkaufen, da eine Verdeutlichung
-            durch verschiedene Ikonen oder Hervorhebungen von verschiedenen
+            Das <BoldTypo> erste Beispiel</BoldTypo> bezieht sich auf
+            <BoldTypo> „Healthy Labels“</BoldTypo> [vgl. 5, vgl. 7]. Das Ziel
+            von „Healthy Labels“ ist eine erhöhte{" "}
+            <BoldTypo>
+              Konzentration der Nutzer auf wichtige Informationen
+            </BoldTypo>{" "}
+            bei Lebensmitteletiketten und eine Hervorhebung, welche enthaltene
+            Nährwerte zu einer gesunden Ernährung führen könnten [vgl. 5]. Ein
+            anderes Ziel ist eine{" "}
+            <BoldTypo>
+              {" "}
+              Erleichterung bei dem Ignorieren von Marketing-Aspekten
+            </BoldTypo>
+            , das in vielen Fällen die wichtige Informationen über eine
+            ungesunde Ernährung versteckt [vgl. 5]. Solch eine Umsetzung eignet
+            sich nicht nur für Etiketten in einem Lebensmittelgeschäft, sondern
+            auch für Online-Shops, die Lebensmittel verkaufen, da eine
+            Verdeutlichung durch verschiedene
+            <BoldTypo> Ikonen oder Hervorhebungen</BoldTypo> von verschiedenen
             Elementen leicht umsetzbar sind. In diesem Beispiel wird die
             Variante mit drei farbigen Ikonen umgesetzt, um zu verdeutlichen,
             welche Ernährung gesund ist. Die Anordnung der Elemente ist genau
-            wie im Beispiel in Abbildung 17 mit „Cards“ und „Grids“ umgesetzt
-            [vgl. 8, 9]. Die visuelle Darstellung ist durch Material-UI Ikonen
-            verdeutlicht. Beim Schweben über die Ikonen erscheint ein kleines
-            Pop-up Fenster mit den genauen Werten. Diese Pop-up Fenster wurden
-            mit Hilfe von Material-UI Tooltips umgesetzt [vgl. 10].{" "}
+            wie im Beispiel in Abbildung 17 mit{" "}
+            <BoldTypo> „Cards“ und „Grids“</BoldTypo> umgesetzt [vgl. 8, 9]. Die
+            visuelle Darstellung ist durch Material-UI Ikonen verdeutlicht. Beim
+            Schweben über die Ikonen erscheint ein kleines Pop-up Fenster mit
+            den genauen Werten. Diese <BoldTypo> Pop-up</BoldTypo> Fenster
+            wurden mit Hilfe von Material-UI Tooltips umgesetzt [vgl. 10].{" "}
           </Typography>
           <Example
             maxWidth="900"
@@ -520,24 +546,34 @@ export default function GettingStarted() {
             </Grid>
           </Example>
           <Typography gutterBottom>
-            Das zweite Beispiel bezieht sich auf das Gebiet der IT-Sicherheit
-            mit der Studie von 11. Ziel von dieser Studie war eine Erhöhung der
-            Auswahlrate von sicheren Netzwerken. Dies wurde anhand von
-            verschiedenen Nudges versucht, unter denen der „Visualisation“ Nudge
-            zu finden war [vgl. 11]. Der „Visualisation“ Nudge hat, im Vergleich
-            zu anderen Nudges, eine hohe Erfolgsratevon 53,3%, daher wurde
-            dieses Beispiel zusätzlich zu dem Beispiel „Healthy Labels“ gewählt,
-            auch wenn die Umsetzung sehr ähnlich ist. Die sichersten Wi-Fis
-            werden als grüne Ikonen angezeigt, die mittelsicheren als
-            orangene/gelbe und die unsichere als rote Ikonen. Da dieser Nudge am
-            besten im Zusammenspiel mit dem „Positioning“ Nudge funktioniert,
-            werden diese zusammen angewendet. Daher werden die sichersten Wi-Fis
-            oben positioniert und die unsicheren unten. Diese Beispiel wurde
-            mithilfe von Material-UI „Grids“, „Papers“ und Ikonen umgesetzt
-            [vgl. 8, vgl. 12, 13]. Die Farben und Ikonen wurden fallabhängig mit
-            Hilfe von „If/Else“ Abfragen je nach Sicherheitsstufe geändert.
-            Material-UI bietet Ikonen zu mehreren Signalstärken an, daher kann
-            auch die Signalstärke leicht angezeigt werden.{" "}
+            Das <BoldTypo> zweite Beispiel</BoldTypo> bezieht sich auf das
+            Gebiet der <BoldTypo> IT-Sicherheit</BoldTypo>
+            mit der Studie von [11]. Ziel von dieser Studie war eine{" "}
+            <BoldTypo>
+              Erhöhung der Auswahlrate von sicheren Netzwerken
+            </BoldTypo>
+            . Dies wurde anhand von verschiedenen Nudges versucht, unter denen
+            der „Visualisation“ Nudge zu finden war [vgl. 11]. Der
+            „Visualisation“ Nudge hat, im Vergleich zu anderen Nudges, eine hohe{" "}
+            <BoldTypo>Erfolgsratevon 53,3%</BoldTypo>, daher wurde dieses
+            Beispiel zusätzlich zu dem Beispiel „Healthy Labels“ gewählt, auch
+            wenn die Umsetzung sehr ähnlich ist. Die{" "}
+            <BoldTypo>sichersten Wi-Fis</BoldTypo>
+            werden als <BoldTypo> grüne Ikonen</BoldTypo> angezeigt, die{" "}
+            <BoldTypo> mittelsicheren als orangene/gelbe</BoldTypo> und die{" "}
+            <BoldTypo>unsichere als rote Ikonen</BoldTypo>. Da dieser Nudge am
+            besten im{" "}
+            <BoldTypo>Zusammenspiel mit dem „Positioning“ Nudge</BoldTypo>{" "}
+            funktioniert, werden diese zusammen angewendet. Daher werden die
+            sichersten Wi-Fis oben positioniert und die unsicheren unten. Diese
+            Beispiel wurde mithilfe von Material-UI{" "}
+            <BoldTypo>„Grids“, „Papers“ und Ikonen</BoldTypo>
+            umgesetzt [vgl. 8, vgl. 12, 13]. Die{" "}
+            <BoldTypo>Farben und Ikonen</BoldTypo> wurden fallabhängig mit Hilfe
+            von gängingen <BoldTypo>„If/Else“</BoldTypo> Abfragen je nach
+            Sicherheitsstufe geändert. Material-UI bietet Ikonen zu mehreren
+            Signalstärken an, daher kann auch die Signalstärke leicht angezeigt
+            werden.{" "}
           </Typography>
           <Example link="https://codesandbox.io/s/visualisation2wifis-ekwth?file=/index.js">
             <Typography variant="h6" gutterBottom align="center">
@@ -642,21 +678,29 @@ export default function GettingStarted() {
             </Grid>
           </Example>
           <Typography gutterBottom>
-            Das dritte Beispiel bezieht sich auf Energieetiketten.
-            Energieetiketten verdeutlichen die Informationen über
-            Energieeffizienz und somit wird der Nutzer zu einem
-            umweltfreundlicheren Verhalten aufgefordert [vgl. 6, vgl. 14].
-            Dieses Beispiel wird mit Bildern umgesetzt, die von der Europäischen
-            Union online zur Verfügung stehen [15]. Dieses Beispiel wurde gleich
-            wie das Beispiel in Abbildung 18 mit „Cards“ und „Grids“ umgesetzt
-            [vgl. 8, 9]. Zusätzlich wurden Energieetiketten als Bilder neben den
-            Preisen beigefügt. Diese Bilder wurden von der Europäischen Union
-            vorgegeben und sind auf deren Webseite zum Herunterladen verfügbar
-            [vgl. 15]. Die Europäische Union gibt vor, dass diese Etiketten die
-            Größe des Preises (die Größe des Fontes) haben müssen [vgl. 16].
-            Dies ist leicht umsetzbar, da die Etiketten in der genauen Größe
-            herunterladen werden können und somit schnelle Ladezeiten dank der
-            geringen Größe gewährleisten.{" "}
+            Das <BoldTypo> dritte Beispiel</BoldTypo> bezieht sich auf{" "}
+            <BoldTypo> Energieetiketten</BoldTypo>. Energieetiketten{" "}
+            <BoldTypo>
+              {" "}
+              verdeutlichen die Informationen über Energieeffizienz
+            </BoldTypo>{" "}
+            und somit wird der Nutzer zu einem{" "}
+            <BoldTypo> umweltfreundlicheren Verhalten</BoldTypo>
+            aufgefordert [vgl. 6, vgl. 14]. Dieses Beispiel wird mit{" "}
+            <BoldTypo> Bildern</BoldTypo>
+            umgesetzt, die <BoldTypo> von der Europäischen Union</BoldTypo>{" "}
+            online zur Verfügung stehen [15]. Dieses Beispiel wurde gleich wie
+            das Beispiel oben mit <BoldTypo> „Cards“ und „Grids“</BoldTypo>{" "}
+            umgesetzt [vgl. 8, 9]. Zusätzlich wurden{" "}
+            <BoldTypo>Energieetiketten als Bilder</BoldTypo> neben den Preisen
+            beigefügt. Diese Bilder wurden{" "}
+            <BoldTypo>von der Europäischen Union vorgegeben</BoldTypo>
+            und sind auf deren Webseite zum Herunterladen verfügbar [vgl. 15].
+            Die <BoldTypo> Europäische Union</BoldTypo> gibt vor, dass diese
+            Etiketten die<BoldTypo> Größe des Preises</BoldTypo> (die Größe des
+            Fontes) haben müssen [vgl. 16]. Dies ist leicht umsetzbar, da die
+            Etiketten in der genauen Größe herunterladen werden können und somit
+            schnelle Ladezeiten dank der geringen Größe gewährleisten.{" "}
           </Typography>
           <Example maxWidth="900">
             <Grid container spacing={2}>
@@ -831,18 +875,23 @@ export default function GettingStarted() {
           <Typography gutterBottom>
             Dieser Nudge, auch wenn nah an der Grenze zu einer hohen
             Effizienzklasse, wird mit der durchschnittlichen Effektivität von
-            47,33% im mittleren Abschnitt der Effizienzklasse angeordnet.
+            <BoldTypo>
+              {" "}
+              47,33% im mittleren Abschnitt der Effizienzklasse
+            </BoldTypo>{" "}
+            angeordnet.
           </Typography>
           <Typography gutterBottom>
             Da Material-UI zahlreiche anpassbare Ikonen anbietet und die Arbeit
             mit „Grids“ leicht und schnell ist, können „Visualisation“ Nudges
             jeweils unter eine Stunde umgesetzt werden. Somit wird dieser Nudge
-            in die Klasse geringer Aufwand eingestuft.
+            in die Klasse <BoldTypo> geringer Aufwand</BoldTypo> eingestuft.
           </Typography>
           <Typography gutterBottom>
             Da die Effektivitätsklasse bei „Visualisation“ Nudge mittelhoch und
-            der Aufwand niedrig ist, wird die Effizienz, gleich wie bei „Adding
-            Inferior Alternatives“ Nudge als mittelgroß eingeschätzt.
+            der Aufwand niedrig ist, wird die <BoldTypo> Effizienz</BoldTypo>,
+            gleich wie bei „Adding Inferior Alternatives“ Nudge als{" "}
+            <BoldTypo> mittelgroß</BoldTypo> eingeschätzt.
           </Typography>
 
           <hr />
