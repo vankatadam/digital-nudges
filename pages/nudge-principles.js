@@ -233,7 +233,8 @@ export default function designCycle() {
       </Typography>
       <Typography gutterBottom>
         4. Google LLC (2020) ‪Richard Thaler‬ - ‪Google Scholar‬.
-        https://scholar.google.com/citations?user=Tvzd5GgAAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DTvzd5GgAAAAJ%26citation_for_view%3DTvzd5GgAAAAJ%3A1sJd4Hv_s6UC%26tzom%3D-120.
+        https://scholar.google.com/citations?user=Tvzd5GgAAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DTvzd5Gg
+        AAAAJ%26citation_for_view%3DTvzd5GgAAAAJ%3A1sJd4Hv_s6UC%26tzom%3D-120.
         Accessed 08 Aug 2020
       </Typography>
       <Typography gutterBottom>
